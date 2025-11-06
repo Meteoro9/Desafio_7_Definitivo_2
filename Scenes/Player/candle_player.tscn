@@ -1,21 +1,195 @@
-[gd_scene load_steps=6 format=3 uid="uid://dsnr7dq55rfyk"]
+[gd_scene load_steps=27 format=3 uid="uid://dsnr7dq55rfyk"]
 
-[ext_resource type="Script" uid="uid://dlivlqrme6awg" path="res://Scripts/Player/candle_player.gd" id="1_p1jqv"]
-[ext_resource type="Texture2D" uid="uid://c55m8lp0o8ega" path="res://Assets/Player/vela1 redimencionada.png" id="1_yngwo"]
+[ext_resource type="Script" uid="uid://c0wxo80n2kqta" path="res://Scripts/Player/candle_player.gd" id="1_p1jqv"]
+[ext_resource type="Texture2D" uid="uid://cghlih80e7w6" path="res://Assets/Player/candle.png" id="2_5vcen"]
 [ext_resource type="Script" uid="uid://1ajmaisv5g72" path="res://Scripts/Player/jump_area.gd" id="3_85dko"]
+[ext_resource type="Script" uid="uid://dpscdhtb7w28j" path="res://Scripts/Player/candle_animations.gd" id="4_5vcen"]
+[ext_resource type="Texture2D" uid="uid://divv5kuurlcg" path="res://Assets/Fire/Small_Fireball_10x26.png" id="4_ohdre"]
+[ext_resource type="Texture2D" uid="uid://bmi5e6nspbxt3" path="res://Assets/Darkness.png" id="5_5vcen"]
+[ext_resource type="Script" uid="uid://cdekpneeufghb" path="res://Scripts/Player/fire_area.gd" id="6_fldxn"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p1jqv"]
-radius = 6.0
+radius = 4.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p1jqv"]
-size = Vector2(20, 3)
+size = Vector2(10, 3)
 
-[node name="Candle-Player" type="CharacterBody2D"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_k754a"]
+radius = 4.63822
+height = 18.7755
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k754a"]
+atlas = ExtResource("4_ohdre")
+region = Rect2(0, 52, 10, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fldxn"]
+atlas = ExtResource("4_ohdre")
+region = Rect2(10, 52, 10, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pgpgy"]
+atlas = ExtResource("4_ohdre")
+region = Rect2(20, 52, 10, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mb1rh"]
+atlas = ExtResource("4_ohdre")
+region = Rect2(30, 52, 10, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rkhb5"]
+atlas = ExtResource("4_ohdre")
+region = Rect2(40, 52, 10, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1jqsy"]
+atlas = ExtResource("4_ohdre")
+region = Rect2(50, 52, 10, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ehfws"]
+atlas = ExtResource("4_ohdre")
+region = Rect2(60, 52, 10, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_trbsq"]
+atlas = ExtResource("4_ohdre")
+region = Rect2(70, 52, 10, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_14pnx"]
+atlas = ExtResource("4_ohdre")
+region = Rect2(80, 52, 10, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5c1s0"]
+atlas = ExtResource("4_ohdre")
+region = Rect2(90, 52, 10, 26)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_usdh6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k754a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fldxn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pgpgy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mb1rh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rkhb5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1jqsy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ehfws")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_trbsq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_14pnx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5c1s0")
+}],
+"loop": true,
+"name": &"Fire",
+"speed": 11.0
+}]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k754a"]
+bg_color = Color(0.861716, 0.0152079, 9.62615e-07, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fldxn"]
+bg_color = Color(0.431203, 0.777874, 0, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="Animation" id="Animation_c5p07"]
+resource_name = "Fire"
+length = 0.7
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("DarknessTexture:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.466667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(4.285, 4.285), Vector2(4.48, 4.48), Vector2(4.025, 4.025)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("DarknessTexture:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -25)]
+}
+
+[sub_resource type="Animation" id="Animation_ebalj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("DarknessTexture:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(4.285, 4.285)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("DarknessTexture:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-84, 336)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bcdl3"]
+_data = {
+&"Fire": SubResource("Animation_c5p07"),
+&"RESET": SubResource("Animation_ebalj")
+}
+
+[node name="Candle-Player" type="CharacterBody2D" node_paths=PackedStringArray("fire_animation")]
+scale = Vector2(1.96, 1.96)
 script = ExtResource("1_p1jqv")
+fire_animation = NodePath("FireArea")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-texture = ExtResource("1_yngwo")
+position = Vector2(0.2, -5)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_5vcen")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_p1jqv")
@@ -27,6 +201,59 @@ script = ExtResource("3_85dko")
 position = Vector2(0, 14.5)
 shape = SubResource("RectangleShape2D_p1jqv")
 debug_color = Color(0.614125, 0.531184, 0.228713, 0.42)
+
+[node name="FireArea" type="Area2D" parent="." node_paths=PackedStringArray("bar")]
+position = Vector2(0, -22)
+scale = Vector2(0.55, 0.55)
+script = ExtResource("6_fldxn")
+bar = NodePath("../CanvasLayer/ProgressBar")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FireArea"]
+position = Vector2(0, 2.89425)
+shape = SubResource("CapsuleShape2D_k754a")
+debug_color = Color(0.987509, 0, 0.312252, 0.42)
+
+[node name="FireAnimation" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -22)
+scale = Vector2(0.55, 0.55)
+sprite_frames = SubResource("SpriteFrames_usdh6")
+animation = &"Fire"
+autoplay = "Fire"
+frame_progress = 0.75645
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -242.0
+offset_top = -88.0
+offset_right = 242.0
+offset_bottom = -61.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/background = SubResource("StyleBoxFlat_k754a")
+theme_override_styles/fill = SubResource("StyleBoxFlat_fldxn")
+show_percentage = false
+
+[node name="DarknessTexture" type="Sprite2D" parent="."]
+texture_filter = 2
+position = Vector2(-84, 336)
+scale = Vector2(4.285, 4.285)
+texture = ExtResource("5_5vcen")
+offset = Vector2(-19.3699, 82.147)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." node_paths=PackedStringArray("animated_sprite", "candle")]
+libraries = {
+&"": SubResource("AnimationLibrary_bcdl3")
+}
+script = ExtResource("4_5vcen")
+animated_sprite = NodePath("../FireAnimation")
+candle = NodePath("..")
 
 [connection signal="body_entered" from="Jump-Area" to="Jump-Area" method="_on_body_entered"]
 [connection signal="body_exited" from="Jump-Area" to="Jump-Area" method="_on_body_exited"]

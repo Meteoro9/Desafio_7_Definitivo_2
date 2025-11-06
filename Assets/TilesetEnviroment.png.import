@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c55m8lp0o8ega"
-path="res://.godot/imported/vela1 redimencionada.png-f71508d17268a5dc615fd60c08d30935.ctex"
+uid="uid://dxkb3us24tc7v"
+path="res://.godot/imported/TilesetEnviroment.png-86749bd8d5c0d6309f75f93d0f185a53.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Player/vela1 redimencionada.png"
-dest_files=["res://.godot/imported/vela1 redimencionada.png-f71508d17268a5dc615fd60c08d30935.ctex"]
+source_file="res://Assets/TilesetEnviroment.png"
+dest_files=["res://.godot/imported/TilesetEnviroment.png-86749bd8d5c0d6309f75f93d0f185a53.ctex"]
 
 [params]
 

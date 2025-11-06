@@ -1,29 +1,27 @@
 extends CharacterBody2D
-class_name CandleController
+class_name CandlePlayer
 
-var speed := 30
-var gravity := 800.0
-var direction := Vector2.ZERO
+const SPEED = 300.0
+const JUMP_VELOCITY = -550.0
 
-func CheckInputs():
-	if Input.is_action_just_pressed("arriba"):
-		direction += Vector2(0, -10)
-	if Input.is_action_pressed("derecha"):
-		direction += Vector2(1, 0)
-	if Input.is_action_pressed("izquierda"):
-		direction += Vector2(-1, 0)
-
-func AplyInputs():
-	direction = direction.normalized()
-	velocity = direction * speed
-	move_and_slide()
-
-func _process(_delta: float) -> void:
-	direction = Vector2.ZERO
-	CheckInputs()
-	AplyInputs()
+@export var fire_animation : Area2D
 
 func _physics_process(delta: float) -> void:
+	# Add the gravity.
 	if not is_on_floor():
-		velocity.y += gravity * delta
+		velocity += get_gravity() * delta
+
+	# Handle jump.
+	if Input.is_action_just_pressed("arriba") and is_on_floor():
+		velocity.y = JUMP_VELOCITY
+
+	# Get the input direction and handle the movement/deceleration.
+	# As good practice, you should replace UI actions with custom gameplay actions.
+	var direction := Input.get_axis("izquierda", "derecha")
+	if direction:
+		velocity.x = direction * SPEED
+		fire_animation.take_damage(1.5)
+	else:
+		velocity.x = move_toward(velocity.x, 0, SPEED)
+
 	move_and_slide()
