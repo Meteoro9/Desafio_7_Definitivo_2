@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://dsnr7dq55rfyk"]
+[gd_scene load_steps=31 format=3 uid="uid://dsnr7dq55rfyk"]
 
 [ext_resource type="Script" uid="uid://c0wxo80n2kqta" path="res://Scripts/Player/candle_player.gd" id="1_p1jqv"]
 [ext_resource type="Texture2D" uid="uid://cghlih80e7w6" path="res://Assets/Player/candle.png" id="2_5vcen"]
@@ -6,7 +6,9 @@
 [ext_resource type="Script" uid="uid://dpscdhtb7w28j" path="res://Scripts/Player/candle_animations.gd" id="4_5vcen"]
 [ext_resource type="Texture2D" uid="uid://divv5kuurlcg" path="res://Assets/Fire/Small_Fireball_10x26.png" id="4_ohdre"]
 [ext_resource type="Texture2D" uid="uid://bmi5e6nspbxt3" path="res://Assets/Darkness.png" id="5_5vcen"]
+[ext_resource type="AudioStream" uid="uid://b42330n7sgcds" path="res://Audio/Player/candle_flame_SFX.ogg" id="5_pgpgy"]
 [ext_resource type="Script" uid="uid://cdekpneeufghb" path="res://Scripts/Player/fire_area.gd" id="6_fldxn"]
+[ext_resource type="AudioStream" uid="uid://j7wcpo8751uk" path="res://Audio/Player/flame_off_SFX.ogg" id="6_mb1rh"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p1jqv"]
 radius = 4.0
@@ -247,6 +249,15 @@ position = Vector2(0, 2.89425)
 shape = SubResource("CapsuleShape2D_k754a")
 debug_color = Color(0.987509, 0, 0.312252, 0.42)
 
+[node name="FlameAlive" type="AudioStreamPlayer2D" parent="FireArea"]
+stream = ExtResource("5_pgpgy")
+volume_db = 7.782
+autoplay = true
+
+[node name="FlameKill" type="AudioStreamPlayer2D" parent="FireArea"]
+stream = ExtResource("6_mb1rh")
+volume_db = 16.271
+
 [node name="FireAnimation" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 position = Vector2(0, -22)
@@ -293,4 +304,5 @@ fire = NodePath("../FireArea")
 
 [connection signal="body_entered" from="Jump-Area" to="Jump-Area" method="_on_body_entered"]
 [connection signal="body_exited" from="Jump-Area" to="Jump-Area" method="_on_body_exited"]
+[connection signal="finished" from="FireArea/FlameAlive" to="FireArea" method="_on_flame_alive_finished"]
 [connection signal="animation_finished" from="AnimationPlayer" to="AnimationPlayer" method="_on_animation_finished"]
