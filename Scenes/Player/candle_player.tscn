@@ -258,6 +258,11 @@ autoplay = true
 stream = ExtResource("6_mb1rh")
 volume_db = 16.271
 
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="FireArea"]
+position = Vector2(0, 4.74954)
+scale = Vector2(1.81818, 1.81818)
+energy = 0.01
+
 [node name="FireAnimation" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 position = Vector2(0, -22)
