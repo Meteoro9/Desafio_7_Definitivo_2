@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://b5xkdo13aol70"]
+[gd_scene load_steps=13 format=4 uid="uid://b5xkdo13aol70"]
 
 [ext_resource type="PackedScene" uid="uid://co3o3n7v2njpx" path="res://Scenes/Levels/parallax_2.tscn" id="1_gxp0d"]
 [ext_resource type="Texture2D" uid="uid://dkc1gppjxpsy0" path="res://Assets/spritesheet-tiles-default.png" id="1_i2phc"]
@@ -4188,6 +4188,9 @@ tile_size = Vector2i(64, 64)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_rbjd4")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g630t"]
+size = Vector2(56, 2394)
+
 [node name="Sample_Level" type="Node2D"]
 
 [node name="Parallax2" parent="." instance=ExtResource("1_gxp0d")]
@@ -4195,22 +4198,22 @@ position = Vector2(1878.64, 2537.71)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 scale = Vector2(0.5, 0.5)
-tile_map_data = PackedByteArray("AAAIAAUAAAAHAAYAAAAJAAUAAAAHAAYAAAAHAAUAAAAHAAYAAAAGAAUAAAAHAAcAAAAKAAUAAAAHAAMAAAAEAAcAAAAAAAUAAAAEAAYAAAAAAAUAAAAEAAUAAAAAAAUAAAAEAAQAAAAAAAUAAAAEAAgAAAAAAAUAAAAEAAMAAAAAAAUAAAAEAAkAAAAAAAUAAAAEAAoAAAAAAAUAAAAEAAsAAAAAAAUAAAAEAAwAAAAAAAUAAAAEAAIAAAAAAAUAAAAEAAEAAAAAAAQAAAABAAEAAAAHAAcAAAACAAEAAAAHAAYAAAADAAEAAAAHAAYAAAAMAAIAAAAHAAcAAAANAAIAAAAHAAYAAAAOAAIAAAAHAAYAAAAPAP//AAAAAAUAAAAPAAAAAAAAAAUAAAAPAAEAAAAAAAUAAAAPAAIAAAAAAAUAAAAPAAMAAAAAAAUAAAAPAAQAAAAAAAUAAAAPAAUAAAAAAAUAAAAPAAYAAAAAAAUAAAAPAAcAAAAAAAUAAAAPAAgAAAAAAAUAAAAPAAkAAAAAAAUAAAAPAAoAAAAAAAUAAAAPAAsAAAAAAAUAAAAPAAwAAAAAAAUAAAAPAP7/AAAAAAUAAAAPAP3/AAAAAAUAAAAPAPz/AAAAAAUAAAAPAPv/AAAAAAUAAAAIAAAAAAAIAAQAAAAKAPv/AAAHAAYAAAALAPv/AAAHAAYAAAAMAPv/AAAHAAYAAAANAPv/AAAHAAYAAAAOAPv/AAAHAAYAAAAJAPv/AAAHAAcAAAAAAP3/AAAHAAcAAAABAP3/AAAHAAMAAAAPAPr/AAAAAAUAAAAPAPn/AAAAAAUAAAAPAPj/AAAAAAUAAAAPAPf/AAAAAAQAAAAOAPf/AAAHAAYAAAANAPf/AAAHAAYAAAAMAPf/AAAHAAcAAAA=")
+tile_map_data = PackedByteArray("AAAIAAUAAAAHAAYAAAAJAAUAAAAHAAYAAAAHAAUAAAAHAAYAAAAGAAUAAAAHAAcAAAAKAAUAAAAHAAMAAAAEAAcAAAAAAAUAAAAEAAYAAAAAAAUAAAAEAAUAAAAAAAUAAAAEAAQAAAAAAAUAAAAEAAgAAAAAAAUAAAAEAAMAAAAAAAUAAAAEAAkAAAAAAAUAAAAEAAoAAAAAAAUAAAAEAAsAAAAAAAUAAAAEAAwAAAAAAAUAAAAEAAIAAAAAAAUAAAAEAAEAAAAAAAQAAAABAAEAAAAHAAcAAAACAAEAAAAHAAYAAAADAAEAAAAHAAYAAAAMAAIAAAAHAAcAAAANAAIAAAAHAAYAAAAOAAIAAAAHAAYAAAAPAP//AAAAAAUAAAAPAAAAAAAAAAUAAAAPAAEAAAAAAAUAAAAPAAIAAAAAAAUAAAAPAAMAAAAAAAUAAAAPAAQAAAAAAAUAAAAPAAUAAAAAAAUAAAAPAAYAAAAAAAUAAAAPAAcAAAAAAAUAAAAPAAgAAAAAAAUAAAAPAAkAAAAAAAUAAAAPAAoAAAAAAAUAAAAPAAsAAAAAAAUAAAAPAAwAAAAAAAUAAAAPAP7/AAAAAAUAAAAPAP3/AAAAAAUAAAAPAPz/AAAAAAUAAAAPAPv/AAAAAAUAAAAAAP3/AAAHAAcAAAABAP3/AAAHAAMAAAAPAPr/AAAAAAUAAAAPAPn/AAAAAAUAAAAPAPj/AAAAAAUAAAADAPf/AAAHAAMAAAACAPf/AAAHAAYAAAABAPf/AAAHAAYAAAAAAPf/AAAHAAcAAAD///X/AAAHAAMAAAD+//X/AAAHAAYAAAABAPL/AAAIAAMAAAACAPL/AAAIAAMAAAAAAPH/AAAHAA4AAAADAPH/AAAHAA0AAAADAPL/AAAIAAEAAAAAAPL/AAAIAAIAAAABAPH/AAAAAAQAAAACAPH/AAAAAAQAAAAIAP//AAAIAAQAAAAOAPr/AAAHAAYAAAANAPr/AAAHAAYAAAAMAPr/AAAHAAYAAAALAPr/AAAHAAYAAAAKAPr/AAAHAAYAAAAJAPr/AAAHAAcAAAA=")
 tile_set = SubResource("TileSet_piwxh")
 
 [node name="WaterDrop_Spawner" parent="." instance=ExtResource("4_7ugqr")]
-position = Vector2(307, -70)
+position = Vector2(80, -408)
 
 [node name="WaterAreas" type="Node2D" parent="."]
 scale = Vector2(0.5, 0.5)
 
 [node name="WaterArea" parent="WaterAreas" instance=ExtResource("4_piwxh")]
-position = Vector2(546, 99)
-scale = Vector2(4.04, 3)
+position = Vector2(288, 340)
+scale = Vector2(3.05692, 26.68)
 
 [node name="WaterArea2" parent="WaterAreas" instance=ExtResource("4_piwxh")]
-position = Vector2(736, -156)
-scale = Vector2(3.16, 9.12)
+position = Vector2(992, 36)
+scale = Vector2(3.16, 60.16)
 
 [node name="Candle-Player" parent="." instance=ExtResource("2_rbjd4")]
 visible = false
@@ -4222,10 +4225,21 @@ script = ExtResource("3_rbjd4")
 player = NodePath("../Candle-Player")
 
 [node name="WindArea" parent="." instance=ExtResource("7_7ugqr")]
-position = Vector2(452, -189)
+position = Vector2(347, -222)
 
 [node name="ShowTimer" parent="." instance=ExtResource("8_m3nkb")]
 
 [node name="WinArea" parent="." node_paths=PackedStringArray("show_timer") instance=ExtResource("9_g630t")]
-position = Vector2(33, -447)
+position = Vector2(240, -1684)
 show_timer = NodePath("../ShowTimer")
+
+[node name="Limits" type="StaticBody2D" parent="."]
+position = Vector2(-24, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Limits"]
+position = Vector2(-24, -738)
+shape = SubResource("RectangleShape2D_g630t")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Limits"]
+position = Vector2(624, -739)
+shape = SubResource("RectangleShape2D_g630t")

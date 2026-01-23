@@ -2,7 +2,7 @@ extends CharacterBody2D
 class_name CandlePlayer
 
 const SPEED = 300.0
-const JUMP_VELOCITY = -550.0
+const JUMP_VELOCITY = -530.0
 
 @export var fire_animation : Area2D
 
