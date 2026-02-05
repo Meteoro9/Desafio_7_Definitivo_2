@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://blyuq2har1ns" path="res://Scenes/Utils/music_manager.gd" id="1_wg8ck"]
 
-[node name="Music Manager" type="Node2D" unique_id=815195589]
+[node name="Music Manager" type="Node" unique_id=907357435]
 script = ExtResource("1_wg8ck")
 
-[node name="Music-Player" type="AudioStreamPlayer2D" parent="." unique_id=232723371]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1357784762]

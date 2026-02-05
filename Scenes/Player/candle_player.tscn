@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://dsnr7dq55rfyk"]
+[gd_scene format=3 uid="uid://dsnr7dq55rfyk"]
 
 [ext_resource type="Script" uid="uid://c0wxo80n2kqta" path="res://Scripts/Player/candle_player.gd" id="1_p1jqv"]
 [ext_resource type="Texture2D" uid="uid://cghlih80e7w6" path="res://Assets/Player/candle.png" id="2_5vcen"]
@@ -148,6 +148,34 @@ tracks/1/keys = {
 "values": [Vector2(0, 0), Vector2(0, -10)]
 }
 
+[sub_resource type="Animation" id="Animation_pgpgy"]
+resource_name = "Goodbye_Darkness"
+length = 1.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("DarknessTexture:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.93333334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1.51, 1.51), Vector2(5, 5)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("DarknessTexture:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.7, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0.6392157), Color(1, 1, 1, 0)]
+}
+
 [sub_resource type="Animation" id="Animation_ebalj"]
 length = 0.001
 tracks/0/type = "value"
@@ -173,6 +201,18 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(-84, 336)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("DarknessTexture:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_k754a"]
@@ -210,60 +250,56 @@ tracks/0/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_bcdl3"]
 _data = {
 &"Fire": SubResource("Animation_c5p07"),
+&"Goodbye_Darkness": SubResource("Animation_pgpgy"),
 &"RESET": SubResource("Animation_ebalj"),
 &"kill": SubResource("Animation_k754a"),
 &"stay_killed": SubResource("Animation_fldxn")
 }
 
-[node name="Candle-Player" type="CharacterBody2D" node_paths=PackedStringArray("fire_animation")]
+[node name="Candle-Player" type="CharacterBody2D" unique_id=31092358 node_paths=PackedStringArray("fire_animation")]
 scale = Vector2(1.96, 1.96)
 script = ExtResource("1_p1jqv")
 fire_animation = NodePath("FireArea")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1720756080]
 texture_filter = 1
 position = Vector2(0.2, -5)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("2_5vcen")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=425528358]
 shape = SubResource("CapsuleShape2D_p1jqv")
 
-[node name="Jump-Area" type="Area2D" parent="."]
+[node name="Jump-Area" type="Area2D" parent="." unique_id=2060432537]
 script = ExtResource("3_85dko")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Jump-Area"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Jump-Area" unique_id=727389755]
 position = Vector2(0, 14.5)
 shape = SubResource("RectangleShape2D_p1jqv")
 debug_color = Color(0.614125, 0.531184, 0.228713, 0.42)
 
-[node name="FireArea" type="Area2D" parent="." node_paths=PackedStringArray("bar", "fire_animation")]
+[node name="FireArea" type="Area2D" parent="." unique_id=201426561 node_paths=PackedStringArray("bar", "fire_animation")]
 position = Vector2(0, -22)
 scale = Vector2(0.55, 0.55)
 script = ExtResource("6_fldxn")
 bar = NodePath("../CanvasLayer/ProgressBar")
 fire_animation = NodePath("../FireAnimation")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="FireArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FireArea" unique_id=1772313496]
 position = Vector2(0, 2.89425)
 shape = SubResource("CapsuleShape2D_k754a")
 debug_color = Color(0.987509, 0, 0.312252, 0.42)
 
-[node name="FlameAlive" type="AudioStreamPlayer2D" parent="FireArea"]
+[node name="FlameAlive" type="AudioStreamPlayer2D" parent="FireArea" unique_id=653084471]
 stream = ExtResource("5_pgpgy")
 volume_db = 7.782
 autoplay = true
 
-[node name="FlameKill" type="AudioStreamPlayer2D" parent="FireArea"]
+[node name="FlameKill" type="AudioStreamPlayer2D" parent="FireArea" unique_id=479985769]
 stream = ExtResource("6_mb1rh")
 volume_db = 16.271
 
-[node name="DirectionalLight2D" type="DirectionalLight2D" parent="FireArea"]
-position = Vector2(0, 4.74954)
-scale = Vector2(1.81818, 1.81818)
-energy = 0.01
-
-[node name="FireAnimation" type="AnimatedSprite2D" parent="."]
+[node name="FireAnimation" type="AnimatedSprite2D" parent="." unique_id=1448469897]
 texture_filter = 1
 position = Vector2(0, -22)
 scale = Vector2(0.55, 0.55)
@@ -272,9 +308,9 @@ animation = &"Fire"
 autoplay = "Fire"
 frame_progress = 0.795133
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=714631531]
 
-[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer"]
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer" unique_id=1393437567]
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
@@ -290,7 +326,7 @@ theme_override_styles/background = SubResource("StyleBoxFlat_k754a")
 theme_override_styles/fill = SubResource("StyleBoxFlat_fldxn")
 show_percentage = false
 
-[node name="DarknessTexture" type="Sprite2D" parent="."]
+[node name="DarknessTexture" type="Sprite2D" parent="." unique_id=943423137]
 z_index = 10
 texture_filter = 2
 position = Vector2(-84, 336)
@@ -298,10 +334,8 @@ scale = Vector2(4.285, 4.285)
 texture = ExtResource("5_5vcen")
 offset = Vector2(-19.3699, 82.147)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." node_paths=PackedStringArray("animated_sprite", "candle", "fire")]
-libraries = {
-&"": SubResource("AnimationLibrary_bcdl3")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=160269180 node_paths=PackedStringArray("animated_sprite", "candle", "fire")]
+libraries/ = SubResource("AnimationLibrary_bcdl3")
 script = ExtResource("4_5vcen")
 animated_sprite = NodePath("../FireAnimation")
 candle = NodePath("..")

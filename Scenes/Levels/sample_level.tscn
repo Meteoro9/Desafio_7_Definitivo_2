@@ -1,7 +1,8 @@
-[gd_scene load_steps=13 format=4 uid="uid://b5xkdo13aol70"]
+[gd_scene format=4 uid="uid://b5xkdo13aol70"]
 
 [ext_resource type="PackedScene" uid="uid://co3o3n7v2njpx" path="res://Scenes/Levels/parallax_2.tscn" id="1_gxp0d"]
 [ext_resource type="Texture2D" uid="uid://dkc1gppjxpsy0" path="res://Assets/spritesheet-tiles-default.png" id="1_i2phc"]
+[ext_resource type="Script" uid="uid://b3oa7t8vwp7m" path="res://Scripts/Utils/level1_manager.gd" id="1_u3gei"]
 [ext_resource type="PackedScene" uid="uid://dsnr7dq55rfyk" path="res://Scenes/Player/candle_player.tscn" id="2_rbjd4"]
 [ext_resource type="Script" uid="uid://mc6cboe8n1lu" path="res://Scripts/Player/camera_follow.gd" id="3_rbjd4"]
 [ext_resource type="PackedScene" uid="uid://cri2ewgfn2l0q" path="res://Scenes/Enemies/water_drop_spawner.tscn" id="4_7ugqr"]
@@ -4191,55 +4192,55 @@ sources/0 = SubResource("TileSetAtlasSource_rbjd4")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g630t"]
 size = Vector2(56, 2394)
 
-[node name="Sample_Level" type="Node2D"]
+[node name="Sample_Level" type="Node2D" unique_id=1150439360]
+script = ExtResource("1_u3gei")
 
-[node name="Parallax2" parent="." instance=ExtResource("1_gxp0d")]
+[node name="Parallax2" parent="." unique_id=215094258 instance=ExtResource("1_gxp0d")]
 position = Vector2(1878.64, 2537.71)
 
-[node name="TileMapLayer" type="TileMapLayer" parent="."]
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1108606788]
 scale = Vector2(0.5, 0.5)
 tile_map_data = PackedByteArray("AAAIAAUAAAAHAAYAAAAJAAUAAAAHAAYAAAAHAAUAAAAHAAYAAAAGAAUAAAAHAAcAAAAKAAUAAAAHAAMAAAAEAAcAAAAAAAUAAAAEAAYAAAAAAAUAAAAEAAUAAAAAAAUAAAAEAAQAAAAAAAUAAAAEAAgAAAAAAAUAAAAEAAMAAAAAAAUAAAAEAAkAAAAAAAUAAAAEAAoAAAAAAAUAAAAEAAsAAAAAAAUAAAAEAAwAAAAAAAUAAAAEAAIAAAAAAAUAAAAEAAEAAAAAAAQAAAABAAEAAAAHAAcAAAACAAEAAAAHAAYAAAADAAEAAAAHAAYAAAAMAAIAAAAHAAcAAAANAAIAAAAHAAYAAAAOAAIAAAAHAAYAAAAPAP//AAAAAAUAAAAPAAAAAAAAAAUAAAAPAAEAAAAAAAUAAAAPAAIAAAAAAAUAAAAPAAMAAAAAAAUAAAAPAAQAAAAAAAUAAAAPAAUAAAAAAAUAAAAPAAYAAAAAAAUAAAAPAAcAAAAAAAUAAAAPAAgAAAAAAAUAAAAPAAkAAAAAAAUAAAAPAAoAAAAAAAUAAAAPAAsAAAAAAAUAAAAPAAwAAAAAAAUAAAAPAP7/AAAAAAUAAAAPAP3/AAAAAAUAAAAPAPz/AAAAAAUAAAAPAPv/AAAAAAUAAAAAAP3/AAAHAAcAAAABAP3/AAAHAAMAAAAPAPr/AAAAAAUAAAAPAPn/AAAAAAUAAAAPAPj/AAAAAAUAAAADAPf/AAAHAAMAAAACAPf/AAAHAAYAAAABAPf/AAAHAAYAAAAAAPf/AAAHAAcAAAD///X/AAAHAAMAAAD+//X/AAAHAAYAAAABAPL/AAAIAAMAAAACAPL/AAAIAAMAAAAAAPH/AAAHAA4AAAADAPH/AAAHAA0AAAADAPL/AAAIAAEAAAAAAPL/AAAIAAIAAAABAPH/AAAAAAQAAAACAPH/AAAAAAQAAAAIAP//AAAIAAQAAAAOAPr/AAAHAAYAAAANAPr/AAAHAAYAAAAMAPr/AAAHAAYAAAALAPr/AAAHAAYAAAAKAPr/AAAHAAYAAAAJAPr/AAAHAAcAAAA=")
 tile_set = SubResource("TileSet_piwxh")
 
-[node name="WaterDrop_Spawner" parent="." instance=ExtResource("4_7ugqr")]
+[node name="WaterDrop_Spawner" parent="." unique_id=1362191504 instance=ExtResource("4_7ugqr")]
 position = Vector2(80, -408)
 
-[node name="WaterAreas" type="Node2D" parent="."]
+[node name="WaterAreas" type="Node2D" parent="." unique_id=247257230]
 scale = Vector2(0.5, 0.5)
 
-[node name="WaterArea" parent="WaterAreas" instance=ExtResource("4_piwxh")]
+[node name="WaterArea" parent="WaterAreas" unique_id=126504632 instance=ExtResource("4_piwxh")]
 position = Vector2(288, 340)
 scale = Vector2(3.05692, 26.68)
 
-[node name="WaterArea2" parent="WaterAreas" instance=ExtResource("4_piwxh")]
+[node name="WaterArea2" parent="WaterAreas" unique_id=1614803027 instance=ExtResource("4_piwxh")]
 position = Vector2(992, 36)
 scale = Vector2(3.16, 60.16)
 
-[node name="Candle-Player" parent="." instance=ExtResource("2_rbjd4")]
-visible = false
+[node name="Candle-Player" parent="." unique_id=1151881987 instance=ExtResource("2_rbjd4")]
 position = Vector2(272, 126)
 
-[node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("player")]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=294351659 node_paths=PackedStringArray("player")]
 zoom = Vector2(2, 2)
 script = ExtResource("3_rbjd4")
 player = NodePath("../Candle-Player")
 
-[node name="WindArea" parent="." instance=ExtResource("7_7ugqr")]
+[node name="WindArea" parent="." unique_id=156230257 instance=ExtResource("7_7ugqr")]
 position = Vector2(347, -222)
 
-[node name="ShowTimer" parent="." instance=ExtResource("8_m3nkb")]
+[node name="ShowTimer" parent="." unique_id=1522023902 instance=ExtResource("8_m3nkb")]
 
-[node name="WinArea" parent="." node_paths=PackedStringArray("show_timer") instance=ExtResource("9_g630t")]
-position = Vector2(240, -1684)
+[node name="WinArea" parent="." unique_id=906749016 node_paths=PackedStringArray("show_timer") instance=ExtResource("9_g630t")]
+position = Vector2(278, -63)
 show_timer = NodePath("../ShowTimer")
 
-[node name="Limits" type="StaticBody2D" parent="."]
+[node name="Limits" type="StaticBody2D" parent="." unique_id=1148835502]
 position = Vector2(-24, 0)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Limits"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Limits" unique_id=1645778950]
 position = Vector2(-24, -738)
 shape = SubResource("RectangleShape2D_g630t")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Limits"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Limits" unique_id=2142635773]
 position = Vector2(624, -739)
 shape = SubResource("RectangleShape2D_g630t")
