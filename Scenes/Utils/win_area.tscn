@@ -2,12 +2,14 @@
 
 [ext_resource type="Script" uid="uid://qesn0r4nvmyg" path="res://Scripts/Utils/win_area.gd" id="1_sobkd"]
 [ext_resource type="PackedScene" uid="uid://cnj0et6kmyb3r" path="res://Scenes/Levels/win_menu.tscn" id="2_osqyv"]
+[ext_resource type="PackedScene" uid="uid://bio3abrceg83a" path="res://Scenes/Levels/loose_menu.tscn" id="3_ss5hm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rbut1"]
 
 [node name="WinArea" type="Area2D" unique_id=1272530565]
 script = ExtResource("1_sobkd")
 win_scene = ExtResource("2_osqyv")
+loose_scene = ExtResource("3_ss5hm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=112501631]
 scale = Vector2(124.69, 2.52)
