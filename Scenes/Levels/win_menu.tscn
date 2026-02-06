@@ -1,12 +1,14 @@
-[gd_scene load_steps=7 format=3 uid="uid://cnj0et6kmyb3r"]
+[gd_scene format=3 uid="uid://cnj0et6kmyb3r"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i6hqk"]
-bg_color = Color(0.35421, 0.728915, 0.305636, 1)
+[ext_resource type="Script" uid="uid://t37fi2u1vxam" path="res://Scripts/Utils/win_menu.gd" id="1_30vpb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_keumo"]
+bg_color = Color(0.288213, 0.586319, 0.246446, 1)
 corner_radius_top_left = 16
 corner_radius_top_right = 16
 corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
-shadow_color = Color(0.346569, 0.346569, 0.346569, 0.831373)
+shadow_color = Color(0, 0, 0, 0.215686)
 shadow_size = 5
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_30vpb"]
@@ -18,13 +20,13 @@ corner_radius_bottom_left = 16
 shadow_color = Color(0.286275, 0.588235, 0.247059, 0.67451)
 shadow_size = 5
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_keumo"]
-bg_color = Color(0.288213, 0.586319, 0.246446, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i6hqk"]
+bg_color = Color(0.35421, 0.728915, 0.305636, 1)
 corner_radius_top_left = 16
 corner_radius_top_right = 16
 corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
-shadow_color = Color(0, 0, 0, 0.215686)
+shadow_color = Color(0.346569, 0.346569, 0.346569, 0.831373)
 shadow_size = 5
 
 [sub_resource type="Animation" id="Animation_pbk73"]
@@ -87,9 +89,10 @@ _data = {
 &"visible_init": SubResource("Animation_c1hu8")
 }
 
-[node name="WinMenu" type="CanvasLayer"]
+[node name="WinMenu" type="CanvasLayer" unique_id=1123096377]
+script = ExtResource("1_30vpb")
 
-[node name="Button" type="Button" parent="."]
+[node name="Button" type="Button" parent="." unique_id=690714501]
 modulate = Color(1, 1, 1, 0)
 visibility_layer = 16
 anchors_preset = 8
@@ -103,18 +106,18 @@ offset_right = 165.5
 offset_bottom = 38.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 32
-theme_override_styles/hover = SubResource("StyleBoxFlat_i6hqk")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_30vpb")
 theme_override_styles/normal = SubResource("StyleBoxFlat_keumo")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_30vpb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_i6hqk")
 text = "Volver a intentar
 "
 
-[node name="Button2" type="Button" parent="."]
+[node name="Button2" type="Button" parent="." unique_id=1190618162]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -126,19 +129,20 @@ offset_right = 165.5
 offset_bottom = 135.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 32
-theme_override_styles/hover = SubResource("StyleBoxFlat_i6hqk")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_30vpb")
 theme_override_styles/normal = SubResource("StyleBoxFlat_keumo")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_30vpb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_i6hqk")
 text = "Ir al menú
 "
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_rifxn")
-}
-autoplay = "visible_init"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1314943492]
+libraries/ = SubResource("AnimationLibrary_rifxn")
+autoplay = &"visible_init"
+
+[connection signal="pressed" from="Button" to="." method="on_retry_pressed"]
+[connection signal="pressed" from="Button2" to="." method="on_go_menu_pressed"]
