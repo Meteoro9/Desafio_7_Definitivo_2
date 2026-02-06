@@ -2,6 +2,8 @@ extends Control
 class_name MainMenu
 
 @onready var label = $Label
+var languages: Array[String] = ["en", "es"]
+var next_language_index := 1
 
 func _ready() -> void:
 	var final_text = "Tus tiempos: \n"
@@ -30,3 +32,10 @@ func _ready() -> void:
 
 func _on_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/Levels/sample_level.tscn")
+
+func on_language_pressed():
+	change_language(languages[next_language_index])
+	next_language_index = (next_language_index + 1) % languages.size()
+
+func change_language(lang: String) -> void:
+	TranslationServer.set_locale(lang)

@@ -114,7 +114,7 @@ theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxFlat_keumo")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_30vpb")
 theme_override_styles/hover = SubResource("StyleBoxFlat_i6hqk")
-text = "Volver a intentar
+text = "RETRY
 "
 
 [node name="Button2" type="Button" parent="." unique_id=1190618162]
@@ -137,7 +137,7 @@ theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxFlat_keumo")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_30vpb")
 theme_override_styles/hover = SubResource("StyleBoxFlat_i6hqk")
-text = "Ir al menú
+text = "MENU
 "
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1314943492]

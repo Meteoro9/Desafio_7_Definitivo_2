@@ -85,7 +85,30 @@ theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxFlat_vytfc")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_qqk0j")
 theme_override_styles/hover = SubResource("StyleBoxFlat_2n722")
-text = "Jugar
-"
+text = "PLAY"
+
+[node name="Button2" type="Button" parent="." unique_id=530460084]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -468.0
+offset_top = -110.0
+offset_right = -137.0
+offset_bottom = -34.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_vytfc")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_qqk0j")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2n722")
+text = "LANGUAGE"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="button_up" from="Button2" to="." method="on_language_pressed"]
