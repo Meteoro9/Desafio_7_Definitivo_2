@@ -116,7 +116,7 @@ text = "LANGUAGE"
 [node name="Node" type="Node" parent="." unique_id=556889127]
 
 [node name="Video" type="VideoStreamPlayer" parent="Node" unique_id=2107253081]
-modulate = Color(0.43529412, 0.3019608, 0.3019608, 1)
+modulate = Color(0.24739495, 0.1406644, 0.07443265, 1)
 z_index = -2
 texture_filter = 1
 offset_left = 178.0
@@ -130,7 +130,7 @@ autoplay = true
 loop = true
 
 [node name="Video2" type="VideoStreamPlayer" parent="Node" unique_id=302371918]
-modulate = Color(0.43529412, 0.3019608, 0.3019608, 1)
+modulate = Color(0.24739495, 0.1406644, 0.07443265, 1)
 z_index = -2
 texture_filter = 1
 offset_left = 359.0
@@ -144,7 +144,7 @@ autoplay = true
 loop = true
 
 [node name="Video3" type="VideoStreamPlayer" parent="Node" unique_id=948264958]
-modulate = Color(0.43529412, 0.3019608, 0.3019608, 1)
+modulate = Color(0.24739495, 0.1406644, 0.07443265, 1)
 z_index = -2
 texture_filter = 1
 offset_left = -2.9806519
@@ -158,7 +158,7 @@ autoplay = true
 loop = true
 
 [node name="Video4" type="VideoStreamPlayer" parent="Node" unique_id=149110937]
-modulate = Color(0.43529412, 0.3019608, 0.3019608, 1)
+modulate = Color(0.24739495, 0.1406644, 0.07443265, 1)
 z_index = -2
 texture_filter = 1
 offset_left = 178.01933
@@ -172,7 +172,7 @@ autoplay = true
 loop = true
 
 [node name="Video5" type="VideoStreamPlayer" parent="Node" unique_id=1826876530]
-modulate = Color(0.43529412, 0.3019608, 0.3019608, 1)
+modulate = Color(0.24739495, 0.1406644, 0.07443265, 1)
 z_index = -2
 texture_filter = 1
 offset_left = 902.0
@@ -186,7 +186,7 @@ autoplay = true
 loop = true
 
 [node name="Video6" type="VideoStreamPlayer" parent="Node" unique_id=1768132766]
-modulate = Color(0.43529412, 0.3019608, 0.3019608, 1)
+modulate = Color(0.24739495, 0.1406644, 0.07443265, 1)
 z_index = -2
 texture_filter = 1
 offset_left = 540.01935
@@ -200,7 +200,7 @@ autoplay = true
 loop = true
 
 [node name="Video7" type="VideoStreamPlayer" parent="Node" unique_id=1678845339]
-modulate = Color(0.43529412, 0.3019608, 0.3019608, 1)
+modulate = Color(0.24739495, 0.1406644, 0.07443265, 1)
 z_index = -2
 texture_filter = 1
 offset_left = 721.0
@@ -214,7 +214,7 @@ autoplay = true
 loop = true
 
 [node name="Video8" type="VideoStreamPlayer" parent="Node" unique_id=2141240117]
-modulate = Color(0.43529412, 0.3019608, 0.3019608, 1)
+modulate = Color(0.24739495, 0.1406644, 0.07443265, 1)
 z_index = -2
 texture_filter = 1
 offset_left = 902.0
@@ -228,7 +228,7 @@ autoplay = true
 loop = true
 
 [node name="Video9" type="VideoStreamPlayer" parent="Node" unique_id=1407802046]
-modulate = Color(0.43529412, 0.3019608, 0.3019608, 1)
+modulate = Color(0.24739495, 0.1406644, 0.07443265, 1)
 z_index = -2
 texture_filter = 1
 offset_left = 540.01935
@@ -242,7 +242,7 @@ autoplay = true
 loop = true
 
 [node name="Video10" type="VideoStreamPlayer" parent="Node" unique_id=838714691]
-modulate = Color(0.43529412, 0.3019608, 0.3019608, 1)
+modulate = Color(0.24739495, 0.1406644, 0.07443265, 1)
 z_index = -2
 texture_filter = 1
 offset_left = 721.0193
@@ -256,7 +256,7 @@ autoplay = true
 loop = true
 
 [node name="Video11" type="VideoStreamPlayer" parent="Node" unique_id=354144215]
-modulate = Color(0.43529412, 0.3019608, 0.3019608, 1)
+modulate = Color(0.24739495, 0.1406644, 0.07443265, 1)
 z_index = -2
 texture_filter = 1
 offset_left = 1083.0193
@@ -270,7 +270,7 @@ autoplay = true
 loop = true
 
 [node name="Video12" type="VideoStreamPlayer" parent="Node" unique_id=334584083]
-modulate = Color(0.43529412, 0.3019608, 0.3019608, 1)
+modulate = Color(0.24739495, 0.1406644, 0.07443265, 1)
 z_index = -2
 texture_filter = 1
 offset_left = 1083.0
@@ -284,7 +284,7 @@ autoplay = true
 loop = true
 
 [node name="Video13" type="VideoStreamPlayer" parent="Node" unique_id=1917553412]
-modulate = Color(0.43529412, 0.3019608, 0.3019608, 1)
+modulate = Color(0.24739495, 0.1406644, 0.07443265, 1)
 z_index = -2
 texture_filter = 1
 offset_left = 902.0193
@@ -298,7 +298,7 @@ autoplay = true
 loop = true
 
 [node name="Video14" type="VideoStreamPlayer" parent="Node" unique_id=483256174]
-modulate = Color(0.43529412, 0.3019608, 0.3019608, 1)
+modulate = Color(0.24739495, 0.1406644, 0.07443265, 1)
 z_index = -2
 texture_filter = 1
 offset_left = 1264.0193
@@ -312,7 +312,7 @@ autoplay = true
 loop = true
 
 [node name="Video15" type="VideoStreamPlayer" parent="Node" unique_id=229103615]
-modulate = Color(0.43529412, 0.3019608, 0.3019608, 1)
+modulate = Color(0.24739495, 0.1406644, 0.07443265, 1)
 z_index = -2
 texture_filter = 1
 offset_left = 359.01935
@@ -326,7 +326,7 @@ autoplay = true
 loop = true
 
 [node name="Video16" type="VideoStreamPlayer" parent="Node" unique_id=1035792181]
-modulate = Color(0.43529412, 0.3019608, 0.3019608, 1)
+modulate = Color(0.24739495, 0.1406644, 0.07443265, 1)
 z_index = -2
 texture_filter = 1
 offset_left = 540.0193
@@ -340,7 +340,7 @@ autoplay = true
 loop = true
 
 [node name="Video17" type="VideoStreamPlayer" parent="Node" unique_id=374386623]
-modulate = Color(0.43529412, 0.3019608, 0.3019608, 1)
+modulate = Color(0.24739495, 0.1406644, 0.07443265, 1)
 z_index = -2
 texture_filter = 1
 offset_left = -2.980667
@@ -354,7 +354,7 @@ autoplay = true
 loop = true
 
 [node name="Video18" type="VideoStreamPlayer" parent="Node" unique_id=1004289106]
-modulate = Color(0.43529412, 0.3019608, 0.3019608, 1)
+modulate = Color(0.24739495, 0.1406644, 0.07443265, 1)
 z_index = -2
 texture_filter = 1
 offset_left = 178.01935
@@ -368,7 +368,7 @@ autoplay = true
 loop = true
 
 [node name="Video19" type="VideoStreamPlayer" parent="Node" unique_id=2139235776]
-modulate = Color(0.43529412, 0.3019608, 0.3019608, 1)
+modulate = Color(0.24739495, 0.1406644, 0.07443265, 1)
 z_index = -2
 texture_filter = 1
 offset_left = 1264.0001
