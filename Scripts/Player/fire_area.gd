@@ -11,30 +11,29 @@ var is_alive := true # Para evitar loopear método kill()
 
 @onready var alive_audio = $FlameAlive
 @onready var kill_audio = $FlameKill
+@onready var candle = get_parent()
 
 func take_damage(amount : float):
-	if current_flame - amount <= 0:
-		kill()
-	else:
-		current_flame -= amount
-	
-	if current_flame < 0:
-		current_flame = 0
+	if not candle.won:
+		if current_flame - amount <= 0:
+			kill()
+		else:
+			current_flame -= amount
+		
+		if current_flame < 0:
+			current_flame = 0
 
 func kill():
-	if is_alive:
-		var candle = get_parent()
+	if is_alive and not candle.won:
+		current_flame -= 100 # Forzamos <= 0
+		fire_animation.visible = false # "apagamos" el fuego animado
+		alive_audio.stop() # Apagamos el sonido de fuego vivo
+		kill_audio.play() # Reproducimos sonido de muerte
+		is_alive = false
 		
-		if not candle.won:
-			current_flame -= 100 # Forzamos <= 0
-			fire_animation.visible = false # "apagamos" el fuego animado
-			alive_audio.stop() # Apagamos el sonido de fuego vivo
-			kill_audio.play() # Reproducimos sonido de muerte
-			is_alive = false
-			
-			GlobalMusicManager.current_state = GlobalMusicManager.Scene_State.LOOSE
-			var scene = loose_menu.instantiate()
-			get_tree().root.add_child(scene)
+		GlobalMusicManager.current_state = GlobalMusicManager.Scene_State.LOOSE
+		var scene = loose_menu.instantiate()
+		get_tree().root.add_child(scene)
 
 func _process(_delta: float) -> void:
 	if current_flame <= 0 and is_alive: # Si murió en este frame
