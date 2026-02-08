@@ -28,6 +28,10 @@ buses/default_bus_layout="uid://b0pi7vexomshk"
 GameData="*res://Scripts/Utils/game_data.gd"
 GlobalMusicManager="*uid://blyuq2har1ns"
 
+[display]
+
+window/stretch/mode="viewport"
+
 [dotnet]
 
 project/assembly_name="Desafío-7-Definitivo-2"
