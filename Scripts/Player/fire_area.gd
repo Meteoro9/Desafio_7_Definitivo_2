@@ -23,15 +23,18 @@ func take_damage(amount : float):
 
 func kill():
 	if is_alive:
-		current_flame -= 100 # Forzamos <= 0
-		fire_animation.visible = false # "apagamos" el fuego animado
-		alive_audio.stop() # Apagamos el sonido de fuego vivo
-		kill_audio.play() # Reproducimos sonido de muerte
-		is_alive = false
+		var candle = get_parent()
 		
-		GlobalMusicManager.current_state = GlobalMusicManager.Scene_State.LOOSE
-		var scene = loose_menu.instantiate()
-		get_tree().root.add_child(scene)
+		if not candle.won:
+			current_flame -= 100 # Forzamos <= 0
+			fire_animation.visible = false # "apagamos" el fuego animado
+			alive_audio.stop() # Apagamos el sonido de fuego vivo
+			kill_audio.play() # Reproducimos sonido de muerte
+			is_alive = false
+			
+			GlobalMusicManager.current_state = GlobalMusicManager.Scene_State.LOOSE
+			var scene = loose_menu.instantiate()
+			get_tree().root.add_child(scene)
 
 func _process(_delta: float) -> void:
 	if current_flame <= 0 and is_alive: # Si murió en este frame

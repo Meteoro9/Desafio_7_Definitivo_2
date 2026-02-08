@@ -5,6 +5,7 @@ class_name WinArea
 @export var loose_scene : PackedScene
 @export var is_win : bool
 @export var show_timer : CanvasLayer
+
 var timer : TimerRecord = null
 
 func _ready() -> void:
@@ -15,7 +16,8 @@ func _on_body_entered(body: Node2D) -> void:
 		# Detectamos su Animation player
 		var anim_player = body.get_node_or_null("AnimationPlayer")
 		timer.stop_timer()
-		if is_win:
+		if is_win and not body.won:
+			body.won = true
 			if anim_player:
 				anim_player.play("Goodbye_Darkness")
 			
@@ -25,7 +27,8 @@ func _on_body_entered(body: Node2D) -> void:
 			get_tree().root.add_child(scene)
 			
 			GameData.add_time(timer.current_time)
-		else:
+			
+		elif not is_win: 
 			GlobalMusicManager.current_state = GlobalMusicManager.Scene_State.LOOSE
 			var scene = loose_scene.instantiate()
 			get_tree().root.add_child(scene)

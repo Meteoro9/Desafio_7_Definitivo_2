@@ -5,6 +5,7 @@ const SPEED = 300.0
 const JUMP_VELOCITY = -530.0
 
 @export var fire_animation : Area2D
+var won := false
 
 # Script de plantilla integrada en el motor, muy leves modificaciones
 func _physics_process(delta: float) -> void:
