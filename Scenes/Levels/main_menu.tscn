@@ -53,7 +53,7 @@ scale = Vector2(10.1617, 10.1617)
 texture = ExtResource("1_qqk0j")
 expand_mode = 1
 
-[node name="Label" type="Label" parent="." unique_id=1774430224]
+[node name="LabelTimes" type="Label" parent="." unique_id=1774430224]
 layout_mode = 1
 anchors_preset = 9
 anchor_bottom = 1.0
@@ -63,7 +63,7 @@ offset_bottom = -488.0
 grow_vertical = 2
 theme_override_constants/line_spacing = 10
 theme_override_font_sizes/font_size = 32
-text = "Tus tiempos:"
+text = "TIMES"
 vertical_alignment = 1
 
 [node name="LabelDay" type="Label" parent="." unique_id=1314790330]
@@ -83,8 +83,8 @@ vertical_alignment = 1
 layout_mode = 1
 anchors_preset = 9
 anchor_bottom = 1.0
-offset_left = 359.0
-offset_right = 682.0
+offset_left = 411.0
+offset_right = 734.0
 offset_bottom = -488.0
 grow_vertical = 2
 theme_override_constants/line_spacing = 10
@@ -92,7 +92,7 @@ theme_override_font_sizes/font_size = 32
 text = "HOUR"
 vertical_alignment = 1
 
-[node name="LabelTimeRecord" type="Label" parent="." unique_id=1766922494]
+[node name="LabelTimesRecord" type="Label" parent="." unique_id=1766922494]
 layout_mode = 1
 anchors_preset = 9
 anchor_bottom = 1.0
@@ -102,7 +102,7 @@ offset_right = 359.0
 grow_vertical = 2
 theme_override_constants/line_spacing = 10
 theme_override_font_sizes/font_size = 32
-text = "Tus tiempos:"
+text = "TIMES-LOG"
 vertical_alignment = 1
 
 [node name="LabelDayRecord" type="Label" parent="." unique_id=1659871211]
@@ -115,20 +115,20 @@ offset_right = 565.0
 grow_vertical = 2
 theme_override_constants/line_spacing = 10
 theme_override_font_sizes/font_size = 32
-text = "DAY"
+text = "DAY-LOG"
 vertical_alignment = 1
 
 [node name="LabelHourRecord" type="Label" parent="." unique_id=2008669838]
 layout_mode = 1
 anchors_preset = 9
 anchor_bottom = 1.0
-offset_left = 359.0
+offset_left = 411.0
 offset_top = 106.0
-offset_right = 682.0
+offset_right = 734.0
 grow_vertical = 2
 theme_override_constants/line_spacing = 10
 theme_override_font_sizes/font_size = 32
-text = "HOUR"
+text = "HOUR-LOG"
 vertical_alignment = 1
 
 [node name="Button" type="Button" parent="." unique_id=2094343631]

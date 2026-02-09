@@ -14,7 +14,27 @@ msgstr ""
 "Content-Transfer-Encoding: 8-bit\n"
 
 #: Scenes/Levels/main_menu.tscn
-msgid "Tus tiempos:"
+msgid "TIMES"
+msgstr ""
+
+#: Scenes/Levels/main_menu.tscn
+msgid "DAY"
+msgstr ""
+
+#: Scenes/Levels/main_menu.tscn
+msgid "HOUR"
+msgstr ""
+
+#: Scenes/Levels/main_menu.tscn
+msgid "TIMES-LOG"
+msgstr ""
+
+#: Scenes/Levels/main_menu.tscn
+msgid "DAY-LOG"
+msgstr ""
+
+#: Scenes/Levels/main_menu.tscn
+msgid "HOUR-LOG"
 msgstr ""
 
 #: Scenes/Levels/main_menu.tscn

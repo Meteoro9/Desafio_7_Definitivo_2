@@ -1,12 +1,12 @@
 extends Control
 class_name MainMenu
 
-@onready var label = $Label
+@onready var label_times_record = $LabelTimesRecord
+@onready var label_day_record = $LabelDayRecord
+@onready var label_hour_record = $LabelHourRecord
 var languages: Array[String] = ["en_US", "es_AR", "pt_BR", "zh_CN", "ja_JP", "ru_RU"]
 var current_lang := "en_US"
 
-var your_records_string: Array[String] = ["Your records: \n", "Tus tiempos: \n", 
-	"Seus tempos: \n", "你的时间：\n", "あなたのタイム：\n", "Твои результаты: \n"]
 var list_empty_string: Array[String] = ["(No records registered yet)", 
 	"(Aún no se registró ningún tiempo)", "(Ainda não há tempos registrados)", 
 	"（尚未记录任何时间）", "（まだ記録がありません）", "(Пока нет записанных результатов)"]
@@ -18,12 +18,11 @@ func update_text():
 	current_lang = TranslationServer.get_locale()
 	var current_index = languages.find(current_lang)
 	if current_index == -1: current_index = 0
-	var final_text = your_records_string[current_index]
-	
+	var final_text : String
 	var record_list = GameData.records
 	
 	if record_list.is_empty():
-		final_text += list_empty_string[current_index]
+		final_text = list_empty_string[current_index]
 	else:
 		# Duplicamos el array y lo reordenamos al revés, el último queda arriba
 		var splash_record_list = record_list.duplicate()
@@ -35,7 +34,7 @@ func update_text():
 			final_text += "* " + time_formatted + "\n"
 	
 	# Actualizamos label
-	label.text = final_text
+	label_times_record.text = final_text
 	
 	# Cambiar estado de la música:
 	await get_tree().process_frame # Esperamos el primer frame

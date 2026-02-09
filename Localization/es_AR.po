@@ -20,7 +20,27 @@ msgstr ""
 "X-Generator: Poedit 3.8\n"
 
 #: Scenes/Levels/main_menu.tscn
-msgid "Tus tiempos:"
+msgid "TIMES"
+msgstr "Tus tiempos"
+
+#: Scenes/Levels/main_menu.tscn
+msgid "DAY"
+msgstr "Día"
+
+#: Scenes/Levels/main_menu.tscn
+msgid "HOUR"
+msgstr "Hora"
+
+#: Scenes/Levels/main_menu.tscn
+msgid "TIMES-LOG"
+msgstr ""
+
+#: Scenes/Levels/main_menu.tscn
+msgid "DAY-LOG"
+msgstr ""
+
+#: Scenes/Levels/main_menu.tscn
+msgid "HOUR-LOG"
 msgstr ""
 
 #: Scenes/Levels/main_menu.tscn
@@ -29,7 +49,7 @@ msgstr "Jugar"
 
 #: Scenes/Levels/main_menu.tscn
 msgid "LANGUAGE"
-msgstr "Lenguaje : Español"
+msgstr "Lenguaje: Español"
 
 #: Scenes/Levels/loose_menu.tscn Scenes/Levels/win_menu.tscn
 msgid "RETRY\n"

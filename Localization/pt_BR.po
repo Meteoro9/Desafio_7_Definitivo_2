@@ -20,7 +20,27 @@ msgstr ""
 "X-Generator: Poedit 3.8\n"
 
 #: Scenes/Levels/main_menu.tscn
-msgid "Tus tiempos:"
+msgid "TIMES"
+msgstr "Seus tempos"
+
+#: Scenes/Levels/main_menu.tscn
+msgid "DAY"
+msgstr "Dia"
+
+#: Scenes/Levels/main_menu.tscn
+msgid "HOUR"
+msgstr "Hora"
+
+#: Scenes/Levels/main_menu.tscn
+msgid "TIMES-LOG"
+msgstr ""
+
+#: Scenes/Levels/main_menu.tscn
+msgid "DAY-LOG"
+msgstr ""
+
+#: Scenes/Levels/main_menu.tscn
+msgid "HOUR-LOG"
 msgstr ""
 
 #: Scenes/Levels/main_menu.tscn
@@ -37,7 +57,7 @@ msgstr "Tentar novamente\n"
 
 #: Scenes/Levels/loose_menu.tscn Scenes/Levels/win_menu.tscn
 msgid "MENU\n"
-msgstr "Menu principal\n"
+msgstr "Ir para o menu\n"
 
 msgid "Desafío-7-Definitivo-2"
 msgstr "Não perca a fé!"
