@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://kddljbpd6rq1"]
+
+[ext_resource type="Script" uid="uid://cjhymuvo70t2d" path="res://Scripts/Elements/elevator_platform.gd" id="1_87khy"]
+[ext_resource type="Texture2D" uid="uid://ds5ckyjsp1o23" path="res://Assets/Elements/Platform.png" id="1_vorls"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_87khy"]
+size = Vector2(64, 24)
+
+[node name="Elevator Platform" type="StaticBody2D" unique_id=1907244711]
+script = ExtResource("1_87khy")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1949995251]
+position = Vector2(-2, -2)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_vorls")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=750978737]
+position = Vector2(-2, -6)
+shape = SubResource("RectangleShape2D_87khy")
