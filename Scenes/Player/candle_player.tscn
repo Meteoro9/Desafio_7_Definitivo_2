@@ -257,7 +257,7 @@ _data = {
 &"stay_killed": SubResource("Animation_fldxn")
 }
 
-[node name="Candle-Player" type="CharacterBody2D" unique_id=31092358 node_paths=PackedStringArray("fire_animation")]
+[node name="Candle-Player" type="CharacterBody2D" unique_id=31092358 node_paths=PackedStringArray("fire_animation") groups=["player"]]
 scale = Vector2(1.96, 1.96)
 script = ExtResource("1_p1jqv")
 fire_animation = NodePath("FireArea")

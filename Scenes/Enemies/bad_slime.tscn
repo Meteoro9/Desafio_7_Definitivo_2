@@ -1,0 +1,119 @@
+[gd_scene format=3 uid="uid://ulmrfikmm8mi"]
+
+[ext_resource type="Texture2D" uid="uid://df7288ni0nik8" path="res://Assets/Elements/Bad Slime.png" id="1_ibex2"]
+[ext_resource type="Script" uid="uid://d1ru2tjlc55is" path="res://Scripts/Enemies/bad_slime.gd" id="1_uy2fn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uy2fn"]
+atlas = ExtResource("1_ibex2")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7le8g"]
+atlas = ExtResource("1_ibex2")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s26cc"]
+atlas = ExtResource("1_ibex2")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_arvgr"]
+atlas = ExtResource("1_ibex2")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y2e33"]
+atlas = ExtResource("1_ibex2")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h5qxh"]
+atlas = ExtResource("1_ibex2")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lnlx2"]
+atlas = ExtResource("1_ibex2")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wdrvb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uy2fn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7le8g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s26cc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_arvgr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y2e33")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h5qxh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lnlx2")
+}],
+"loop": false,
+"name": &"idle",
+"speed": 3.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ibex2"]
+radius = 7.489886
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uy2fn"]
+size = Vector2(24.125, 6)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ibex2"]
+size = Vector2(38, 21)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7le8g"]
+size = Vector2(239.5, 221)
+
+[node name="Bad Slime" type="CharacterBody2D" unique_id=1099784084]
+script = ExtResource("1_uy2fn")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=914350580]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_wdrvb")
+animation = &"attack"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=466548177]
+position = Vector2(0, 5)
+scale = Vector2(1.9161083, 1.4631963)
+shape = SubResource("CircleShape2D_ibex2")
+
+[node name="HurtBox" type="Area2D" parent="." unique_id=15790620]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox" unique_id=2040903113]
+position = Vector2(0, -8)
+shape = SubResource("RectangleShape2D_uy2fn")
+debug_color = Color(0.97855586, 0.078154676, 0.32136402, 0.41960785)
+
+[node name="HitBox" type="Area2D" parent="." unique_id=414230857]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox" unique_id=1350141831]
+position = Vector2(0, 8.5)
+shape = SubResource("RectangleShape2D_ibex2")
+debug_color = Color(0.7602537, 0.18677631, 1, 0.41960785)
+
+[node name="AreaFollow" type="Area2D" parent="." unique_id=219240377]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaFollow" unique_id=1294206639]
+position = Vector2(0, -76.5)
+shape = SubResource("RectangleShape2D_7le8g")
+debug_color = Color(0, 0.6446857, 0.28214455, 0.41960785)
+
+[connection signal="body_entered" from="HurtBox" to="." method="_on_hurt_box_body_entered"]
+[connection signal="body_exited" from="HurtBox" to="." method="_on_hurt_box_body_exited"]
+[connection signal="body_entered" from="HitBox" to="." method="_on_hit_box_body_entered"]
+[connection signal="body_exited" from="HitBox" to="." method="_on_hit_box_body_exited"]
+[connection signal="body_exited" from="AreaFollow" to="." method="_on_area_follow_body_exited"]
