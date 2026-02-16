@@ -10,6 +10,7 @@ var speed := 500.0
 @export var end_position_right : float
 var init_position_left : float
 var yendo := true
+var alive := true
 var is_player_in_hitbox := false
 var player : CandlePlayer
 
@@ -30,7 +31,7 @@ func _play_animation_and_motion(_delta):
 	if _current_state == State.MOVING or _current_state == State.FOLLOWING:
 		_enemy_motion(_delta)
 		$AnimatedSprite2D.play("idle")
-	if _current_state == State.ATTACKING:
+	if _current_state == State.ATTACKING and alive:
 		$AnimatedSprite2D.play("attack")
 
 func _enemy_motion(_delta):
@@ -55,7 +56,9 @@ func _on_attack_started():
 # Área dañado
 func _on_hurt_box_body_entered(body: Node2D) -> void:
 	if body is CandlePlayer:
-		pass
+		alive = false
+		await get_tree().create_timer(1.0).timeout
+		queue_free()
 	pass # Replace with function body.
 
 func _on_hurt_box_body_exited(body: Node2D) -> void:
@@ -72,4 +75,3 @@ func _on_hit_box_body_exited(body: Node2D) -> void:
 func _on_area_follow_body_exited(body: Node2D) -> void:
 	if body is CandlePlayer and _current_state == State.FOLLOWING:
 		_current_state = State.MOVING # Para evitar comportamientos de seguimiento extraños
-		print("Dejando de seguir al jugador")
