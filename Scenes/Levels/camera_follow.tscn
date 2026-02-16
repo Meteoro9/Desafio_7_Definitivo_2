@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://qly26b58ghn5"]
+
+[ext_resource type="Script" uid="uid://mc6cboe8n1lu" path="res://Scripts/Player/camera_follow.gd" id="1_jyku8"]
+
+[node name="Camera Follow" type="Camera2D" unique_id=2027653545]
+rotation = 0.43458697
+zoom = Vector2(2, 2)
+script = ExtResource("1_jyku8")

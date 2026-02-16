@@ -4,10 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://dkc1gppjxpsy0" path="res://Assets/spritesheet-tiles-default.png" id="1_i2phc"]
 [ext_resource type="Script" uid="uid://b3oa7t8vwp7m" path="res://Scripts/Utils/level1_manager.gd" id="1_u3gei"]
 [ext_resource type="PackedScene" uid="uid://dsnr7dq55rfyk" path="res://Scenes/Player/candle_player.tscn" id="2_rbjd4"]
-[ext_resource type="Script" uid="uid://mc6cboe8n1lu" path="res://Scripts/Player/camera_follow.gd" id="3_rbjd4"]
 [ext_resource type="PackedScene" uid="uid://cri2ewgfn2l0q" path="res://Scenes/Enemies/water_drop_spawner.tscn" id="4_7ugqr"]
 [ext_resource type="PackedScene" uid="uid://b3i70u2s72jdx" path="res://Scenes/Enemies/water_area.tscn" id="4_piwxh"]
 [ext_resource type="PackedScene" uid="uid://bqmlk6xtsc7ak" path="res://Scenes/Enemies/wind_area.tscn" id="7_7ugqr"]
+[ext_resource type="PackedScene" uid="uid://qly26b58ghn5" path="res://Scenes/Levels/camera_follow.tscn" id="8_42xj8"]
 [ext_resource type="PackedScene" uid="uid://b7j0bgreic0dy" path="res://Scenes/Utils/show_timer.tscn" id="8_m3nkb"]
 [ext_resource type="PackedScene" uid="uid://dhnvfcs0niumg" path="res://Scenes/Utils/win_area.tscn" id="9_g630t"]
 [ext_resource type="PackedScene" uid="uid://ulmrfikmm8mi" path="res://Scenes/Enemies/bad_slime.tscn" id="12_vdvy6"]
@@ -5171,9 +5171,7 @@ position = Vector2(305, -1205)
 [node name="Candle-Player" parent="." unique_id=1151881987 instance=ExtResource("2_rbjd4")]
 position = Vector2(272, 126)
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=294351659 node_paths=PackedStringArray("player")]
-zoom = Vector2(2, 2)
-script = ExtResource("3_rbjd4")
+[node name="Camera Follow" parent="." unique_id=2027653545 node_paths=PackedStringArray("player") instance=ExtResource("8_42xj8")]
 player = NodePath("../Candle-Player")
 
 [node name="ShowTimer" parent="." unique_id=1522023902 instance=ExtResource("8_m3nkb")]

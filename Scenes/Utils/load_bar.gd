@@ -47,3 +47,5 @@ func _process(delta: float) -> void:
 	if last_progress == 100.0: # Esto solo puede pasar cuando terminó de cargar algo
 		animation.play("loaded")
 		last_progress = 0.0
+		await  animation.animation_finished
+		hide()
