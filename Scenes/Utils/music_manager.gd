@@ -41,7 +41,7 @@ func fade_transition_music(state: Scene_State):
 	
 	var tween = create_tween()
 	tween.tween_property(music_player, "volume_db",
-		 -80.0, 1.0).set_trans(Tween.TRANS_SINE)
+		 -80.0, 0.3).set_trans(Tween.TRANS_SINE)
 	
 	tween.tween_callback(func():
 		music_player.stream = new_song
@@ -49,7 +49,7 @@ func fade_transition_music(state: Scene_State):
 	)
 	
 	tween.tween_property(music_player, "volume_db", 
-		0.0, 1.0).set_trans(Tween.TRANS_SINE)
+		0.0, 0.5).set_trans(Tween.TRANS_SINE)
 
 func detect_finished():
 	if music_player.finished:

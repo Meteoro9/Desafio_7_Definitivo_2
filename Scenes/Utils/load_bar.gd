@@ -43,8 +43,7 @@ func _process(delta: float) -> void:
 			get_tree().change_scene_to_packed(packed_next_scene)
 			current_scene_changing = ""
 			loading = false
-	# Esta sección causa errores, no la probé pero es la estructura que pensé que podía ayudar
-	if last_progress == 100.0:
+	
+	if last_progress == 100.0: # Esto solo puede pasar cuando terminó de cargar algo
 		animation.play("loaded")
-		await animation.animation_finished
 		last_progress = 0.0
