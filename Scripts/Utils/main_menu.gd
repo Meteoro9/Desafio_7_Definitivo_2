@@ -32,3 +32,4 @@ func on_language_pressed():
 
 func change_language(lang: String) -> void:
 	TranslationServer.set_locale(lang)
+	GameData.save_locale(lang)

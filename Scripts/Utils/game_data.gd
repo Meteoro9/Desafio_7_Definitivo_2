@@ -45,9 +45,12 @@ func _clean_old_records(target_level_id : int):
 		records_of_this_level.sort_custom(func(a, b): return a.time_record > b.time_record)
 		current_records.erase(records_of_this_level[0])
 
-func _save_to_disk():
+func save_locale(locale: String) -> void: _save_to_disk(locale)
+
+func _save_to_disk(locale_override: String = ""):
 	var save = SaveData.new()
 	save.records = current_records
+	save.saved_locale_lang = locale_override if locale_override != "" else TranslationServer.get_locale()
 	ResourceSaver.save(save, save_path)
 
 func load_data():
@@ -56,3 +59,7 @@ func load_data():
 		
 		if save:
 			current_records = save.records
+			# Aplicar idioma guardado
+			if save.saved_locale_lang != "": TranslationServer.set_locale(save.saved_locale_lang)
+			else: TranslationServer.set_locale("en_US")
+		else: TranslationServer.set_locale("en_US")

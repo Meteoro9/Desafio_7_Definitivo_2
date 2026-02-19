@@ -37,7 +37,7 @@ func _process(delta: float) -> void:
 func _spawn_trail():
 	var trail = SlimeEntity.instantiate()
 	get_parent().add_child(trail)
-	trail.global_position = global_position
+	trail.global_position = global_position + Vector2(0, 10)
 
 func _play_animation_and_motion(_delta):
 	await $AnimatedSprite2D.animation_finished

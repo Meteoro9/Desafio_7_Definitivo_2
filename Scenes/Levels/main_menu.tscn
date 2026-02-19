@@ -118,6 +118,18 @@ tracks/6/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
 }
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Candle Menu:scale")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(5, 5)]
+}
 
 [sub_resource type="Animation" id="Animation_wmo1h"]
 resource_name = "hide_menu"
@@ -204,6 +216,18 @@ tracks/6/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Candle Menu:scale")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(5, 5), Vector2(1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_gnv55"]
@@ -293,6 +317,18 @@ tracks/6/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Candle Menu:scale")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(5, 5)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_b7svq"]
 _data = {
@@ -365,12 +401,16 @@ text = "LANGUAGE"
 [node name="Level Show Info" parent="." unique_id=443533315 instance=ExtResource("3_xg7my")]
 layout_mode = 1
 
-[node name="Node" type="Node" parent="." unique_id=556889127]
+[node name="Background Animated" type="Control" parent="." unique_id=230777307]
+anchors_preset = 0
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
 
-[node name="Video" type="VideoStreamPlayer" parent="Node" unique_id=2107253081]
+[node name="Video" type="VideoStreamPlayer" parent="Background Animated" unique_id=2107253081]
 modulate = Color(0.24739495, 0.1406644, 0.07443265, 1)
 z_index = -2
 texture_filter = 1
+layout_mode = 0
 offset_left = 178.0
 offset_top = -184.0
 offset_right = 434.0
@@ -381,10 +421,11 @@ stream = ExtResource("3_t475i")
 autoplay = true
 loop = true
 
-[node name="Video2" type="VideoStreamPlayer" parent="Node" unique_id=302371918]
+[node name="Video2" type="VideoStreamPlayer" parent="Background Animated" unique_id=302371918]
 modulate = Color(0.24739495, 0.1406644, 0.07443265, 1)
 z_index = -2
 texture_filter = 1
+layout_mode = 0
 offset_left = 359.0
 offset_top = -2.9999847
 offset_right = 615.0
@@ -395,10 +436,11 @@ stream = ExtResource("3_t475i")
 autoplay = true
 loop = true
 
-[node name="Video3" type="VideoStreamPlayer" parent="Node" unique_id=948264958]
+[node name="Video3" type="VideoStreamPlayer" parent="Background Animated" unique_id=948264958]
 modulate = Color(0.24739495, 0.1406644, 0.07443265, 1)
 z_index = -2
 texture_filter = 1
+layout_mode = 0
 offset_left = -2.9806519
 offset_top = -3.0
 offset_right = 253.01935
@@ -409,10 +451,11 @@ stream = ExtResource("3_t475i")
 autoplay = true
 loop = true
 
-[node name="Video4" type="VideoStreamPlayer" parent="Node" unique_id=149110937]
+[node name="Video4" type="VideoStreamPlayer" parent="Background Animated" unique_id=149110937]
 modulate = Color(0.24739495, 0.1406644, 0.07443265, 1)
 z_index = -2
 texture_filter = 1
+layout_mode = 0
 offset_left = 178.01933
 offset_top = 178.0
 offset_right = 434.01935
@@ -423,10 +466,11 @@ stream = ExtResource("3_t475i")
 autoplay = true
 loop = true
 
-[node name="Video5" type="VideoStreamPlayer" parent="Node" unique_id=1826876530]
+[node name="Video5" type="VideoStreamPlayer" parent="Background Animated" unique_id=1826876530]
 modulate = Color(0.24739495, 0.1406644, 0.07443265, 1)
 z_index = -2
 texture_filter = 1
+layout_mode = 0
 offset_left = 902.0
 offset_top = -184.0
 offset_right = 1158.0
@@ -437,10 +481,11 @@ stream = ExtResource("3_t475i")
 autoplay = true
 loop = true
 
-[node name="Video6" type="VideoStreamPlayer" parent="Node" unique_id=1768132766]
+[node name="Video6" type="VideoStreamPlayer" parent="Background Animated" unique_id=1768132766]
 modulate = Color(0.24739495, 0.1406644, 0.07443265, 1)
 z_index = -2
 texture_filter = 1
+layout_mode = 0
 offset_left = 540.01935
 offset_top = -184.0
 offset_right = 796.01935
@@ -451,10 +496,11 @@ stream = ExtResource("3_t475i")
 autoplay = true
 loop = true
 
-[node name="Video7" type="VideoStreamPlayer" parent="Node" unique_id=1678845339]
+[node name="Video7" type="VideoStreamPlayer" parent="Background Animated" unique_id=1678845339]
 modulate = Color(0.24739495, 0.1406644, 0.07443265, 1)
 z_index = -2
 texture_filter = 1
+layout_mode = 0
 offset_left = 721.0
 offset_top = -3.0
 offset_right = 977.0
@@ -465,10 +511,11 @@ stream = ExtResource("3_t475i")
 autoplay = true
 loop = true
 
-[node name="Video8" type="VideoStreamPlayer" parent="Node" unique_id=2141240117]
+[node name="Video8" type="VideoStreamPlayer" parent="Background Animated" unique_id=2141240117]
 modulate = Color(0.24739495, 0.1406644, 0.07443265, 1)
 z_index = -2
 texture_filter = 1
+layout_mode = 0
 offset_left = 902.0
 offset_top = 178.0
 offset_right = 1158.0
@@ -479,10 +526,11 @@ stream = ExtResource("3_t475i")
 autoplay = true
 loop = true
 
-[node name="Video9" type="VideoStreamPlayer" parent="Node" unique_id=1407802046]
+[node name="Video9" type="VideoStreamPlayer" parent="Background Animated" unique_id=1407802046]
 modulate = Color(0.24739495, 0.1406644, 0.07443265, 1)
 z_index = -2
 texture_filter = 1
+layout_mode = 0
 offset_left = 540.01935
 offset_top = 178.0
 offset_right = 796.01935
@@ -493,10 +541,11 @@ stream = ExtResource("3_t475i")
 autoplay = true
 loop = true
 
-[node name="Video10" type="VideoStreamPlayer" parent="Node" unique_id=838714691]
+[node name="Video10" type="VideoStreamPlayer" parent="Background Animated" unique_id=838714691]
 modulate = Color(0.24739495, 0.1406644, 0.07443265, 1)
 z_index = -2
 texture_filter = 1
+layout_mode = 0
 offset_left = 721.0193
 offset_top = 359.0
 offset_right = 977.0193
@@ -507,10 +556,11 @@ stream = ExtResource("3_t475i")
 autoplay = true
 loop = true
 
-[node name="Video11" type="VideoStreamPlayer" parent="Node" unique_id=354144215]
+[node name="Video11" type="VideoStreamPlayer" parent="Background Animated" unique_id=354144215]
 modulate = Color(0.24739495, 0.1406644, 0.07443265, 1)
 z_index = -2
 texture_filter = 1
+layout_mode = 0
 offset_left = 1083.0193
 offset_top = -3.0
 offset_right = 1339.0193
@@ -521,10 +571,11 @@ stream = ExtResource("3_t475i")
 autoplay = true
 loop = true
 
-[node name="Video12" type="VideoStreamPlayer" parent="Node" unique_id=334584083]
+[node name="Video12" type="VideoStreamPlayer" parent="Background Animated" unique_id=334584083]
 modulate = Color(0.24739495, 0.1406644, 0.07443265, 1)
 z_index = -2
 texture_filter = 1
+layout_mode = 0
 offset_left = 1083.0
 offset_top = 359.0
 offset_right = 1339.0
@@ -535,10 +586,11 @@ stream = ExtResource("3_t475i")
 autoplay = true
 loop = true
 
-[node name="Video13" type="VideoStreamPlayer" parent="Node" unique_id=1917553412]
+[node name="Video13" type="VideoStreamPlayer" parent="Background Animated" unique_id=1917553412]
 modulate = Color(0.24739495, 0.1406644, 0.07443265, 1)
 z_index = -2
 texture_filter = 1
+layout_mode = 0
 offset_left = 902.0193
 offset_top = 540.0
 offset_right = 1158.0193
@@ -549,10 +601,11 @@ stream = ExtResource("3_t475i")
 autoplay = true
 loop = true
 
-[node name="Video14" type="VideoStreamPlayer" parent="Node" unique_id=483256174]
+[node name="Video14" type="VideoStreamPlayer" parent="Background Animated" unique_id=483256174]
 modulate = Color(0.24739495, 0.1406644, 0.07443265, 1)
 z_index = -2
 texture_filter = 1
+layout_mode = 0
 offset_left = 1264.0193
 offset_top = 178.0
 offset_right = 1520.0193
@@ -563,10 +616,11 @@ stream = ExtResource("3_t475i")
 autoplay = true
 loop = true
 
-[node name="Video15" type="VideoStreamPlayer" parent="Node" unique_id=229103615]
+[node name="Video15" type="VideoStreamPlayer" parent="Background Animated" unique_id=229103615]
 modulate = Color(0.24739495, 0.1406644, 0.07443265, 1)
 z_index = -2
 texture_filter = 1
+layout_mode = 0
 offset_left = 359.01935
 offset_top = 359.0
 offset_right = 615.01935
@@ -577,10 +631,11 @@ stream = ExtResource("3_t475i")
 autoplay = true
 loop = true
 
-[node name="Video16" type="VideoStreamPlayer" parent="Node" unique_id=1035792181]
+[node name="Video16" type="VideoStreamPlayer" parent="Background Animated" unique_id=1035792181]
 modulate = Color(0.24739495, 0.1406644, 0.07443265, 1)
 z_index = -2
 texture_filter = 1
+layout_mode = 0
 offset_left = 540.0193
 offset_top = 540.0
 offset_right = 796.0193
@@ -591,10 +646,11 @@ stream = ExtResource("3_t475i")
 autoplay = true
 loop = true
 
-[node name="Video17" type="VideoStreamPlayer" parent="Node" unique_id=374386623]
+[node name="Video17" type="VideoStreamPlayer" parent="Background Animated" unique_id=374386623]
 modulate = Color(0.24739495, 0.1406644, 0.07443265, 1)
 z_index = -2
 texture_filter = 1
+layout_mode = 0
 offset_left = -2.980667
 offset_top = 359.0
 offset_right = 253.01933
@@ -605,10 +661,11 @@ stream = ExtResource("3_t475i")
 autoplay = true
 loop = true
 
-[node name="Video18" type="VideoStreamPlayer" parent="Node" unique_id=1004289106]
+[node name="Video18" type="VideoStreamPlayer" parent="Background Animated" unique_id=1004289106]
 modulate = Color(0.24739495, 0.1406644, 0.07443265, 1)
 z_index = -2
 texture_filter = 1
+layout_mode = 0
 offset_left = 178.01935
 offset_top = 540.0
 offset_right = 434.01935
@@ -619,10 +676,11 @@ stream = ExtResource("3_t475i")
 autoplay = true
 loop = true
 
-[node name="Video19" type="VideoStreamPlayer" parent="Node" unique_id=2139235776]
+[node name="Video19" type="VideoStreamPlayer" parent="Background Animated" unique_id=2139235776]
 modulate = Color(0.24739495, 0.1406644, 0.07443265, 1)
 z_index = -2
 texture_filter = 1
+layout_mode = 0
 offset_left = 1264.0001
 offset_top = -184.0
 offset_right = 1520.0001
