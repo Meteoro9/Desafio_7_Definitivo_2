@@ -22,6 +22,7 @@ func _ready() -> void:
 	init_position_left = global_position.x
 	player = get_tree().get_first_node_in_group("player")
 	$AnimatedSprite2D.frame_changed.connect(_on_attack_started)
+	$HitBox.area_entered.connect(_kill_player)
 
 func _process(delta: float) -> void:
 	_trail_timer += delta
@@ -74,12 +75,17 @@ func _on_hurt_box_body_entered(body: Node2D) -> void:
 		queue_free()
 	pass # Replace with function body.
 
+func _kill_player(area: Area2D):
+	if area is FireBehaviour: area.kill()
+
 func _on_hurt_box_body_exited(body: Node2D) -> void:
 	pass
 
 # Área dañar
 func _on_hit_box_body_entered(body: Node2D) -> void:
 	if body is CandlePlayer: _current_state = State.ATTACKING
+
+
 
 func _on_hit_box_body_exited(body: Node2D) -> void:
 	if body is CandlePlayer: _current_state = State.FOLLOWING
