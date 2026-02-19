@@ -12,7 +12,7 @@ var current_level_index := 0
 @export var h_box_container : HBoxContainer
 @export var animation : AnimationPlayer
 
-var languages: Array[String] = ["en_US", "es_AR", "pt_BR", "zh_CN", "ja_JP", "ru_RU", "gn_PY"]
+var languages: Array[String] = ["en_US", "es_AR", "pt_BR", "zh_CN", "ja_JP", "ru_RU", "gn_PY", "fr_FR", "hi_IN"]
 var current_lang := "en_US"
 
 func _ready() -> void:

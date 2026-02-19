@@ -1,0 +1,76 @@
+# LANGUAGE translation for Don't Loose Your Faith for the following files:
+# res://Scenes/Levels/main_menu.tscn
+# res://Scenes/Levels/loose_menu.tscn
+# res://Scenes/Levels/win_menu.tscn
+# res://Scenes/Levels/level_show_info.tscn
+#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Don't Loose Your Faith\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: hi_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.8\n"
+
+#: Scenes/Levels/main_menu.tscn Scenes/Levels/level_show_info.tscn
+msgid "PLAY"
+msgstr "खेलें"
+
+#: Scenes/Levels/main_menu.tscn
+msgid "LANGUAGE"
+msgstr "भाषा: हिन्दी"
+
+#: Scenes/Levels/main_menu.tscn Scenes/Levels/level_show_info.tscn
+msgid "TIMES"
+msgstr "आपके रिकॉर्ड:"
+
+#: Scenes/Levels/main_menu.tscn Scenes/Levels/level_show_info.tscn
+msgid "DAY"
+msgstr "तारीख"
+
+#: Scenes/Levels/main_menu.tscn Scenes/Levels/level_show_info.tscn
+msgid "HOUR"
+msgstr "समय"
+
+#: Scenes/Levels/main_menu.tscn
+msgid ""
+"[pulse freq=.3 ease=2.0][wave][title-effect][i]Main-Title[/i][/title-effect]"
+"[/wave][/pulse]"
+msgstr ""
+"[pulse freq=.3 ease=2.0][wave][title-effect][i]अपना विश्वास मत खोना![/i][/"
+"title-effect][/wave][/pulse]"
+
+#: Scenes/Levels/loose_menu.tscn Scenes/Levels/win_menu.tscn
+msgid "RETRY"
+msgstr "फिर से प्रयास करें"
+
+#: Scenes/Levels/loose_menu.tscn Scenes/Levels/win_menu.tscn
+msgid "MENU"
+msgstr "मेनू पर जाएँ"
+
+#: Scenes/Levels/level_show_info.tscn
+msgid "STARS"
+msgstr "सितारे"
+
+#: Scenes/Levels/level_show_info.tscn
+msgid "LEVEL-TITLE"
+msgstr "स्तर %d"
+
+#: Scenes/Levels/level_show_info.tscn
+msgid "MAIN-MENU"
+msgstr "वापस"
+
+#: Scenes/Levels/level_show_info.tscn
+msgid "NO-RECORDS"
+msgstr "(अभी तक कोई समय दर्ज नहीं हुआ है)"
+
+msgid "Don't Loose Your Faith"
+msgstr "अपना विश्वास मत खोना"
