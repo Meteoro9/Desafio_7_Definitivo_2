@@ -45,8 +45,8 @@ msgid ""
 "[pulse freq=.3 ease=2.0][wave][title-effect][i]Main-Title[/i][/title-effect][/wave]"
 "[/pulse]"
 msgstr ""
-"[pulse freq=.3 ease=2.0][wave][title-effect][i]No pierdas la fe![/i][/title-effect]"
-"[/wave][/pulse]"
+"[pulse freq=.3 ease=2.0][wave][title-effect]No pierdas la fe![/title-effect][/wave]"
+"[/pulse]"
 
 #: Scenes/Levels/loose_menu.tscn Scenes/Levels/win_menu.tscn
 msgid "RETRY"

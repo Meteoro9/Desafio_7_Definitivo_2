@@ -38,7 +38,7 @@ msgstr "Ára"
 
 #: Scenes/Levels/main_menu.tscn Scenes/Levels/level_show_info.tscn
 msgid "HOUR"
-msgstr "Aravo"
+msgstr " "
 
 #: Scenes/Levels/main_menu.tscn
 msgid ""

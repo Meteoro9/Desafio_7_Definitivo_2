@@ -8,7 +8,7 @@ class_name LevelShowInfo
 @export var level_index_label : RichTextLabel
 
 @export var level_info_array_ordered : Array[LevelSummaryMenu]
-var current_level_index := 0
+var current_level_index : int = GameManager.current_showed_index
 @export var h_box_container : HBoxContainer
 @export var animation : AnimationPlayer
 
@@ -65,11 +65,13 @@ func _on_button_next_pressed():
 	if (current_level_index + 1) < level_info_array_ordered.size():
 		current_level_index += 1
 		show_info(level_info_array_ordered[current_level_index])
+		GameManager.current_showed_index = current_level_index
 
 func _on_button_previous_pressed():
 	if not (current_level_index -1) < 0:
 		current_level_index -= 1
 		show_info(level_info_array_ordered[current_level_index])
+		GameManager.current_showed_index = current_level_index
 
 func _on_button_play_pressed():
 	LoadBar.fade_to_scene(level_info_array_ordered[current_level_index].level_path)

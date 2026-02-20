@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bk1n0jj4xvseh" path="res://Scenes/Levels/level_show_info.tscn" id="3_xg7my"]
 [ext_resource type="PackedScene" uid="uid://dpnemmdmxf2a3" path="res://Scenes/Decoration/candle_menu.tscn" id="5_wmo1h"]
 [ext_resource type="Script" uid="uid://1w16umy3lb4q" path="res://Assets/Fonts/title_text_effect.gd" id="6_gnv55"]
+[ext_resource type="FontFile" uid="uid://bpkcjwcop55te" path="res://Assets/Fonts/FontdinerSwanky-Regular.ttf" id="6_wnywc"]
 
 [sub_resource type="Animation" id="Animation_xg7my"]
 length = 0.001
@@ -768,13 +769,15 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -712.0
+offset_left = -802.0
 offset_top = 69.0
 offset_right = -88.0
-offset_bottom = 325.0
+offset_bottom = 401.0
 grow_horizontal = 0
 mouse_filter = 2
-theme_override_font_sizes/normal_font_size = 100
+theme_override_fonts/normal_font = ExtResource("6_wnywc")
+theme_override_font_sizes/normal_font_size = 90
+theme_override_font_sizes/bold_font_size = 80
 theme_override_font_sizes/italics_font_size = 100
 bbcode_enabled = true
 text = "[pulse freq=.3 ease=2.0][wave][title-effect][i]Main-Title[/i][/title-effect][/wave][/pulse]"

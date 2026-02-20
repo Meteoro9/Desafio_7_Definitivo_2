@@ -512,7 +512,7 @@ day_record_label = NodePath("CanvasLayer/HBoxContainer/PanelContainer/MarginCont
 hour_record_label = NodePath("CanvasLayer/HBoxContainer/PanelContainer/MarginContainer/HBoxContainer/GridContainer/LabelHourRecord")
 stars_record_label = NodePath("CanvasLayer/HBoxContainer/PanelContainer/MarginContainer/HBoxContainer/GridContainer/LabelStarsRecord")
 level_index_label = NodePath("CanvasLayer/HBoxContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/LevelID")
-level_info_array_ordered = [NodePath("Level-Info"), NodePath("Level-1-Info")]
+level_info_array_ordered = [NodePath("Level-Info"), NodePath("Level-1-Info"), NodePath("Level-2-Info")]
 h_box_container = NodePath("CanvasLayer/HBoxContainer")
 animation = NodePath("AnimationPlayer")
 
@@ -676,6 +676,9 @@ silver_coins_limit = 1
 bronze_coins_limit = 3
 time_star_1 = 45.0
 time_star_2 = 35.0
+
+[node name="Level-2-Info" parent="." unique_id=819396862 instance=ExtResource("4_oxtd6")]
+level_id = 2
 
 [connection signal="pressed" from="CanvasLayer/HBoxContainer/PanelContainer/MarginContainer/HBoxContainer/ButtonPrevious" to="." method="_on_button_previous_pressed"]
 [connection signal="pressed" from="CanvasLayer/HBoxContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/ButtonPlay" to="." method="_on_button_play_pressed"]

@@ -6,3 +6,5 @@ var level_paths : Array[String] = [
 	"res://Scenes/Levels/Final Levels/level_1.tscn",
 	"",
 ]
+
+var current_showed_index : int = 1
