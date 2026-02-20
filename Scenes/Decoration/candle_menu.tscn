@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dpnemmdmxf2a3"]
 
-[ext_resource type="Texture2D" uid="uid://cghlih80e7w6" path="res://Assets/Player/candle.png" id="1_wqh68"]
+[ext_resource type="Texture2D" uid="uid://cdc3m33407k2a" path="res://Assets/Player/candle.png" id="1_wqh68"]
 [ext_resource type="Texture2D" uid="uid://divv5kuurlcg" path="res://Assets/Fire/Small_Fireball_10x26.png" id="2_tugd4"]
 [ext_resource type="AudioStream" uid="uid://b42330n7sgcds" path="res://Audio/Player/candle_flame_SFX.ogg" id="3_gjxc2"]
 
@@ -429,7 +429,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
-"speed": 9.0
+"speed": 13.0
 }]
 
 [node name="Candle Menu" type="Sprite2D" unique_id=1463863104]
@@ -440,7 +440,7 @@ position = Vector2(0, -88)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_j421n")
 autoplay = "default"
-frame_progress = 0.33193
+frame_progress = 0.68874913
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=975603734]
 stream = ExtResource("3_gjxc2")

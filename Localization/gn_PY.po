@@ -26,7 +26,7 @@ msgstr "Ñembosarái"
 
 #: Scenes/Levels/main_menu.tscn
 msgid "LANGUAGE"
-msgstr "Ñe’ẽ: Avañe’ẽ"
+msgstr "Ñe’ẽ: Avañe’ẽ (AI)"
 
 #: Scenes/Levels/main_menu.tscn Scenes/Levels/level_show_info.tscn
 msgid "TIMES"
@@ -62,7 +62,7 @@ msgstr "Mbyja kuéra"
 
 #: Scenes/Levels/level_show_info.tscn
 msgid "LEVEL-TITLE"
-msgstr "Nivel %d"
+msgstr "[wave]Nivel %d[/wave]"
 
 #: Scenes/Levels/level_show_info.tscn
 msgid "MAIN-MENU"

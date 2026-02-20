@@ -26,7 +26,7 @@ msgstr "开始游戏"
 
 #: Scenes/Levels/main_menu.tscn
 msgid "LANGUAGE"
-msgstr "语言：中文"
+msgstr "语言：中文 (AI)"
 
 #: Scenes/Levels/main_menu.tscn Scenes/Levels/level_show_info.tscn
 msgid "TIMES"
@@ -45,8 +45,8 @@ msgid ""
 "[pulse freq=.3 ease=2.0][wave][title-effect][i]Main-Title[/i][/title-effect][/wave]"
 "[/pulse]"
 msgstr ""
-"[pulse freq=.3 ease=2.0][wave][title-effect][i]不要失去信念！[/i][/title-"
-"effect][/wave][/pulse]"
+"[pulse freq=.3 ease=2.0][wave][title-effect][i]不要失去信念！[/i][/title-effect][/"
+"wave][/pulse]"
 
 #: Scenes/Levels/loose_menu.tscn Scenes/Levels/win_menu.tscn
 msgid "RETRY"
@@ -62,7 +62,7 @@ msgstr "星星"
 
 #: Scenes/Levels/level_show_info.tscn
 msgid "LEVEL-TITLE"
-msgstr "第%d关"
+msgstr "[wave]第%d关[/wave]"
 
 #: Scenes/Levels/level_show_info.tscn
 msgid "MAIN-MENU"

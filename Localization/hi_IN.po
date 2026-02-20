@@ -26,7 +26,7 @@ msgstr "खेलें"
 
 #: Scenes/Levels/main_menu.tscn
 msgid "LANGUAGE"
-msgstr "भाषा: हिन्दी"
+msgstr "भाषा: हिन्दी (AI)"
 
 #: Scenes/Levels/main_menu.tscn Scenes/Levels/level_show_info.tscn
 msgid "TIMES"
@@ -62,7 +62,7 @@ msgstr "सितारे"
 
 #: Scenes/Levels/level_show_info.tscn
 msgid "LEVEL-TITLE"
-msgstr "स्तर %d"
+msgstr "[wave]स्तर %d[/wave]"
 
 #: Scenes/Levels/level_show_info.tscn
 msgid "MAIN-MENU"

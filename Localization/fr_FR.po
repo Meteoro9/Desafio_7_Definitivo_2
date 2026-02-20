@@ -26,7 +26,7 @@ msgstr "Jouer"
 
 #: Scenes/Levels/main_menu.tscn
 msgid "LANGUAGE"
-msgstr "Langue : Français"
+msgstr "Langue : Français (AI)"
 
 #: Scenes/Levels/main_menu.tscn Scenes/Levels/level_show_info.tscn
 msgid "TIMES"
@@ -62,7 +62,7 @@ msgstr "Étoiles"
 
 #: Scenes/Levels/level_show_info.tscn
 msgid "LEVEL-TITLE"
-msgstr "Niveau %d"
+msgstr "[wave]Niveau %d[/wave]"
 
 #: Scenes/Levels/level_show_info.tscn
 msgid "MAIN-MENU"

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dsnr7dq55rfyk"]
 
 [ext_resource type="Script" uid="uid://c0wxo80n2kqta" path="res://Scripts/Player/candle_player.gd" id="1_p1jqv"]
-[ext_resource type="Texture2D" uid="uid://cghlih80e7w6" path="res://Assets/Player/candle.png" id="2_5vcen"]
+[ext_resource type="Texture2D" uid="uid://cdc3m33407k2a" path="res://Assets/Player/candle.png" id="2_5vcen"]
 [ext_resource type="Script" uid="uid://dpscdhtb7w28j" path="res://Scripts/Player/candle_animations.gd" id="4_5vcen"]
 [ext_resource type="Texture2D" uid="uid://divv5kuurlcg" path="res://Assets/Fire/Small_Fireball_10x26.png" id="4_ohdre"]
 [ext_resource type="Texture2D" uid="uid://bmi5e6nspbxt3" path="res://Assets/Darkness.png" id="5_5vcen"]
@@ -442,7 +442,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Fire",
-"speed": 11.0
+"speed": 13.0
 }]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k754a"]

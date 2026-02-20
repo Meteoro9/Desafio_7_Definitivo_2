@@ -8,9 +8,9 @@
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xa7wv"]
 bg_color = Color(0.22352941, 0.22352941, 0.22352941, 0.7254902)
-corner_radius_top_left = 50
+corner_radius_top_left = 35
 corner_radius_top_right = 10
-corner_radius_bottom_right = 50
+corner_radius_bottom_right = 35
 corner_radius_bottom_left = 10
 
 [sub_resource type="Animation" id="Animation_xa7wv"]
@@ -564,28 +564,28 @@ columns = 4
 [node name="LabelTimes" type="Label" parent="CanvasLayer/HBoxContainer/PanelContainer/MarginContainer/HBoxContainer/GridContainer" unique_id=2098416578]
 layout_mode = 2
 theme_override_constants/line_spacing = 10
-theme_override_font_sizes/font_size = 32
+theme_override_font_sizes/font_size = 26
 text = "TIMES"
 vertical_alignment = 1
 
 [node name="LabelDay" type="Label" parent="CanvasLayer/HBoxContainer/PanelContainer/MarginContainer/HBoxContainer/GridContainer" unique_id=177442186]
 layout_mode = 2
 theme_override_constants/line_spacing = 10
-theme_override_font_sizes/font_size = 32
+theme_override_font_sizes/font_size = 26
 text = "DAY"
 vertical_alignment = 1
 
 [node name="LabelHour" type="Label" parent="CanvasLayer/HBoxContainer/PanelContainer/MarginContainer/HBoxContainer/GridContainer" unique_id=279854612]
 layout_mode = 2
 theme_override_constants/line_spacing = 10
-theme_override_font_sizes/font_size = 32
+theme_override_font_sizes/font_size = 26
 text = "HOUR"
 vertical_alignment = 1
 
 [node name="LabelStars" type="Label" parent="CanvasLayer/HBoxContainer/PanelContainer/MarginContainer/HBoxContainer/GridContainer" unique_id=336744590]
 layout_mode = 2
 theme_override_constants/line_spacing = 10
-theme_override_font_sizes/font_size = 32
+theme_override_font_sizes/font_size = 26
 text = "STARS"
 vertical_alignment = 1
 
@@ -621,6 +621,7 @@ alignment = 1
 [node name="LevelID" type="RichTextLabel" parent="CanvasLayer/HBoxContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer" unique_id=889409276]
 layout_mode = 2
 theme_override_fonts/normal_font = ExtResource("3_hwnxc")
+theme_override_font_sizes/normal_font_size = 22
 bbcode_enabled = true
 text = "LEVEL-TITLE"
 fit_content = true
