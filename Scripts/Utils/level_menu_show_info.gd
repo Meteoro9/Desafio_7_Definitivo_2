@@ -19,8 +19,6 @@ func _ready() -> void:
 	animation.play("init")
 	await get_tree().create_timer(1.0).timeout
 	show_info(level_info_array_ordered[0])
-	h_box_container.alignment = BoxContainer.ALIGNMENT_CENTER
-	h_box_container.global_position.y = h_box_container.global_position.y -20
 
 func show_info(summary: LevelSummaryMenu) -> void:
 	current_lang = TranslationServer.get_locale()
@@ -65,18 +63,17 @@ func _on_button_next_pressed():
 	if (current_level_index + 1) < level_info_array_ordered.size():
 		current_level_index += 1
 		show_info(level_info_array_ordered[current_level_index])
-		h_box_container.alignment = BoxContainer.ALIGNMENT_CENTER
-		h_box_container.global_position.y = h_box_container.global_position.y -20
+		#h_box_container.global_position.y = _initial_y
 
 func _on_button_previous_pressed():
 	if not (current_level_index -1) < 0:
 		current_level_index -= 1
 		show_info(level_info_array_ordered[current_level_index])
-		h_box_container.alignment = BoxContainer.ALIGNMENT_CENTER
-		h_box_container.global_position.y = h_box_container.global_position.y -20
+		#h_box_container.global_position.y = _initial_y
 
 func _on_button_play_pressed():
 	LoadBar.fade_to_scene(level_info_array_ordered[current_level_index].level_path)
 
 func _on_button_prev_menu_pressed():
 	hide_level_info()
+#endregion
