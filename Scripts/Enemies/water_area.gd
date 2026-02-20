@@ -4,10 +4,14 @@ class_name WaterArea
 var damage := 50.0
 var player_inside : CandlePlayer = null
 
+func _ready() -> void:
+	area_entered.connect(_on_body_entered)
+
 func _on_body_entered(body: Node2D) -> void:
 	if body is CandlePlayer:
 		player_inside = body
 		print("Entro el jugador al agua")
+	if body is FireBehaviour: body.kill()
 
 func _on_body_exited(body: Node2D) -> void:
 	if body == player_inside:
