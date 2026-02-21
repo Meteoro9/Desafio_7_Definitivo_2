@@ -100,6 +100,7 @@ _data = {
 size = Vector2(42, 35.5)
 
 [node name="Locked Door" type="StaticBody2D" unique_id=173566127]
+collision_mask = 6
 script = ExtResource("1_rnmaq")
 texture_red = ExtResource("2_lsaa3")
 texture_yellow = ExtResource("3_bfgak")

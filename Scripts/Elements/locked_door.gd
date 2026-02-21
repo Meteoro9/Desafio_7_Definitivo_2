@@ -20,7 +20,9 @@ func _process(_delta: float) -> void:
 		if button_to_unlock.is_active:
 			is_locking = false
 			$AnimationPlayer.play("unlock")
-	#if key_to_unlock: # hay que plantear la misma lógica pero al tocar la llave
+			print("Se abrió la puerta")
+	if button_to_unlock == null:
+		print("No se asignó el botón en ", self.name)
 
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "unlock":
