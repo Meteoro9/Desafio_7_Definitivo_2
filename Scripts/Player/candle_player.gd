@@ -10,6 +10,7 @@ const JUMP_VELOCITY = -530.0
 @export var fire_behaviour : FireBehaviour
 var won := false
 var external_velocity : Vector2 = Vector2.ZERO
+var in_wind : bool = false
 
 #region Movement
 # Script de plantilla integrada en el motor, muy leves modificaciones
@@ -21,7 +22,7 @@ func _physics_process(delta: float) -> void:
 	if not won:
 		# Handle jump.
 		if Input.is_action_pressed("arriba") and is_on_floor() and not _in_slime:
-			velocity.y = JUMP_VELOCITY
+			if not in_wind: velocity.y = JUMP_VELOCITY
 		
 		# Get the input direction and handle the movement/deceleration.
 		# As good practice, you should replace UI actions with custom gameplay actions.
@@ -45,7 +46,6 @@ func _physics_process(delta: float) -> void:
 			#velocity.x = move_toward(velocity.x, 0, SPEED) # Código original
 			#endregion
 	
-	velocity += external_velocity * delta
 	move_and_slide()
 
 #region States
@@ -69,13 +69,4 @@ func remove_slime_effect(trail: SlimeTrail) -> void:
 	_current_state = State.NORMAL
 	_active_slime_trails.erase(trail)
 
-# Wind
-func aply_wind_effect(direction: Vector2) -> void:
-	_current_state = State.PUSHED
-	external_velocity = direction
-
-func remove_wind_effect() -> void:
-	_current_state = State.NORMAL
-	var tween = create_tween()
-	tween.tween_property(self, "external_velocity", Vector2.ZERO, 1.0).set_trans(Tween.TRANS_QUAD)
 #endregion
