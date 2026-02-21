@@ -1,11 +1,15 @@
 extends CharacterBody2D
 class_name CandlePlayer
 
+enum State { NORMAL, SLIMED, PUSHED }
+
+var _current_state : State = State.NORMAL
 const SPEED = 300.0
 const JUMP_VELOCITY = -530.0
 
 @export var fire_behaviour : FireBehaviour
 var won := false
+var external_velocity : Vector2 = Vector2.ZERO
 
 #region Movement
 # Script de plantilla integrada en el motor, muy leves modificaciones
@@ -41,9 +45,11 @@ func _physics_process(delta: float) -> void:
 			#velocity.x = move_toward(velocity.x, 0, SPEED) # Código original
 			#endregion
 	
+	velocity += external_velocity * delta
 	move_and_slide()
 
 #region States
+# Slime
 var _active_slime_trails : Array[SlimeTrail] = []
 var _normal_friction := 0.85
 
@@ -56,8 +62,20 @@ var _slime_friction: float:
 		return _active_slime_trails.map(func(t): return t.friction_override).min()
 
 func aply_slime_effect(trail: SlimeTrail) -> void:
+	_current_state = State.SLIMED
 	if trail not in _active_slime_trails: _active_slime_trails.append(trail)
 
 func remove_slime_effect(trail: SlimeTrail) -> void:
+	_current_state = State.NORMAL
 	_active_slime_trails.erase(trail)
+
+# Wind
+func aply_wind_effect(direction: Vector2) -> void:
+	_current_state = State.PUSHED
+	external_velocity = direction
+
+func remove_wind_effect() -> void:
+	_current_state = State.NORMAL
+	var tween = create_tween()
+	tween.tween_property(self, "external_velocity", Vector2.ZERO, 1.0).set_trans(Tween.TRANS_QUAD)
 #endregion
