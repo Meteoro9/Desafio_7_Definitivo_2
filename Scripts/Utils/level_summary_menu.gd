@@ -15,6 +15,8 @@ enum LevelSelected { LEVEL_0, LEVEL_1, LEVEL_2, LEVEL_3 }
 @export var time_star_1: float = 30.0
 @export var time_star_2: float = 25.0
 
+#@export var play_requirement: LevelPlayRequirement
+
 # Info procesada para mostrar en pantalla
 var processed_records: Array[Dictionary] = []
 
