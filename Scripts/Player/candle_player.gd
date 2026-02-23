@@ -5,6 +5,7 @@ const SPEED = 300.0
 const JUMP_VELOCITY = -530.0
 var won : bool = false
 @export var fire_behaviour : FireBehaviour
+@onready var state_machine : StateMachine = $"State Machine"
 
 #region States
 # Slime
@@ -28,4 +29,12 @@ func aply_slime_effect(trail: SlimeTrail) -> void:
 func remove_slime_effect(trail: SlimeTrail) -> void:
 	_active_slime_trails.erase(trail)
 
+# Wind
+func enter_wind(direction: Vector2) -> void:
+	wind_direction = direction
+	in_wind = true
+
+func exit_wind() -> void:
+	wind_direction = Vector2.ZERO
+	in_wind = false
 #endregion

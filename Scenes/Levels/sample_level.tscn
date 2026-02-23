@@ -5101,7 +5101,6 @@ script = ExtResource("1_u3gei")
 [node name="WindArea" parent="WindAreas" unique_id=156230257 instance=ExtResource("7_7ugqr")]
 position = Vector2(380, -242)
 scale = Vector2(2.125, 2.125)
-direction_to = 0
 
 [node name="WindArea2" parent="WindAreas" unique_id=1135049885 instance=ExtResource("7_7ugqr")]
 position = Vector2(223, -572)
