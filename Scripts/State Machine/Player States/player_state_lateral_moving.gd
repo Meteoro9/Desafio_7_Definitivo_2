@@ -4,17 +4,7 @@ class_name PlayerStateLateralMoving extends PlayerStateBase
 
 func on_physics_process(delta) -> void:
 	# Asignamos velocidad x según la velocidad del player
-	var direction : float = Input.get_axis("izquierda", "derecha")
-	
-	if direction:
-		var acceleration = get_acceleration()
-		player.velocity.x = lerp(player.velocity.x, direction * player.SPEED, acceleration)
-		# La mecánica del fuego
-		fire_behaviour. take_damage(1.5)
-		if fire_behaviour.current_flame <= 0.0: fire_behaviour.kill()
-	else: 
-		var deceleration = get_deceleration()
-		player.velocity.x = lerp(player.velocity.x, 0.0, deceleration)
+	get_direction()
 	
 	# Actualizamos animación
 	if player.velocity.x > 0: animation_player.play("Right_Moving")
