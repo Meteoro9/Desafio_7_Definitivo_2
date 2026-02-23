@@ -669,6 +669,7 @@ script = ExtResource("3_ptfpb")
 metadata/_custom_type_script = "uid://dadsukldygahu"
 
 [node name="Level-Info" parent="." unique_id=1909714594 instance=ExtResource("4_oxtd6")]
+level_path = "res://Scenes/Levels/sample_level.tscn"
 
 [node name="LevelPlayRequirement" type="Node" parent="Level-Info" unique_id=107667019]
 script = ExtResource("7_211a5")

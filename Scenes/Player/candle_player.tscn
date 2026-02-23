@@ -763,13 +763,11 @@ script = ExtResource("13_ehfws")
 fire_behaviour = NodePath("../../FireArea")
 animation_player = NodePath("../../AnimationPlayer")
 
-[node name="StateJump" type="Node" parent="State Machine" unique_id=316717377 node_paths=PackedStringArray("animation_player")]
+[node name="StateJump" type="Node" parent="State Machine" unique_id=316717377]
 script = ExtResource("13_trbsq")
-animation_player = NodePath("../../AnimationPlayer")
 
-[node name="StateFinished" type="Node" parent="State Machine" unique_id=1834066942 node_paths=PackedStringArray("animation_player")]
+[node name="StateFinished" type="Node" parent="State Machine" unique_id=1834066942]
 script = ExtResource("14_trbsq")
-animation_player = NodePath("../../AnimationPlayer")
 
 [node name="StateFalling" type="Node" parent="State Machine" unique_id=230060653]
 script = ExtResource("15_14pnx")

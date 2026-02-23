@@ -11,10 +11,15 @@ func on_process(delta) -> void:
 		if state_machine.current_state.name != "StateFinished":
 			state_machine.change_to("StateFinished")
 
-func get_friction() -> float:
-	if player.in_slime: return player.slime_friction
-	if player.in_wind: return player.wind_friction
-	return player.normal_friction
+func get_acceleration() -> float:
+	if player.in_slime: return 0.1
+	if player.in_wind: return 0.1
+	return 0.85
+
+func get_deceleration() -> float:
+	if player.in_slime: return 0.05
+	if player.in_wind: return 0.3
+	return 0.85
 
 func check_lateral_moving() -> void:
 	if Input.is_action_pressed("derecha") or Input.is_action_pressed("izquierda"):

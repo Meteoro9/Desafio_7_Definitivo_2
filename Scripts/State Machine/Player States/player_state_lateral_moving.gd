@@ -7,11 +7,14 @@ func on_physics_process(delta) -> void:
 	var direction : float = Input.get_axis("izquierda", "derecha")
 	
 	if direction:
-		player.velocity.x = lerp(player.velocity.x, direction * player.SPEED, get_friction())
+		var acceleration = get_acceleration()
+		player.velocity.x = lerp(player.velocity.x, direction * player.SPEED, acceleration)
 		# La mecánica del fuego
 		fire_behaviour. take_damage(1.5)
 		if fire_behaviour.current_flame <= 0.0: fire_behaviour.kill()
-	else: player.velocity.x = lerp(player.velocity.x, 0.0, get_friction())
+	else: 
+		var deceleration = get_deceleration()
+		player.velocity.x = lerp(player.velocity.x, 0.0, deceleration)
 	
 	# Actualizamos animación
 	if player.velocity.x > 0: animation_player.play("Right_Moving")

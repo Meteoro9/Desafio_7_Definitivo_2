@@ -2,7 +2,7 @@ extends Area2D
 class_name SlimeTrail
 
 @export var lifetime := 8.0
-@export var friction_override := 0.02 # muy poca fricción
+@export var friction_override := 0.1 # muy poca fricción
 var _timer := 0.0
 
 func _ready() -> void:

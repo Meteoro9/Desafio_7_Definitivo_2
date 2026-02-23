@@ -5,7 +5,8 @@ func start() -> void:
 	animation_player.play("Fire")
 
 func on_physics_process(delta) -> void:
-	controlled_node.velocity.x = 0
+	player.velocity.x = lerp(player.velocity.x, 0.0, get_deceleration())
+	#controlled_node.velocity.x = 0
 	
 	handle_gravity(delta)
 	controlled_node.move_and_slide()
