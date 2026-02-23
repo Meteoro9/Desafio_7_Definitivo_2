@@ -26,13 +26,10 @@ func check_lateral_moving() -> void:
 		state_machine.change_to("StateLateralMoving")
 
 func check_jump() -> void:
-	if Input.is_action_pressed("arriba") and player.is_on_floor():
-		state_machine.change_to("StateJump")
+	if Input.is_action_pressed("arriba") and player.is_on_floor(): state_machine.change_to("StateJump")
 
 func check_idle() -> void:
-	if Input.get_axis("izquierda", "derecha") == 0.0:
-		state_machine.change_to("StateIdle")
+	if Input.get_axis("izquierda", "derecha") == 0.0: state_machine.change_to("StateIdle")
 
 func check_falling() -> void:
-	if player.velocity.y > 0: 
-		state_machine.change_to("StateFalling")
+	if player.velocity.y > 0: state_machine.change_to("StateFalling")

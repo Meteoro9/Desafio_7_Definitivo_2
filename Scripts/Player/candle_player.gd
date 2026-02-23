@@ -3,7 +3,6 @@ class_name CandlePlayer
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -530.0
-
 var won : bool = false
 @export var fire_behaviour : FireBehaviour
 
@@ -13,6 +12,7 @@ var _active_slime_trails : Array[SlimeTrail] = []
 var normal_friction := 0.85
 var wind_friction : float = 0.30
 var in_wind : bool = false
+var wind_direction : Vector2 = Vector2.ZERO
 
 var in_slime: bool:
 	get: return not _active_slime_trails.is_empty()
