@@ -5,6 +5,12 @@ var player: CandlePlayer
 
 func start(): player = controlled_node
 
+func on_process(delta) -> void:
+	# chequeamos vida y ejecutamos Finished que evita las entradas del jugador
+	if player.fire_behaviour.current_flame <= 0:
+		if state_machine.current_state.name != "StateFinished":
+			state_machine.change_to("StateFinished")
+
 func get_friction() -> float:
 	if player.in_slime: return player.slime_friction
 	if player.in_wind: return player.wind_friction

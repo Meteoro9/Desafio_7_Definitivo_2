@@ -4,8 +4,8 @@ class_name CandlePlayer
 const SPEED = 300.0
 const JUMP_VELOCITY = -530.0
 
+var won : bool = false
 @export var fire_behaviour : FireBehaviour
-var won := false
 
 #region States
 # Slime
@@ -17,7 +17,7 @@ var in_wind : bool = false
 var in_slime: bool:
 	get: return not _active_slime_trails.is_empty()
 
-var _slime_friction: float:
+var slime_friction: float:
 	get:
 		if _active_slime_trails.is_empty(): return normal_friction
 		return _active_slime_trails.map(func(t): return t.friction_override).min()

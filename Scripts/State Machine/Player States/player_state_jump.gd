@@ -11,5 +11,4 @@ func on_physics_process(delta) -> void:
 	player.move_and_slide()
 
 func on_input(event) -> void:
-	if Input.is_action_pressed("derecha") or Input.is_action_pressed("izquierda"):
-		state_machine.change_to("StateLateralMoving")
+	check_lateral_moving()

@@ -13,7 +13,7 @@
 [ext_resource type="Script" uid="uid://bu6c8luvaxsmb" path="res://Scripts/State Machine/Player States/player_state_idle.gd" id="12_ehfws"]
 [ext_resource type="Script" uid="uid://bkyitp0hi4e2k" path="res://Scripts/State Machine/Player States/player_state_lateral_moving.gd" id="13_ehfws"]
 [ext_resource type="Script" uid="uid://dre330ei3qnbq" path="res://Scripts/State Machine/Player States/player_state_jump.gd" id="13_trbsq"]
-[ext_resource type="Script" uid="uid://h52oxbmwurqm" path="res://Scripts/State Machine/Player States/player_state_won.gd" id="14_trbsq"]
+[ext_resource type="Script" uid="uid://h52oxbmwurqm" path="res://Scripts/State Machine/Player States/player_state_finished.gd" id="14_trbsq"]
 [ext_resource type="Script" uid="uid://b6mwfij84yd3j" path="res://Scripts/State Machine/Player States/player_state_falling.gd" id="15_14pnx"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p1jqv"]
@@ -767,7 +767,7 @@ animation_player = NodePath("../../AnimationPlayer")
 script = ExtResource("13_trbsq")
 animation_player = NodePath("../../AnimationPlayer")
 
-[node name="StateWon" type="Node" parent="State Machine" unique_id=1834066942 node_paths=PackedStringArray("animation_player")]
+[node name="StateFinished" type="Node" parent="State Machine" unique_id=1834066942 node_paths=PackedStringArray("animation_player")]
 script = ExtResource("14_trbsq")
 animation_player = NodePath("../../AnimationPlayer")
 
