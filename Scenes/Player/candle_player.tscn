@@ -16,6 +16,7 @@
 [ext_resource type="Script" uid="uid://h52oxbmwurqm" path="res://Scripts/State Machine/Player States/player_state_finished.gd" id="14_trbsq"]
 [ext_resource type="Script" uid="uid://b6mwfij84yd3j" path="res://Scripts/State Machine/Player States/player_state_falling.gd" id="15_14pnx"]
 [ext_resource type="Script" uid="uid://cfytjtugqh5b2" path="res://Scripts/State Machine/Player States/state_in_wind.gd" id="16_5c1s0"]
+[ext_resource type="Script" uid="uid://drfwmg7nkr46k" path="res://Scripts/State Machine/Player States/player_state_in_water.gd" id="17_usdh6"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p1jqv"]
 radius = 4.0
@@ -775,6 +776,9 @@ script = ExtResource("15_14pnx")
 
 [node name="StateInWind" type="Node" parent="State Machine" unique_id=904792434]
 script = ExtResource("16_5c1s0")
+
+[node name="StateInWater" type="Node" parent="State Machine" unique_id=750873401]
+script = ExtResource("17_usdh6")
 
 [connection signal="finished" from="FireArea/FlameAlive" to="FireArea" method="_on_flame_alive_finished"]
 [connection signal="animation_finished" from="AnimationPlayer" to="AnimationPlayer" method="_on_animation_finished"]

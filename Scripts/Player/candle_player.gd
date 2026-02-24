@@ -2,6 +2,7 @@ extends CharacterBody2D
 class_name CandlePlayer
 
 const SPEED = 300.0
+const WATER_MULTIPLIER = 0.7
 const JUMP_VELOCITY = -530.0
 var won : bool = false
 @export var fire_behaviour : FireBehaviour
