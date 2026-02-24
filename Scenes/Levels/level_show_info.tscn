@@ -210,10 +210,22 @@ tracks/15/keys = {
 "update": 0,
 "values": [Vector2(1, 1)]
 }
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("LabelTimesNoRecords:modulate")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_oxtd6"]
 resource_name = "appear"
-length = 0.6
+length = 1.3
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -273,6 +285,32 @@ tracks/4/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(1.3, 1.3), Vector2(1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("LabelTimesNoRecords:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.36666667, 0.73333335),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/6/type = "method"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath(".")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.06666667),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"placing_no_records_label"
+}]
 }
 
 [sub_resource type="Animation" id="Animation_mxh80"]
@@ -426,7 +464,7 @@ tracks/11/keys = {
 
 [sub_resource type="Animation" id="Animation_hwnxc"]
 resource_name = "desappear"
-length = 0.5
+length = 0.8
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -474,6 +512,18 @@ tracks/3/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [true, false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("LabelTimesNoRecords:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.28),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_ptfpb"]
@@ -523,6 +573,7 @@ h_box_container = NodePath("CanvasLayer/HBoxContainer")
 animation = NodePath("AnimationPlayer")
 
 [node name="LabelTimesNoRecords" type="Label" parent="." unique_id=1301810236]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = 313.0
 offset_top = 289.0
@@ -530,6 +581,7 @@ offset_right = 361.0
 offset_bottom = 316.0
 theme_override_constants/line_spacing = 10
 theme_override_font_sizes/font_size = 20
+text = "añlsdfkjñalksjfd"
 vertical_alignment = 1
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1447986689]

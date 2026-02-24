@@ -41,6 +41,7 @@ func show_info(summary: LevelSummaryMenu) -> void:
 	if summary.processed_records.is_empty():
 		times_no_records_label.text = tr("NO-RECORDS")
 	else:
+		times_no_records_label.text = ""
 		for entry in summary.processed_records:
 			times_text += "*" + entry["time"] + "\n"
 			day_text += entry["date"] + "\n"
@@ -61,12 +62,15 @@ func placing_no_records_label():
 	var panel_size = panel_container.size
 	var label_size = times_no_records_label.size
 	
-	var offset_x : float = -100
+	var offset_x : float = 100.0
+	var offset_y : float = 0.0
 	
-	times_no_records_label.global_position = Vector2(
-		panel_global_pos.x + (panel_size.x - label_size.x) / 2.0 + offset_x,
-		panel_global_pos.y + (panel_size.y - label_size.y) / 2.0
+	var new_pos = Vector2(
+		panel_global_pos.x + offset_x,
+		panel_global_pos.y + (panel_size.y - label_size.y) / 2.0 + offset_y
 	)
+	var tween = create_tween()
+	tween.tween_property(times_no_records_label, "global_position", new_pos, 0.2).set_trans(Tween.TRANS_BOUNCE)
 
 # Método a revisar NO FUNCIONA
 func _update_play_availability(summary: LevelSummaryMenu) -> void:
@@ -92,6 +96,7 @@ func _update_play_availability(summary: LevelSummaryMenu) -> void:
 
 #region Animations
 func show_level_info():
+	placing_no_records_label() # Volvemos a centrar si volvemos a mostrar (por si cambió el idioma)
 	animation.play("appear")
 	await animation.animation_finished
 	animation.play("default")
