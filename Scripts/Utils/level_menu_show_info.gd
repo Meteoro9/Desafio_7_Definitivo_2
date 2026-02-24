@@ -7,7 +7,7 @@ class_name LevelShowInfo
 @export var stars_record_label : Label
 @export var times_no_records_label : Label
 @export var level_index_label : RichTextLabel
-
+@export var panel_container: PanelContainer
 @export var play_button : Button
 @export var cant_play_label : RichTextLabel
 
@@ -53,6 +53,20 @@ func show_info(summary: LevelSummaryMenu) -> void:
 	stars_record_label.text = stars_text
 	# Revisamos si el jugador puede jugar el nivel
 	#_update_play_availability(summary)
+	placing_no_records_label()
+
+func placing_no_records_label():
+	await get_tree().process_frame
+	var panel_global_pos = panel_container.global_position
+	var panel_size = panel_container.size
+	var label_size = times_no_records_label.size
+	
+	var offset_x : float = -100
+	
+	times_no_records_label.global_position = Vector2(
+		panel_global_pos.x + (panel_size.x - label_size.x) / 2.0 + offset_x,
+		panel_global_pos.y + (panel_size.y - label_size.y) / 2.0
+	)
 
 # Método a revisar NO FUNCIONA
 func _update_play_availability(summary: LevelSummaryMenu) -> void:
