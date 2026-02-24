@@ -31,7 +31,7 @@ func show_info(summary: LevelSummaryMenu) -> void:
 	var current_lang_index = languages.find(current_lang)
 	if current_lang_index == -1: current_lang_index = 0
 	# Mostramos en pantalla qué nivel es
-	level_index_label.text = tr("LEVEL-TITLE") % current_level_index
+	level_index_label.text = tr("LEVEL-TITLE") % (current_level_index + 1)
 	# Creamos variables para actualizar el texto
 	var times_text : String = ""
 	var day_text : String = ""
@@ -119,7 +119,7 @@ func _on_button_next_pressed():
 		GameManager.current_showed_index = current_level_index
 
 func _on_button_previous_pressed():
-	if not (current_level_index -1) < 0:
+	if not (current_level_index -1) < 0: # Este es debug
 		current_level_index -= 1
 		show_info(level_info_array_ordered[current_level_index])
 		GameManager.current_showed_index = current_level_index

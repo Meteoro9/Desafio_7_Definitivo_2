@@ -1,5 +1,12 @@
 extends CanvasLayer
 
+@onready var stars_label = $RichTextLabel
+# Implementar lógica de muestra de estrellas al ganar
+var stars : int = 0
+
+func _ready() -> void:
+	#stars_label.text = 
+	pass
 
 func on_retry_pressed():
 	LoadBar.fade_to_scene(GameManager.level_paths[GameManager.current_level_index])

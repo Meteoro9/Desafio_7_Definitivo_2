@@ -27,6 +27,7 @@ func _on_body_entered(body: Node2D) -> void:
 			GlobalMusicManager.current_state = GlobalMusicManager.Scene_State.WIN
 			
 			var scene = win_scene.instantiate()
+			scene.stars = 0
 			get_tree().root.add_child(scene)
 			
 			GameData.add_record(level_id, timer.current_time)

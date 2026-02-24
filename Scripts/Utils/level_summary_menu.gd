@@ -3,8 +3,14 @@ class_name LevelSummaryMenu
 
 # Agregar acá los niveles para poder seleccionarlos.
 # Level_0 = Sample_Level, no mostrarlo en versión final
-enum LevelSelected { LEVEL_0, LEVEL_1, LEVEL_2, LEVEL_3, LEVEL_4, LEVEL_5 } 
-@export var level_id : LevelSelected = LevelSelected.LEVEL_0
+enum LevelSelected { 
+	LEVEL_0, 
+	LEVEL_1, 
+	LEVEL_2, 
+	LEVEL_3, 
+	LEVEL_4, 
+	LEVEL_5 } 
+@export var level_id : LevelSelected = LevelSelected.LEVEL_1
 @export var level_path : String
 
 @export var gold_coins_limit : int = 0

@@ -20,4 +20,3 @@ func check_jump() -> void:
 	if Input.is_action_pressed("arriba") and player.is_on_floor():
 		state_machine.change_to("StateJump")
 		player.velocity.y *= player.WATER_MULTIPLIER
-		

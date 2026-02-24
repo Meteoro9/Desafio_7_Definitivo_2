@@ -568,7 +568,7 @@ level_index_label = NodePath("CanvasLayer/HBoxContainer/PanelContainer/MarginCon
 panel_container = NodePath("CanvasLayer/HBoxContainer/PanelContainer")
 play_button = NodePath("CanvasLayer/HBoxContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/ButtonPlay")
 cant_play_label = NodePath("Canot Play Label")
-level_info_array_ordered = [NodePath("Level-0-Info"), NodePath("Level-1-Info"), NodePath("Level-2-Info"), NodePath("Level-3-Info"), NodePath("Level-4-Info")]
+level_info_array_ordered = [NodePath("Level-1-Info"), NodePath("Level-2-Info"), NodePath("Level-3-Info"), NodePath("Level-4-Info")]
 h_box_container = NodePath("CanvasLayer/HBoxContainer")
 animation = NodePath("AnimationPlayer")
 
@@ -749,7 +749,6 @@ script = ExtResource("7_211a5")
 metadata/_custom_type_script = "uid://dyc7fljrdvedp"
 
 [node name="Level-1-Info" parent="." unique_id=527644416 instance=ExtResource("4_oxtd6")]
-level_id = 1
 level_path = "res://Scenes/Levels/Final Levels/level_1.tscn"
 gold_coins_limit = 1
 silver_coins_limit = 1
@@ -787,7 +786,7 @@ script = ExtResource("7_211a5")
 metadata/_custom_type_script = "uid://dyc7fljrdvedp"
 
 [node name="Level-4-Info" parent="." unique_id=819396862 instance=ExtResource("4_oxtd6")]
-level_id = 2
+level_id = 4
 level_path = "res://Scenes/Levels/Final Levels/level_4.tscn"
 gold_coins_limit = 3
 silver_coins_limit = 3

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cnj0et6kmyb3r"]
 
 [ext_resource type="Script" uid="uid://t37fi2u1vxam" path="res://Scripts/Utils/win_menu.gd" id="1_30vpb"]
+[ext_resource type="FontFile" uid="uid://ckf8mo42wqebx" path="res://Assets/Fonts/ChelseaMarket-Regular.ttf" id="2_keumo"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_keumo"]
 bg_color = Color(0.288213, 0.586319, 0.246446, 1)
@@ -141,6 +142,21 @@ text = "MENU"
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1314943492]
 libraries/ = SubResource("AnimationLibrary_rifxn")
 autoplay = &"visible_init"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=416799711]
+visible = false
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -137.25
+offset_right = 137.25
+offset_bottom = 40.0
+grow_horizontal = 2
+theme_override_fonts/normal_font = ExtResource("2_keumo")
+theme_override_font_sizes/normal_font_size = 24
+text = "STARS-WIN: ★★★★★"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="Button" to="." method="on_retry_pressed"]
 [connection signal="pressed" from="Button2" to="." method="on_go_menu_pressed"]

@@ -16,7 +16,7 @@ func _on_body_entered(body: Node2D) -> void:
 
 func _on_body_exited(body: Node2D) -> void:
 	if body == player_inside:
-		body.state_machine.change_to("StateIdle")
+		body.state_machine.change_to("StateLateralMoving")
 		player_inside = null
 		print("El jugador salió del agua")
 
