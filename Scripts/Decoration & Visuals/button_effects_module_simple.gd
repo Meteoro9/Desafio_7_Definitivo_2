@@ -1,10 +1,10 @@
-class_name ButtonEffectsModule extends Node
+class_name ButtonEffectsModuleSimple extends Node
+
 
 @export var ease_type: Tween.EaseType
 @export var trans_type: Tween.TransitionType
-@export var anim_duration: float = 0.1
+@export var anim_duration: float = 0.2
 @export var scale_amount: Vector2 = Vector2(1.05, 1.05)
-@export var rotation_amount: float = 3.0
 
 @onready var button: Button = get_parent()
 
@@ -19,15 +19,11 @@ func _ready() -> void:
 func _on_button_pressed() -> void:
 	reset_tween()
 	tween.tween_property(button, "scale", scale_amount, anim_duration).from(Vector2(0.8, 0.8))
-	tween.tween_property(button, "rotation_degrees", rotation_amount * [-1, 1].pick_random(), 
-		anim_duration).from(0)
 
 func _on_mouse_hovered(hovered: bool) -> void:
 	reset_tween()
 	tween.tween_property(button, "scale", 
 		scale_amount if hovered else Vector2.ONE, anim_duration)
-	tween.tween_property(button, "rotation_degrees", 
-		rotation_amount * [-1, 1].pick_random() if hovered else 0.0, anim_duration)
 
 func reset_tween() -> void:
 	if tween: tween.kill()
