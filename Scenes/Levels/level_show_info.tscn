@@ -501,7 +501,7 @@ _data = {
 &"init": SubResource("Animation_ptfpb")
 }
 
-[node name="Level Show Info" type="Control" unique_id=443533315 node_paths=PackedStringArray("times_record_label", "day_record_label", "hour_record_label", "stars_record_label", "level_index_label", "play_button", "cant_play_label", "level_info_array_ordered", "h_box_container", "animation")]
+[node name="Level Show Info" type="Control" unique_id=443533315 node_paths=PackedStringArray("times_record_label", "day_record_label", "hour_record_label", "stars_record_label", "times_no_records_label", "level_index_label", "play_button", "cant_play_label", "level_info_array_ordered", "h_box_container", "animation")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -513,12 +513,23 @@ times_record_label = NodePath("CanvasLayer/HBoxContainer/PanelContainer/MarginCo
 day_record_label = NodePath("CanvasLayer/HBoxContainer/PanelContainer/MarginContainer/HBoxContainer/GridContainer/LabelDayRecord")
 hour_record_label = NodePath("CanvasLayer/HBoxContainer/PanelContainer/MarginContainer/HBoxContainer/GridContainer/LabelHourRecord")
 stars_record_label = NodePath("CanvasLayer/HBoxContainer/PanelContainer/MarginContainer/HBoxContainer/GridContainer/LabelStarsRecord")
+times_no_records_label = NodePath("LabelTimesNoRecords")
 level_index_label = NodePath("CanvasLayer/HBoxContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/LevelID")
 play_button = NodePath("CanvasLayer/HBoxContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/ButtonPlay")
 cant_play_label = NodePath("Canot Play Label")
 level_info_array_ordered = [NodePath("Level-Info"), NodePath("Level-1-Info"), NodePath("Level-2-Info"), NodePath("Level-4-Info")]
 h_box_container = NodePath("CanvasLayer/HBoxContainer")
 animation = NodePath("AnimationPlayer")
+
+[node name="LabelTimesNoRecords" type="Label" parent="." unique_id=1301810236]
+layout_mode = 0
+offset_left = 313.0
+offset_top = 289.0
+offset_right = 361.0
+offset_bottom = 316.0
+theme_override_constants/line_spacing = 10
+theme_override_font_sizes/font_size = 20
+vertical_alignment = 1
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1447986689]
 

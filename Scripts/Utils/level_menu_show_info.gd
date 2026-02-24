@@ -5,6 +5,7 @@ class_name LevelShowInfo
 @export var day_record_label : Label
 @export var hour_record_label : Label
 @export var stars_record_label : Label
+@export var times_no_records_label : Label
 @export var level_index_label : RichTextLabel
 
 @export var play_button : Button
@@ -38,7 +39,7 @@ func show_info(summary: LevelSummaryMenu) -> void:
 	var stars_text : String = ""
 	# Actualizamos variables de texto
 	if summary.processed_records.is_empty():
-		times_text = tr("NO-RECORDS")
+		times_no_records_label.text = tr("NO-RECORDS")
 	else:
 		for entry in summary.processed_records:
 			times_text += "*" + entry["time"] + "\n"
