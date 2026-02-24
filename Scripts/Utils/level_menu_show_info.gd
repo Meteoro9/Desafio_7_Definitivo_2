@@ -56,21 +56,7 @@ func show_info(summary: LevelSummaryMenu) -> void:
 	#_update_play_availability(summary)
 	placing_no_records_label()
 
-func placing_no_records_label():
-	await get_tree().process_frame
-	var panel_global_pos = panel_container.global_position
-	var panel_size = panel_container.size
-	var label_size = times_no_records_label.size
-	
-	var offset_x : float = 100.0
-	var offset_y : float = 0.0
-	
-	var new_pos = Vector2(
-		panel_global_pos.x + offset_x,
-		panel_global_pos.y + (panel_size.y - label_size.y) / 2.0 + offset_y
-	)
-	var tween = create_tween()
-	tween.tween_property(times_no_records_label, "global_position", new_pos, 0.2).set_trans(Tween.TRANS_BOUNCE)
+
 
 # Método a revisar NO FUNCIONA
 func _update_play_availability(summary: LevelSummaryMenu) -> void:
@@ -107,6 +93,22 @@ func hide_level_info():
 	visible = false
 	var animation_menu = get_parent().get_node("AnimationPlayer")
 	animation_menu.play("show_menu")
+
+func placing_no_records_label():
+	await get_tree().process_frame
+	var panel_global_pos = panel_container.global_position
+	var panel_size = panel_container.size
+	var label_size = times_no_records_label.size
+	
+	var offset_x : float = 100.0
+	var offset_y : float = 0.0
+	
+	var new_pos = Vector2(
+		panel_global_pos.x + offset_x,
+		panel_global_pos.y + (panel_size.y - label_size.y) / 2.0 + offset_y
+	)
+	var tween = create_tween()
+	tween.tween_property(times_no_records_label, "global_position", new_pos, 0.2).set_trans(Tween.TRANS_BOUNCE)
 #endregion
 
 #region Buttons!!!
