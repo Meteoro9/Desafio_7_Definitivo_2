@@ -28,12 +28,12 @@ tile_map_data = PackedByteArray("AAD+/wAAAAAHAAUAAAD//wAAAAAHAAYAAAAAAAAAAAAHAAY
 position = Vector2(-32, -1144)
 is_win = true
 show_timer = NodePath("../ShowTimer")
-level_id = 2
+level_id = 4
 
 [node name="LooseArea" parent="." unique_id=1996075447 node_paths=PackedStringArray("show_timer") instance=ExtResource("5_q4x4g")]
 position = Vector2(25, 98)
 show_timer = NodePath("../ShowTimer")
-level_id = 2
+level_id = 4
 
 [node name="Camera Follow" parent="." unique_id=2027653545 node_paths=PackedStringArray("player") instance=ExtResource("6_joyot")]
 player = NodePath("../Candle-Player")
@@ -89,44 +89,44 @@ position = Vector2(16, -30)
 [node name="Coin Collectable" parent="Coins" unique_id=2146743414 instance=ExtResource("10_s4fk2")]
 position = Vector2(80, -176)
 coin_material = 2
-level_id = 2
+level_id = 4
 
 [node name="Coin Collectable2" parent="Coins" unique_id=159629317 instance=ExtResource("10_s4fk2")]
 position = Vector2(144, -16)
-level_id = 2
+level_id = 4
 
 [node name="Coin Collectable3" parent="Coins" unique_id=768302321 instance=ExtResource("10_s4fk2")]
 position = Vector2(272, -208)
 coin_material = 2
-level_id = 2
+level_id = 4
 
 [node name="Coin Collectable4" parent="Coins" unique_id=2059603296 instance=ExtResource("10_s4fk2")]
 position = Vector2(-112, -16)
 coin_material = 1
-level_id = 2
+level_id = 4
 
 [node name="Coin Collectable5" parent="Coins" unique_id=1609586336 instance=ExtResource("10_s4fk2")]
 position = Vector2(-240, -728)
-level_id = 2
+level_id = 4
 
 [node name="Coin Collectable6" parent="Coins" unique_id=1768097656 instance=ExtResource("10_s4fk2")]
 position = Vector2(16, -912)
-level_id = 2
+level_id = 4
 
 [node name="Coin Collectable7" parent="Coins" unique_id=403836890 instance=ExtResource("10_s4fk2")]
 position = Vector2(272, -1008)
 coin_material = 2
-level_id = 2
+level_id = 4
 
 [node name="Coin Collectable8" parent="Coins" unique_id=2044822334 instance=ExtResource("10_s4fk2")]
 position = Vector2(80, -912)
 coin_material = 1
-level_id = 2
+level_id = 4
 
 [node name="Coin Collectable9" parent="Coins" unique_id=743359574 instance=ExtResource("10_s4fk2")]
 position = Vector2(240, -528)
 coin_material = 1
-level_id = 2
+level_id = 4
 
 [node name="Water Areas" type="Node2D" parent="." unique_id=1835631060]
 
