@@ -34,7 +34,7 @@ GameManager="*uid://rcvf87m2hnc7"
 [display]
 
 window/size/always_on_top=true
-window/stretch/mode="viewport"
+window/stretch/mode="canvas_items"
 
 [dotnet]
 

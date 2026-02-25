@@ -41,7 +41,7 @@ func _process(delta: float) -> void:
 		if loaded_status == ResourceLoader.ThreadLoadStatus.THREAD_LOAD_LOADED:
 			#animation.play("loaded") # temporal
 			var packed_next_scene = ResourceLoader.load_threaded_get(current_scene_changing)
-			await get_tree().create_timer(0.4).timeout
+			await get_tree().create_timer(0.25).timeout
 			get_tree().change_scene_to_packed(packed_next_scene)
 			current_scene_changing = ""
 			loading = false
