@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://t37fi2u1vxam" path="res://Scripts/Utils/win_menu.gd" id="1_30vpb"]
 [ext_resource type="FontFile" uid="uid://ckf8mo42wqebx" path="res://Assets/Fonts/ChelseaMarket-Regular.ttf" id="2_keumo"]
+[ext_resource type="Script" uid="uid://dadsukldygahu" path="res://Scripts/Decoration & Visuals/button_effects_module.gd" id="2_ncqc4"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_keumo"]
 bg_color = Color(0.288213, 0.586319, 0.246446, 1)
@@ -117,6 +118,10 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_30vpb")
 theme_override_styles/hover = SubResource("StyleBoxFlat_i6hqk")
 text = "RETRY"
 
+[node name="ButtonEffectsModule" type="Node" parent="Button" unique_id=1907421132]
+script = ExtResource("2_ncqc4")
+metadata/_custom_type_script = "uid://dadsukldygahu"
+
 [node name="Button2" type="Button" parent="." unique_id=1190618162]
 anchors_preset = 8
 anchor_left = 0.5
@@ -138,6 +143,10 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_keumo")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_30vpb")
 theme_override_styles/hover = SubResource("StyleBoxFlat_i6hqk")
 text = "MENU"
+
+[node name="ButtonEffectsModule" type="Node" parent="Button2" unique_id=401410168]
+script = ExtResource("2_ncqc4")
+metadata/_custom_type_script = "uid://dadsukldygahu"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1314943492]
 libraries/ = SubResource("AnimationLibrary_rifxn")
