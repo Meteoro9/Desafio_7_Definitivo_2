@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cdc3m33407k2a" path="res://Assets/Player/candle.png" id="1_wqh68"]
 [ext_resource type="Texture2D" uid="uid://divv5kuurlcg" path="res://Assets/Fire/Small_Fireball_10x26.png" id="2_tugd4"]
-[ext_resource type="AudioStream" uid="uid://b42330n7sgcds" path="res://Audio/Player/candle_flame_SFX.ogg" id="3_gjxc2"]
+[ext_resource type="AudioStream" uid="uid://b42330n7sgcds" path="res://Audio/SFX/Player/candle_flame_SFX.ogg" id="3_gjxc2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0lsn5"]
 atlas = ExtResource("2_tugd4")
