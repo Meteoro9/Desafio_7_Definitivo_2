@@ -5,6 +5,7 @@ var player: CandlePlayer
 
 func start(): player = controlled_node
 
+#region Jump Behaviour
 var coyote_time : float = 0.2
 var coyote_timer : float = 0.0
 var input_buffer_time : float = 0.2
@@ -39,14 +40,15 @@ func consume_jump():
 	jump_buffered = false
 	input_buffer_timer = 0.0
 	coyote_timer = coyote_time
+#endregion
 
-
-func on_process(delta) -> void:
+func on_process(_delta) -> void:
 	# chequeamos vida y ejecutamos Finished que evita las entradas del jugador
 	if player.fire_behaviour.current_flame <= 0:
 		if state_machine.current_state.name != "StateFinished":
 			state_machine.change_to("StateFinished")
 
+# ESTO TAMBIÉN PERTENECE AL SALTO
 func on_physics_process(delta) -> void:
 	input_buffer_behaviour(delta)
 	coyote_time_behaviour(delta)
