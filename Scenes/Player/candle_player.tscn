@@ -19,6 +19,7 @@
 [ext_resource type="Script" uid="uid://drfwmg7nkr46k" path="res://Scripts/State Machine/Player States/player_state_in_water.gd" id="17_usdh6"]
 [ext_resource type="Script" uid="uid://bmuq6287e8kty" path="res://Scripts/Player/jump_behaviour_module.gd" id="18_c5p07"]
 [ext_resource type="Script" uid="uid://b0t12s0w8o7wc" path="res://Scripts/Player/corner_correction.gd" id="19_ebalj"]
+[ext_resource type="Script" uid="uid://snpee37vgi1o" path="res://Scripts/Player/ground_detection.gd" id="20_bcdl3"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p1jqv"]
 radius = 4.0
@@ -799,6 +800,11 @@ target_position = Vector2(0, -8)
 [node name="RayCast_right" type="RayCast2D" parent="CornerCorrection" unique_id=1727676763]
 position = Vector2(2.551021, -11.224489)
 target_position = Vector2(0, -8)
+
+[node name="Ground Detection" type="RayCast2D" parent="." unique_id=1091454144]
+position = Vector2(0, 10.714286)
+target_position = Vector2(0, 5.6122446)
+script = ExtResource("20_bcdl3")
 
 [connection signal="finished" from="FireArea/FlameAlive" to="FireArea" method="_on_flame_alive_finished"]
 [connection signal="animation_finished" from="AnimationPlayer" to="AnimationPlayer" method="_on_animation_finished"]

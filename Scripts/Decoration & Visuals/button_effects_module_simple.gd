@@ -21,6 +21,11 @@ func _ready() -> void:
 	pressed_player.stream = sfx_pressed
 	add_child(hover_player)
 	add_child(pressed_player)
+	hover_player.bus = "SFX"
+	pressed_player.bus = "SFX"
+	hover_player.volume_db = 0.3
+	pressed_player.volume_db = 0.8
+	
 	button.mouse_entered.connect(_on_mouse_hovered.bind(true))
 	button.mouse_exited.connect(_on_mouse_hovered.bind(false))
 	button.pressed.connect(_on_button_pressed)
