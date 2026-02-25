@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bt7d1hcks23sn"
+path="res://.godot/imported/Hover-Mouse-SFX.ogg-b7542b8ff8ed2e9a7158d385903632f5.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/SFX/Menu SFX/Hover-Mouse-SFX.ogg"
+dest_files=["res://.godot/imported/Hover-Mouse-SFX.ogg-b7542b8ff8ed2e9a7158d385903632f5.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

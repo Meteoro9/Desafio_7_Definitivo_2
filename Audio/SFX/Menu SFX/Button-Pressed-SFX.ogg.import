@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dol3rvb1ba273"
+path="res://.godot/imported/Button-Pressed-SFX.ogg-d7b6ced9e2e90fc8deb4ac728ca54b51.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/SFX/Menu SFX/Button-Pressed-SFX.ogg"
+dest_files=["res://.godot/imported/Button-Pressed-SFX.ogg-d7b6ced9e2e90fc8deb4ac728ca54b51.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

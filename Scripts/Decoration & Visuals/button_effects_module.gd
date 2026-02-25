@@ -1,28 +1,28 @@
-class_name ButtonEffectsModule extends Node
+class_name ButtonEffectsModule extends ButtonEffectsModuleSimple
 
-@export var ease_type: Tween.EaseType
-@export var trans_type: Tween.TransitionType
-@export var anim_duration: float = 0.1
-@export var scale_amount: Vector2 = Vector2(1.05, 1.05)
 @export var rotation_amount: float = 3.0
 
-@onready var button: Button = get_parent()
-
-var tween: Tween
-
 func _ready() -> void:
+	hover_player = AudioStreamPlayer2D.new()
+	pressed_player = AudioStreamPlayer2D.new()
+	hover_player.stream = sfx_hover
+	pressed_player.stream = sfx_pressed
+	add_child(hover_player)
+	add_child(pressed_player)
 	button.mouse_entered.connect(_on_mouse_hovered.bind(true))
 	button.mouse_exited.connect(_on_mouse_hovered.bind(false))
 	button.pressed.connect(_on_button_pressed)
 	button.pivot_offset_ratio = Vector2(0.5, 0.5)
 
 func _on_button_pressed() -> void:
+	pressed_player.play()
 	reset_tween()
 	tween.tween_property(button, "scale", scale_amount, anim_duration).from(Vector2(0.8, 0.8))
 	tween.tween_property(button, "rotation_degrees", rotation_amount * [-1, 1].pick_random(), 
 		anim_duration).from(0)
 
 func _on_mouse_hovered(hovered: bool) -> void:
+	hover_player.play()
 	reset_tween()
 	tween.tween_property(button, "scale", 
 		scale_amount if hovered else Vector2.ONE, anim_duration)

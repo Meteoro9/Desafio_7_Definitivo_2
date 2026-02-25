@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ciurgv4ks5jyl"
+path="res://.godot/imported/Scene-Transition-2-SFX.ogg-2ef8f6421e9191727472dfe38e57834d.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/SFX/Menu SFX/Scene-Transition-2-SFX.ogg"
+dest_files=["res://.godot/imported/Scene-Transition-2-SFX.ogg-2ef8f6421e9191727472dfe38e57834d.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
