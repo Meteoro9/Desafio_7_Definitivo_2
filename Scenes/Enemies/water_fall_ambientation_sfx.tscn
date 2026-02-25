@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://qksxp2yra6gh"]
+
+[ext_resource type="AudioStream" uid="uid://c6vfgcdstsvhq" path="res://Audio/SFX/Enemies/WaterFall-SFX.ogg" id="1_ndyp1"]
+
+[node name="WaterFall Ambientation SFX" type="AudioStreamPlayer2D" unique_id=1288794864]
+stream = ExtResource("1_ndyp1")
+volume_db = -5.0
+autoplay = true
+bus = &"SFX"

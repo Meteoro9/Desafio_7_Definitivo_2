@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://b7j0bgreic0dy" path="res://Scenes/Utils/show_timer.tscn" id="7_1qg2w"]
 [ext_resource type="PackedScene" uid="uid://co3o3n7v2njpx" path="res://Scenes/Levels/parallax_2.tscn" id="8_2x5tp"]
 [ext_resource type="PackedScene" uid="uid://qly26b58ghn5" path="res://Scenes/Levels/camera_follow.tscn" id="9_6a11a"]
+[ext_resource type="PackedScene" uid="uid://qksxp2yra6gh" path="res://Scenes/Enemies/water_fall_ambientation_sfx.tscn" id="11_mcsp7"]
 
 [node name="Level 1" type="Node" unique_id=1756882865]
 script = ExtResource("1_shxqe")
@@ -148,3 +149,11 @@ position = Vector2(42, -33)
 [node name="Camera Follow" parent="." unique_id=2027653545 node_paths=PackedStringArray("player") instance=ExtResource("9_6a11a")]
 position = Vector2(12, 18)
 player = NodePath("../Candle-Player")
+
+[node name="WaterFall SFX" type="Node2D" parent="." unique_id=2062467701]
+
+[node name="WaterFall Ambientation SFX" parent="WaterFall SFX" unique_id=1288794864 instance=ExtResource("11_mcsp7")]
+position = Vector2(-145, -419)
+
+[node name="WaterFall Ambientation SFX2" parent="WaterFall SFX" unique_id=954589239 instance=ExtResource("11_mcsp7")]
+position = Vector2(81, -511)
