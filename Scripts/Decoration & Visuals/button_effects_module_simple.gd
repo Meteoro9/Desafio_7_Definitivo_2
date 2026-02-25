@@ -25,6 +25,7 @@ func _ready() -> void:
 	pressed_player.bus = "SFX"
 	hover_player.volume_db = 0.3
 	pressed_player.volume_db = 0.8
+	hover_player.pitch_scale = 0.5
 	
 	button.mouse_entered.connect(_on_mouse_hovered.bind(true))
 	button.mouse_exited.connect(_on_mouse_hovered.bind(false))

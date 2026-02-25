@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bk1n0jj4xvseh" path="res://Scenes/Levels/level_show_info.tscn" id="3_xg7my"]
 [ext_resource type="PackedScene" uid="uid://dpnemmdmxf2a3" path="res://Scenes/Decoration/candle_menu.tscn" id="5_wmo1h"]
 [ext_resource type="Script" uid="uid://1w16umy3lb4q" path="res://Assets/Fonts/title_text_effect.gd" id="6_gnv55"]
-[ext_resource type="FontFile" uid="uid://bpkcjwcop55te" path="res://Assets/Fonts/FontdinerSwanky-Regular.ttf" id="6_wnywc"]
+[ext_resource type="FontFile" uid="uid://55mcq5ld2q5v" path="res://Assets/Fonts/FontdinerSwanky-Regular.ttf" id="6_wnywc"]
 
 [sub_resource type="Animation" id="Animation_xg7my"]
 length = 0.001
