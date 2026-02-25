@@ -26,7 +26,7 @@ func input_buffer_behaviour(delta) -> void:
 			input_buffer_timer = 0.0
 			print("Salto por buffer inhabilitado")
 
-func on_input(event: InputEvent) -> void:
+func on_input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("arriba"):
 		jump_buffered = true
 		input_buffer_timer = 0.0

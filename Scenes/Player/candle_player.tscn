@@ -18,6 +18,7 @@
 [ext_resource type="Script" uid="uid://cfytjtugqh5b2" path="res://Scripts/State Machine/Player States/state_in_wind.gd" id="16_5c1s0"]
 [ext_resource type="Script" uid="uid://drfwmg7nkr46k" path="res://Scripts/State Machine/Player States/player_state_in_water.gd" id="17_usdh6"]
 [ext_resource type="Script" uid="uid://bmuq6287e8kty" path="res://Scripts/Player/jump_behaviour_module.gd" id="18_c5p07"]
+[ext_resource type="Script" uid="uid://b0t12s0w8o7wc" path="res://Scripts/Player/corner_correction.gd" id="19_ebalj"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p1jqv"]
 radius = 4.0
@@ -705,10 +706,12 @@ debug_color = Color(0.987509, 0, 0.312252, 0.42)
 stream = ExtResource("5_pgpgy")
 volume_db = 7.782
 autoplay = true
+bus = &"SFX"
 
 [node name="FlameKill" type="AudioStreamPlayer2D" parent="FireArea" unique_id=479985769]
 stream = ExtResource("6_mb1rh")
 volume_db = 16.271
+bus = &"SFX"
 
 [node name="FireAnimation" type="AnimatedSprite2D" parent="." unique_id=1448469897]
 texture_filter = 1
@@ -739,6 +742,7 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_fldxn")
 show_percentage = false
 
 [node name="DarknessTexture" type="Sprite2D" parent="." unique_id=943423137]
+visible = false
 z_index = 10
 texture_filter = 2
 position = Vector2(-84, 336)
@@ -783,6 +787,18 @@ script = ExtResource("17_usdh6")
 
 [node name="JumpBehaviour" type="Node" parent="." unique_id=951753677]
 script = ExtResource("18_c5p07")
+
+[node name="CornerCorrection" type="Node2D" parent="." unique_id=2101564246]
+script = ExtResource("19_ebalj")
+correction = 3
+
+[node name="RayCast_left" type="RayCast2D" parent="CornerCorrection" unique_id=834808401]
+position = Vector2(-2.5510204, -11.224489)
+target_position = Vector2(0, -8)
+
+[node name="RayCast_right" type="RayCast2D" parent="CornerCorrection" unique_id=1727676763]
+position = Vector2(2.551021, -11.224489)
+target_position = Vector2(0, -8)
 
 [connection signal="finished" from="FireArea/FlameAlive" to="FireArea" method="_on_flame_alive_finished"]
 [connection signal="animation_finished" from="AnimationPlayer" to="AnimationPlayer" method="_on_animation_finished"]
