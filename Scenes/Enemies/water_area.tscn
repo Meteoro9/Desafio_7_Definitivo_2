@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b3i70u2s72jdx"]
 
 [ext_resource type="Script" uid="uid://cw574n66mn4c5" path="res://Scripts/Enemies/water_area.gd" id="1_1mmq0"]
+[ext_resource type="AudioStream" uid="uid://c6khrpbyn45v4" path="res://Audio/SFX/Enemies/WaterPond-Splash-SFX.ogg" id="2_iknq1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p35db"]
 
@@ -12,6 +13,11 @@ script = ExtResource("1_1mmq0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1974341321]
 shape = SubResource("RectangleShape2D_p35db")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1067692501]
+stream = ExtResource("2_iknq1")
+volume_db = -5.238
+bus = &"SFX"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

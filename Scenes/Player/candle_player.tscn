@@ -743,7 +743,6 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_fldxn")
 show_percentage = false
 
 [node name="DarknessTexture" type="Sprite2D" parent="." unique_id=943423137]
-visible = false
 z_index = 10
 texture_filter = 2
 position = Vector2(-84, 336)

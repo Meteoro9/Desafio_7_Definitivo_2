@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://c5su7wlh4nf2x" path="res://Scenes/Collectables/coin_collectable.tscn" id="10_s4fk2"]
 [ext_resource type="PackedScene" uid="uid://b3i70u2s72jdx" path="res://Scenes/Enemies/water_area.tscn" id="11_2p808"]
 [ext_resource type="PackedScene" uid="uid://cri2ewgfn2l0q" path="res://Scenes/Enemies/water_drop_spawner.tscn" id="12_1c8pe"]
+[ext_resource type="PackedScene" uid="uid://qksxp2yra6gh" path="res://Scenes/Enemies/water_fall_ambientation_sfx.tscn" id="13_00q81"]
 
 [node name="Level 4" type="Node" unique_id=474322292]
 script = ExtResource("1_v8pck")
@@ -196,3 +197,20 @@ position = Vector2(-272, -568)
 
 [node name="WaterDrop_Spawner11" parent="WaterDrop Spawners" unique_id=116581287 instance=ExtResource("12_1c8pe")]
 position = Vector2(16, -1048)
+
+[node name="WaterFall SFX" type="Node2D" parent="." unique_id=548256046]
+
+[node name="WaterFall Ambientation SFX" parent="WaterFall SFX" unique_id=1288794864 instance=ExtResource("13_00q81")]
+position = Vector2(-80, -320)
+
+[node name="WaterFall Ambientation SFX2" parent="WaterFall SFX" unique_id=876134546 instance=ExtResource("13_00q81")]
+position = Vector2(112, -320)
+
+[node name="WaterFall Ambientation SFX3" parent="WaterFall SFX" unique_id=1137639309 instance=ExtResource("13_00q81")]
+position = Vector2(-80, 0)
+
+[node name="WaterFall Ambientation SFX4" parent="WaterFall SFX" unique_id=1184294354 instance=ExtResource("13_00q81")]
+position = Vector2(112, 0)
+
+[node name="WaterFall Ambientation SFX5" parent="WaterFall SFX" unique_id=2466535 instance=ExtResource("13_00q81")]
+position = Vector2(48, -904)
