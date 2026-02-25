@@ -8,6 +8,31 @@ var won : bool = false
 @export var fire_behaviour : FireBehaviour
 @onready var state_machine : StateMachine = $"State Machine"
 
+@export_range(0.0,0.5) var coyote_time : float = 0.1
+var coyote_timer : float = 0.0
+var had_jump : bool = false
+var leaved_floor : bool = false
+
+func _physics_process(delta: float) -> void:
+	if is_on_floor():
+		leaved_floor = false
+		had_jump = false
+		coyote_timer = 0.0
+	else:
+		leaved_floor = true
+		coyote_timer += delta
+
+# Helper para el state machine
+func can_jump() -> bool:
+	if had_jump: return false
+	if is_on_floor(): 
+		had_jump = true
+		return true
+	if coyote_timer < coyote_time and not had_jump and leaved_floor:
+		had_jump = true
+		return true
+	return false
+
 #region States
 # Slime
 var _active_slime_trails : Array[SlimeTrail] = []

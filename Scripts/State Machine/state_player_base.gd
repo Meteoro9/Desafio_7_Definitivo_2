@@ -40,7 +40,7 @@ func check_lateral_moving() -> void:
 		state_machine.change_to("StateLateralMoving")
 
 func check_jump() -> void:
-	if Input.is_action_pressed("arriba") and player.is_on_floor(): state_machine.change_to("StateJump")
+	if Input.is_action_just_pressed("arriba") and player.can_jump(): state_machine.change_to("StateJump")
 
 func check_idle() -> void:
 	if Input.get_axis("izquierda", "derecha") == 0.0: state_machine.change_to("StateIdle")

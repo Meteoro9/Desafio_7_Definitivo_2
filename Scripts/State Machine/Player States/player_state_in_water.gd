@@ -17,6 +17,6 @@ func on_physics_process(delta):
 	player.move_and_slide()
 
 func check_jump() -> void:
-	if Input.is_action_pressed("arriba") and player.is_on_floor():
+	if Input.is_action_just_pressed("arriba") and player.can_jump():
 		state_machine.change_to("StateJump")
 		player.velocity.y *= player.WATER_MULTIPLIER
