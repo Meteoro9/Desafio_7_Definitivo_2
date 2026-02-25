@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://ci4rrirmkqk6a"]
 
 [ext_resource type="Script" uid="uid://dd3kkirvbb3di" path="res://Scenes/Utils/load_bar.gd" id="1_xm8ck"]
+[ext_resource type="AudioStream" uid="uid://ryxmogbcu1me" path="res://Audio/SFX/Menu SFX/Scene-Transition-SFX.ogg" id="2_y0h0w"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x7ras"]
 bg_color = Color(0.72156864, 0.1764706, 0.23529412, 0.30980393)
@@ -312,3 +313,8 @@ value = 100.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=105130775]
 libraries/ = SubResource("AnimationLibrary_kdait")
+
+[node name="AudioStreamPlayer2D-1" type="AudioStreamPlayer2D" parent="." unique_id=1765576209]
+stream = ExtResource("2_y0h0w")
+volume_db = -2.619
+bus = &"SFX"

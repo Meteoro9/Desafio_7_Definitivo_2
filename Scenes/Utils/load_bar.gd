@@ -1,7 +1,9 @@
 extends CanvasLayer
 
-@onready var bar = $ProgressBar
-@onready var animation = $AnimationPlayer
+@onready var bar : ProgressBar = $ProgressBar
+@onready var animation : AnimationPlayer = $AnimationPlayer
+@onready var audio_player1 : AudioStreamPlayer2D = $"AudioStreamPlayer2D-1"
+
 var current_scene_changing
 var loading := false
 const init_bar_value := 0.0
@@ -20,11 +22,11 @@ func fade_to_scene(next_scene_route: String) -> void:
 	bar.value = init_bar_value
 	
 	show()
-	
 	animation.play("init")
 	current_scene_changing = next_scene_route
 	ResourceLoader.load_threaded_request(next_scene_route, "")
-	
+	await get_tree().create_timer(.5).timeout
+	audio_player1.play()
 
 func _process(delta: float) -> void:
 	if loading:
