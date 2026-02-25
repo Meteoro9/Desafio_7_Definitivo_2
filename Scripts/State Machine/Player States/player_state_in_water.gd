@@ -10,6 +10,7 @@ func handle_gravity(delta):
 	controlled_node.velocity.y += water_gravity * delta
 
 func on_physics_process(delta):
+	super.on_physics_process(delta)
 	get_direction()
 	player.velocity.x *= player.WATER_MULTIPLIER
 	handle_gravity(delta)
@@ -17,6 +18,7 @@ func on_physics_process(delta):
 	player.move_and_slide()
 
 func check_jump() -> void:
-	if Input.is_action_just_pressed("arriba") and player.can_jump():
+	if should_jump():
+		consume_jump()
 		state_machine.change_to("StateJump")
 		player.velocity.y *= player.WATER_MULTIPLIER

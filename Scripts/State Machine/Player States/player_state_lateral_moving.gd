@@ -3,6 +3,7 @@ class_name PlayerStateLateralMoving extends PlayerStateBase
 @export var fire_behaviour: FireBehaviour
 
 func on_physics_process(delta) -> void:
+	super.on_physics_process(delta)
 	# Asignamos velocidad x según la velocidad del player
 	get_direction()
 	
@@ -15,6 +16,7 @@ func on_physics_process(delta) -> void:
 
 
 func on_input(event) -> void:
+	super.on_input(event)
 	check_lateral_moving()
 	check_jump()
 	check_idle()

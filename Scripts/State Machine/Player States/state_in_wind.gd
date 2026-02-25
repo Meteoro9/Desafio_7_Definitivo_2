@@ -2,6 +2,7 @@ class_name PlayerStateInWind extends PlayerStateBase
 
 
 func on_physics_process(delta) -> void:
+	super.on_physics_process(delta)
 	# Aplicamos movimiento
 	var direction : float = Input.get_axis("izquierda", "derecha")
 	var target_x : float = player.wind_direction.x + (direction * player.SPEED * 0.4)

@@ -5,11 +5,51 @@ var player: CandlePlayer
 
 func start(): player = controlled_node
 
+var coyote_time : float = 0.2
+var coyote_timer : float = 0.0
+var input_buffer_time : float = 0.2
+var input_buffer_timer : float = 0.0
+
+var jump_buffered : bool = false
+var jump_available : bool = false
+
+func coyote_time_behaviour(delta) -> void:
+	if player.is_on_floor(): coyote_timer = 0.0
+	else: coyote_timer += delta
+
+func input_buffer_behaviour(delta) -> void:
+	if jump_buffered:
+		input_buffer_timer += delta
+		if input_buffer_timer > input_buffer_time:
+			jump_buffered = false
+			input_buffer_timer = 0.0
+			print("Salto por buffer inhabilitado")
+
+func on_input(event: InputEvent) -> void:
+	if Input.is_action_just_pressed("arriba"):
+		jump_buffered = true
+		input_buffer_timer = 0.0
+
+func should_jump() -> bool:
+	if not jump_buffered: return false
+	if player.is_on_floor() or coyote_timer < coyote_time: return true
+	return false
+
+func consume_jump():
+	jump_buffered = false
+	input_buffer_timer = 0.0
+	coyote_timer = coyote_time
+
+
 func on_process(delta) -> void:
 	# chequeamos vida y ejecutamos Finished que evita las entradas del jugador
 	if player.fire_behaviour.current_flame <= 0:
 		if state_machine.current_state.name != "StateFinished":
 			state_machine.change_to("StateFinished")
+
+func on_physics_process(delta) -> void:
+	input_buffer_behaviour(delta)
+	coyote_time_behaviour(delta)
 
 #region Helper Methods
 func get_acceleration() -> float:
@@ -40,7 +80,9 @@ func check_lateral_moving() -> void:
 		state_machine.change_to("StateLateralMoving")
 
 func check_jump() -> void:
-	if Input.is_action_just_pressed("arriba") and player.can_jump(): state_machine.change_to("StateJump")
+	if should_jump(): 
+		consume_jump()
+		state_machine.change_to("StateJump")
 
 func check_idle() -> void:
 	if Input.get_axis("izquierda", "derecha") == 0.0: state_machine.change_to("StateIdle")
