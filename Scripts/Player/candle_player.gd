@@ -7,7 +7,7 @@ const JUMP_VELOCITY = -530.0
 var won : bool = false
 @export var fire_behaviour : FireBehaviour
 @onready var state_machine : StateMachine = $"State Machine"
-
+@onready var jump_behaviour = $JumpBehaviour
 
 #region States
 # Slime
