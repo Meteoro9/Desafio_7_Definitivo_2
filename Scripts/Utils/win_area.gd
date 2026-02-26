@@ -9,14 +9,18 @@ class_name WinArea
 
 var timer : TimerRecord = null
 var fire: FireBehaviour = null
+var state_machine : StateMachine = null
 
 func _ready() -> void:
 	timer = show_timer.get_node("Label")
 	fire = get_parent().get_node("Candle-Player/FireArea")
+	state_machine = get_parent().get_node("Candle-Player/State Machine")
 
 func _on_body_entered(body: Node2D) -> void:
 	if body is CandlePlayer:
 		# Detectamos su Animation player
+		state_machine.change_to("StateFinished")
+		
 		var anim_player = body.get_node_or_null("AnimationPlayer")
 		timer.stop_timer()
 		if is_win and not body.won:
