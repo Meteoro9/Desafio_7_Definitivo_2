@@ -6,7 +6,8 @@ var level_paths : Array[String] = [
 	"res://Scenes/Levels/Final Levels/level_1.tscn",
 	"res://Scenes/Levels/Final Levels/level_2.tscn",
 	"res://Scenes/Levels/Final Levels/level_3.tscn",
-	"res://Scenes/Levels/Final Levels/level_4.tscn"
+	"res://Scenes/Levels/Final Levels/level_4.tscn",
+	"res://Scenes/Levels/Final Levels/level_5.tscn"
 ]
 
 var current_showed_index : int = 0

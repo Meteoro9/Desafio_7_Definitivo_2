@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dce26gkgk1opk" path="res://Assets/play-button.png" id="1_xa7wv"]
 [ext_resource type="Texture2D" uid="uid://gls1n4nxm3wh" path="res://Assets/play-button-inverted.png" id="2_mxh80"]
 [ext_resource type="Script" uid="uid://4660ycdksf6t" path="res://Scripts/Decoration & Visuals/button_effects_module_simple.gd" id="3_4upt4"]
-[ext_resource type="FontFile" uid="uid://ckf8mo42wqebx" path="res://Assets/Fonts/ChelseaMarket-Regular.ttf" id="3_hwnxc"]
+[ext_resource type="FontFile" uid="uid://ctccrv58u3mka" path="res://Assets/Fonts/ChelseaMarket-Regular.ttf" id="3_hwnxc"]
 [ext_resource type="Script" uid="uid://dadsukldygahu" path="res://Scripts/Decoration & Visuals/button_effects_module.gd" id="3_ptfpb"]
 [ext_resource type="PackedScene" uid="uid://ciolphkcn5cwq" path="res://Scenes/Levels/level_summary_menu.tscn" id="4_oxtd6"]
 [ext_resource type="Script" uid="uid://dyc7fljrdvedp" path="res://Scripts/Utils/level_play_requirement.gd" id="7_211a5"]
@@ -568,7 +568,7 @@ level_index_label = NodePath("CanvasLayer/HBoxContainer/PanelContainer/MarginCon
 panel_container = NodePath("CanvasLayer/HBoxContainer/PanelContainer")
 play_button = NodePath("CanvasLayer/HBoxContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/ButtonPlay")
 cant_play_label = NodePath("Canot Play Label")
-level_info_array_ordered = [NodePath("Level-1-Info"), NodePath("Level-2-Info"), NodePath("Level-3-Info"), NodePath("Level-4-Info")]
+level_info_array_ordered = [NodePath("Level-1-Info"), NodePath("Level-2-Info"), NodePath("Level-3-Info"), NodePath("Level-4-Info"), NodePath("Level-5-Info")]
 h_box_container = NodePath("CanvasLayer/HBoxContainer")
 animation = NodePath("AnimationPlayer")
 
@@ -741,6 +741,26 @@ text = "MAIN-MENU"
 script = ExtResource("3_ptfpb")
 metadata/_custom_type_script = "uid://dadsukldygahu"
 
+[node name="Canot Play Label" type="RichTextLabel" parent="." unique_id=1077401697]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -290.75
+offset_top = -129.0
+offset_right = 290.75
+offset_bottom = -89.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/normal_font = ExtResource("3_hwnxc")
+bbcode_enabled = true
+text = "[color=red][wave]CANOT-PLAY-3-STARS-PREV-MIN"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="Level-0-Info" parent="." unique_id=1909714594 instance=ExtResource("4_oxtd6")]
 level_path = "res://Scenes/Levels/sample_level.tscn"
 
@@ -798,25 +818,12 @@ time_star_2 = 75.0
 script = ExtResource("7_211a5")
 metadata/_custom_type_script = "uid://dyc7fljrdvedp"
 
-[node name="Canot Play Label" type="RichTextLabel" parent="." unique_id=1077401697]
-visible = false
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -290.75
-offset_top = -129.0
-offset_right = 290.75
-offset_bottom = -89.0
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_fonts/normal_font = ExtResource("3_hwnxc")
-bbcode_enabled = true
-text = "[color=red][wave]CANOT-PLAY-3-STARS-PREV-MIN"
-horizontal_alignment = 1
-vertical_alignment = 1
+[node name="Level-5-Info" parent="." unique_id=2078055530 instance=ExtResource("4_oxtd6")]
+level_id = 5
+level_path = "res://Scenes/Levels/Final Levels/level_5.tscn"
+gold_coins_limit = 3
+silver_coins_limit = 3
+bronze_coins_limit = 3
 
 [connection signal="pressed" from="CanvasLayer/HBoxContainer/PanelContainer/MarginContainer/HBoxContainer/ButtonPrevious" to="." method="_on_button_previous_pressed"]
 [connection signal="pressed" from="CanvasLayer/HBoxContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/ButtonPlay" to="." method="_on_button_play_pressed"]

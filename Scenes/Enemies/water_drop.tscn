@@ -11,7 +11,7 @@ bounce = 0.4
 size = Vector2(7.70713, 0.795996)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kkpwa"]
-radius = 7.07107
+radius = 5.0
 
 [node name="WaterDrop" type="RigidBody2D" unique_id=559343759]
 mass = 0.01
@@ -35,6 +35,7 @@ collision_mask = 5
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1981403631]
 position = Vector2(0, 3)
 shape = SubResource("CircleShape2D_kkpwa")
+debug_color = Color(0.99773353, 0, 0.16955137, 0.41960785)
 
 [node name="Timer" type="Timer" parent="." unique_id=1112116120]
 wait_time = 2.0
