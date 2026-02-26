@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://cte5gxvk8erpi"]
+
+[sub_resource type="Curve" id="Curve_t5oi5"]
+_data = [Vector2(0, 0.47081715), 0.0, 0.0, 0, 0, Vector2(0.2824074, 1), 0.0, 0.0, 0, 0, Vector2(0.86111116, 0.50194556), 0.0, 0.0, 0, 0, Vector2(1, 0.035019517), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_oqo72"]
+curve = SubResource("Curve_t5oi5")
+
+[sub_resource type="Gradient" id="Gradient_uf7dv"]
+offsets = PackedFloat32Array(0, 0.082914576, 0.33919597, 0.74623114)
+colors = PackedColorArray(1, 0.8509804, 0.5647059, 1, 1, 0.8509804, 0, 1, 0.9254902, 0.36862746, 0.2, 1, 0.26657522, 0.2665752, 0.2665752, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_t5oi5"]
+gradient = SubResource("Gradient_uf7dv")
+
+[sub_resource type="Curve" id="Curve_oqo72"]
+_data = [Vector2(0.009259261, 0.7821012), 0.0, 0.0, 0, 0, Vector2(0.25462964, 0.610895), 0.0, 0.0, 0, 0, Vector2(0.6944444, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_02mgk"]
+curve = SubResource("Curve_oqo72")
+
+[sub_resource type="Curve" id="Curve_uf7dv"]
+_data = [Vector2(0, 0.34630352), 0.0, 0.0, 0, 0, Vector2(0.24537036, 1), 0.0, 0.0, 0, 0, Vector2(0.7453704, 0.7042802), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_t5oi5"]
+curve = SubResource("Curve_uf7dv")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_uf7dv"]
+particle_flag_disable_z = true
+angle_min = -64.09999
+angle_max = 73.60001
+gravity = Vector3(0, -40, 0)
+scale_min = 8.0
+scale_max = 10.0
+scale_curve = SubResource("CurveTexture_t5oi5")
+color_ramp = SubResource("GradientTexture1D_t5oi5")
+alpha_curve = SubResource("CurveTexture_oqo72")
+emission_curve = SubResource("CurveTexture_02mgk")
+turbulence_enabled = true
+
+[node name="Fire Particles" type="GPUParticles2D" unique_id=376814491]
+process_material = SubResource("ParticleProcessMaterial_uf7dv")

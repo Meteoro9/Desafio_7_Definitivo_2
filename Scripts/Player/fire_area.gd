@@ -28,7 +28,7 @@ func take_damage(amount : float):
 func kill():
 	if is_alive and not candle.won:
 		current_flame -= 100 # Forzamos <= 0
-		fire_animation.visible = false # "apagamos" el fuego animado
+		#fire_animation.visible = false # "apagamos" el fuego animado
 		alive_audio.stop() # Apagamos el sonido de fuego vivo
 		kill_audio.play() # Reproducimos sonido de muerte
 		is_alive = false
