@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cc2nnhmt4jdgl"]
+
+[ext_resource type="Script" uid="uid://cucnews4h7k8k" path="res://Save System/level_registry.gd" id="1_m8qem"]
+[ext_resource type="Script" uid="uid://dh8uiwrgjyvu3" path="res://Save System/level_config.gd" id="2_k27mj"]
+[ext_resource type="Resource" uid="uid://bjkwbbhyr4nii" path="res://Save System/Level Configs/level_1_config.tres" id="3_gox0x"]
+[ext_resource type="Resource" uid="uid://2wa4k8q7jd0r" path="res://Save System/Level Configs/level_2_config.tres" id="4_lf5y4"]
+[ext_resource type="Resource" uid="uid://b4sragnwjn4cc" path="res://Save System/Level Configs/level_3_config.tres" id="5_geu5p"]
+[ext_resource type="Resource" uid="uid://de434uw2rqxj1" path="res://Save System/Level Configs/level_4_config.tres" id="6_o1mvo"]
+[ext_resource type="Resource" uid="uid://d0q5fleryx3py" path="res://Save System/Level Configs/level_5_config.tres" id="7_hax5r"]
+[ext_resource type="Resource" uid="uid://cc3jvgelsn318" path="res://Save System/Level Configs/level_6_config.tres" id="8_2d23x"]
+
+[node name="Level Registry" type="Node" unique_id=97483131]
+script = ExtResource("1_m8qem")
+configs = Array[ExtResource("2_k27mj")]([ExtResource("3_gox0x"), ExtResource("4_lf5y4"), ExtResource("5_geu5p"), ExtResource("6_o1mvo"), ExtResource("7_hax5r"), ExtResource("8_2d23x")])

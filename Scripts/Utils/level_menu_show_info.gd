@@ -126,7 +126,7 @@ func _on_button_previous_pressed():
 
 func _on_button_play_pressed():
 	if not play_button.disabled: # Doble chequeo de seguridad
-		LoadBar.fade_to_scene(level_info_array_ordered[current_level_index].level_path)
+		LoadBar.fade_to_scene(LevelRegistry.configs[current_level_index].level_path)
 
 func _on_button_prev_menu_pressed():
 	hide_level_info()

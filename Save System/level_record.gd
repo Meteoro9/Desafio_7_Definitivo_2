@@ -4,7 +4,7 @@ class_name LevelRecord
 @export var level_id : int
 @export var time_record : float
 @export var coins_collected: Array[CoinData] = []
-
+@export var stars: int = 0
 # Fecha y hora comprimidos en int
 @export var unix_timestamp : int
 

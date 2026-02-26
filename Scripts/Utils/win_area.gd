@@ -30,11 +30,13 @@ func _on_body_entered(body: Node2D) -> void:
 			
 			GlobalMusicManager.current_state = GlobalMusicManager.Scene_State.WIN
 			
+			# Puedo usar el record nuevo para mostrar cantidad de estrellas
+			var new_record: LevelRecord = GameData.add_record(level_id, timer.current_time)
+			
 			var scene = win_scene.instantiate()
 			scene.stars = 0
 			get_tree().root.add_child(scene)
 			
-			GameData.add_record(level_id, timer.current_time)
 			
 		elif not is_win: 
 			if fire: fire.kill()

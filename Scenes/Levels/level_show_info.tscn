@@ -762,19 +762,12 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Level-0-Info" parent="." unique_id=1909714594 instance=ExtResource("4_oxtd6")]
-level_path = "res://Scenes/Levels/sample_level.tscn"
 
 [node name="LevelPlayRequirement" type="Node" parent="Level-0-Info" unique_id=107667019]
 script = ExtResource("7_211a5")
 metadata/_custom_type_script = "uid://dyc7fljrdvedp"
 
 [node name="Level-1-Info" parent="." unique_id=527644416 instance=ExtResource("4_oxtd6")]
-level_path = "res://Scenes/Levels/Final Levels/level_1.tscn"
-gold_coins_limit = 1
-silver_coins_limit = 1
-bronze_coins_limit = 3
-time_star_1 = 45.0
-time_star_2 = 35.0
 
 [node name="LevelPlayRequirement" type="Node" parent="Level-1-Info" unique_id=1352612180]
 script = ExtResource("7_211a5")
@@ -783,10 +776,6 @@ metadata/_custom_type_script = "uid://dyc7fljrdvedp"
 
 [node name="Level-2-Info" parent="." unique_id=1074932630 instance=ExtResource("4_oxtd6")]
 level_id = 2
-level_path = "res://Scenes/Levels/Final Levels/level_2.tscn"
-gold_coins_limit = 3
-silver_coins_limit = 3
-bronze_coins_limit = 3
 
 [node name="LevelPlayRequirement" type="Node" parent="Level-2-Info" unique_id=2062335708]
 script = ExtResource("7_211a5")
@@ -794,12 +783,6 @@ metadata/_custom_type_script = "uid://dyc7fljrdvedp"
 
 [node name="Level-3-Info" parent="." unique_id=1190367218 instance=ExtResource("4_oxtd6")]
 level_id = 3
-level_path = "res://Scenes/Levels/Final Levels/level_3.tscn"
-gold_coins_limit = 3
-silver_coins_limit = 3
-bronze_coins_limit = 3
-time_star_1 = 70.0
-time_star_2 = 60.0
 
 [node name="LevelPlayRequirement" type="Node" parent="Level-3-Info" unique_id=954863790]
 script = ExtResource("7_211a5")
@@ -807,12 +790,6 @@ metadata/_custom_type_script = "uid://dyc7fljrdvedp"
 
 [node name="Level-4-Info" parent="." unique_id=819396862 instance=ExtResource("4_oxtd6")]
 level_id = 4
-level_path = "res://Scenes/Levels/Final Levels/level_4.tscn"
-gold_coins_limit = 3
-silver_coins_limit = 3
-bronze_coins_limit = 3
-time_star_1 = 90.0
-time_star_2 = 75.0
 
 [node name="LevelPlayRequirement" type="Node" parent="Level-4-Info" unique_id=1813823182]
 script = ExtResource("7_211a5")
@@ -820,10 +797,6 @@ metadata/_custom_type_script = "uid://dyc7fljrdvedp"
 
 [node name="Level-5-Info" parent="." unique_id=2078055530 instance=ExtResource("4_oxtd6")]
 level_id = 5
-level_path = "res://Scenes/Levels/Final Levels/level_5.tscn"
-gold_coins_limit = 3
-silver_coins_limit = 3
-bronze_coins_limit = 3
 
 [connection signal="pressed" from="CanvasLayer/HBoxContainer/PanelContainer/MarginContainer/HBoxContainer/ButtonPrevious" to="." method="_on_button_previous_pressed"]
 [connection signal="pressed" from="CanvasLayer/HBoxContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/ButtonPlay" to="." method="_on_button_play_pressed"]

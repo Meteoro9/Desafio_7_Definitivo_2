@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="LevelConfig" format=3 uid="uid://bjkwbbhyr4nii"]
+
+[ext_resource type="Script" uid="uid://dh8uiwrgjyvu3" path="res://Save System/level_config.gd" id="1_l76mc"]
+
+[resource]
+script = ExtResource("1_l76mc")
+level_id = 1
+level_path = "res://Scenes/Levels/Final Levels/level_1.tscn"
+gold_coins_limit = 1
+silver_coins_limit = 1
+bronze_coins_limit = 3
+time_star_1 = 45.0
+time_star_2 = 35.0
+metadata/_custom_type_script = "uid://dh8uiwrgjyvu3"

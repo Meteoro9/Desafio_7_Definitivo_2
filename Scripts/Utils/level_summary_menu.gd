@@ -3,23 +3,18 @@ class_name LevelSummaryMenu
 
 # Agregar acá los niveles para poder seleccionarlos.
 # Level_0 = Sample_Level, no mostrarlo en versión final
-enum LevelSelected { 
-	LEVEL_0, 
-	LEVEL_1, 
-	LEVEL_2, 
-	LEVEL_3, 
-	LEVEL_4, 
-	LEVEL_5 } 
+enum LevelSelected { LEVEL_0, LEVEL_1, LEVEL_2, LEVEL_3, LEVEL_4, LEVEL_5,
+LEVEL_6, LEVEL_7, LEVEL_8 } 
 @export var level_id : LevelSelected = LevelSelected.LEVEL_1
-@export var level_path : String
+#@export var level_path : String
 
-@export var gold_coins_limit : int = 0
-@export var silver_coins_limit : int = 0
-@export var bronze_coins_limit : int = 0
+#@export var gold_coins_limit : int = 0
+#@export var silver_coins_limit : int = 0
+#@export var bronze_coins_limit : int = 0
 
 # Tiempos necesarios para las estrellas dadas por tiempo
-@export var time_star_1: float = 30.0
-@export var time_star_2: float = 25.0
+#@export var time_star_1: float = 30.0
+#@export var time_star_2: float = 25.0
 
 #@export var play_requirement: LevelPlayRequirement
 
@@ -44,15 +39,16 @@ func _filter_level_records(raw: Array[LevelRecord]) -> Array[LevelRecord]:
 func _build_display_data(records: Array[LevelRecord]) -> Array[Dictionary]:
 	var result: Array[Dictionary] = []
 	for rec in records:
-		var stars := _count_stars(rec)
+		#var stars := _count_stars(rec)
 		result.append({
 			"time": "%.2f" % rec.time_record,
 			"date": rec.get_date_string(),
 			"hour": rec.get_hour_string(),
-			"stars": stars
+			"stars": rec.stars #stars
 		})
 	return result
 
+""" Antigua implementación de conteo de estrellas
 # Procesamos estrellas
 func _count_stars(rec: LevelRecord) -> int:
 	var stars := 0
@@ -70,3 +66,4 @@ func _count_stars(rec: LevelRecord) -> int:
 		stars += 1
 	
 	return stars
+"""

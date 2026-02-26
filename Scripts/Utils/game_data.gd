@@ -16,7 +16,7 @@ func register_coin(level_id: int, material: CoinData.CoinMaterial) -> void:
 	coin.set_data(level_id, material)
 	_pending_coins.append(coin)
 
-func add_record(level_id : int, new_time : float):
+func add_record(level_id : int, new_time : float) -> LevelRecord:
 	var new_record = LevelRecord.new()
 	new_record.set_data(level_id, new_time)
 	
@@ -29,6 +29,8 @@ func add_record(level_id : int, new_time : float):
 	current_records.append(new_record)
 	_clean_old_records(level_id)
 	_save_to_disk()
+	
+	return new_record
 
 # Verificar si es necesario, me lo recomendó IA
 func discard_pending_coins() -> void: _pending_coins.clear()
@@ -59,7 +61,15 @@ func load_data():
 		
 		if save:
 			current_records = save.records
+			_migrate_stars()
 			# Aplicar idioma guardado
 			if save.saved_locale_lang != "": TranslationServer.set_locale(save.saved_locale_lang)
 			else: TranslationServer.set_locale("en_US")
 		else: TranslationServer.set_locale("en_US")
+
+func _migrate_stars() -> void:
+	for rec in current_records:
+		if rec.stars == 0:
+			var config: LevelConfig = LevelRegistry.get_config(rec.level_id)
+			if config: rec.stars = config.count_stars(rec)
+	_save_to_disk()
