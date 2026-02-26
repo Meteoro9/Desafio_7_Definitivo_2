@@ -6,15 +6,6 @@ class_name LevelSummaryMenu
 enum LevelSelected { LEVEL_0, LEVEL_1, LEVEL_2, LEVEL_3, LEVEL_4, LEVEL_5,
 LEVEL_6, LEVEL_7, LEVEL_8 } 
 @export var level_id : LevelSelected = LevelSelected.LEVEL_1
-#@export var level_path : String
-
-#@export var gold_coins_limit : int = 0
-#@export var silver_coins_limit : int = 0
-#@export var bronze_coins_limit : int = 0
-
-# Tiempos necesarios para las estrellas dadas por tiempo
-#@export var time_star_1: float = 30.0
-#@export var time_star_2: float = 25.0
 
 #@export var play_requirement: LevelPlayRequirement
 
@@ -39,7 +30,6 @@ func _filter_level_records(raw: Array[LevelRecord]) -> Array[LevelRecord]:
 func _build_display_data(records: Array[LevelRecord]) -> Array[Dictionary]:
 	var result: Array[Dictionary] = []
 	for rec in records:
-		#var stars := _count_stars(rec)
 		result.append({
 			"time": "%.2f" % rec.time_record,
 			"date": rec.get_date_string(),
@@ -47,23 +37,3 @@ func _build_display_data(records: Array[LevelRecord]) -> Array[Dictionary]:
 			"stars": rec.stars #stars
 		})
 	return result
-
-""" Antigua implementación de conteo de estrellas
-# Procesamos estrellas
-func _count_stars(rec: LevelRecord) -> int:
-	var stars := 0
-	# Filtramos según coleccionables del nivel
-	if gold_coins_limit > 0 and rec.get_coins_by_material(CoinData.CoinMaterial.GOLD) >= gold_coins_limit:
-		stars += 1
-	if silver_coins_limit > 0 and rec.get_coins_by_material(CoinData.CoinMaterial.SILVER) >= silver_coins_limit:
-		stars += 1
-	if bronze_coins_limit > 0 and rec.get_coins_by_material(CoinData.CoinMaterial.BRONZE) >= bronze_coins_limit:
-		stars += 1
-	# Filtramos según tiempos necesarios
-	if rec.time_record < time_star_1:
-		stars += 1
-	if rec.time_record < time_star_2:
-		stars += 1
-	
-	return stars
-"""
