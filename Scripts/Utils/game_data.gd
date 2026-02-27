@@ -25,7 +25,10 @@ func add_record(level_id : int, new_time : float) -> LevelRecord:
 		if coin.level_id == level_id: 
 			new_record.coins_collected.append(coin)
 	_pending_coins.clear()
-	
+	# Calcular estrellas antes de guardar
+	var config: LevelConfig = LevelRegistry.get_config(level_id)
+	if config: new_record.stars = config.count_stars(new_record)
+	# Se agrega a la lista, se elimina el 10mo y se guarda en el disco
 	current_records.append(new_record)
 	_clean_old_records(level_id)
 	_save_to_disk()
@@ -44,7 +47,11 @@ func _clean_old_records(target_level_id : int):
 	# Borramos al superar 9
 	if records_of_this_level.size() > 9:
 		# Ordenamos de mayor a menor tiempo y luego eliminamos el primero (mayor tiempo)
-		records_of_this_level.sort_custom(func(a, b): return a.time_record > b.time_record)
+		records_of_this_level.sort_custom(
+		func(a, b): 
+			if a.stars != b.stars: return a.stars < b.stars # Ordena por cantidad de estrellas
+			return a.time_record > b.time_record # En caso de misma cantidad, ordena por tiempos
+		)
 		current_records.erase(records_of_this_level[0])
 
 func save_locale(locale: String) -> void: _save_to_disk(locale)

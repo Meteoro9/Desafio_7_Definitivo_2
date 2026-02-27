@@ -6,10 +6,9 @@ var stars : int
 
 func _ready() -> void:
 	await get_tree().process_frame
-	#var entry = 
-	var stars_text : String = "★".repeat(stars) + "☆".repeat(5 - stars) 
+	var stars_text : String = "[wave][title-effect]" + "★".repeat(stars) + "☆".repeat(5 - stars) + "[/title-effect][/wave]"
 	
-	stars_label.text = stars_text + "\n" + tr("[wave]STARS-WIN: %d[/wave]" % stars)
+	stars_label.text = stars_text
 
 func on_retry_pressed():
 	LoadBar.fade_to_scene(LevelRegistry.configs[GameManager.current_level_index].level_path)

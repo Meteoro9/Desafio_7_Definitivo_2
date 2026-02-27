@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://t37fi2u1vxam" path="res://Scripts/Utils/win_menu.gd" id="1_30vpb"]
 [ext_resource type="FontFile" uid="uid://ctccrv58u3mka" path="res://Assets/Fonts/ChelseaMarket-Regular.ttf" id="2_keumo"]
 [ext_resource type="Script" uid="uid://dadsukldygahu" path="res://Scripts/Decoration & Visuals/button_effects_module.gd" id="2_ncqc4"]
+[ext_resource type="Script" uid="uid://1w16umy3lb4q" path="res://Assets/Fonts/title_text_effect.gd" id="4_7ksyu"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_keumo"]
 bg_color = Color(0.288213, 0.586319, 0.246446, 1)
@@ -115,6 +116,10 @@ _data = {
 &"visible_init": SubResource("Animation_c1hu8")
 }
 
+[sub_resource type="RichTextEffect" id="RichTextEffect_w521n"]
+script = ExtResource("4_7ksyu")
+metadata/_custom_type_script = "uid://1w16umy3lb4q"
+
 [node name="WinMenu" type="CanvasLayer" unique_id=1123096377]
 script = ExtResource("1_30vpb")
 
@@ -186,11 +191,12 @@ offset_right = 137.25
 offset_bottom = 224.0
 grow_horizontal = 2
 theme_override_fonts/normal_font = ExtResource("2_keumo")
-theme_override_font_sizes/normal_font_size = 24
+theme_override_font_sizes/normal_font_size = 40
 bbcode_enabled = true
-text = "[wave]aaaaaaaaaa[/wave]"
+text = "[wave][title-effect][/title-effect][/wave]"
 horizontal_alignment = 1
 vertical_alignment = 1
+custom_effects = [SubResource("RichTextEffect_w521n")]
 
 [connection signal="pressed" from="Button" to="." method="on_retry_pressed"]
 [connection signal="pressed" from="Button2" to="." method="on_go_menu_pressed"]
