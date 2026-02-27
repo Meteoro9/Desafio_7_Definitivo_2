@@ -3,6 +3,7 @@ class_name ButtonEffectsModule extends ButtonEffectsModuleSimple
 @export var rotation_amount: float = 3.0
 
 func _on_button_pressed() -> void:
+	_select_pitch()
 	pressed_player.play()
 	reset_tween()
 	tween.tween_property(button, "scale", scale_amount, anim_duration).from(Vector2(0.8, 0.8))
@@ -10,6 +11,7 @@ func _on_button_pressed() -> void:
 		anim_duration).from(0)
 
 func _on_mouse_hovered(hovered: bool) -> void:
+	_select_pitch()
 	hover_player.play()
 	reset_tween()
 	tween.tween_property(button, "scale", 

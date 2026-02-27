@@ -25,7 +25,6 @@ func _ready() -> void:
 	pressed_player.bus = "SFX"
 	hover_player.volume_db = 0.3
 	pressed_player.volume_db = 0.8
-	hover_player.pitch_scale = 0.5
 	
 	button.mouse_entered.connect(_on_mouse_hovered.bind(true))
 	button.mouse_exited.connect(_on_mouse_hovered.bind(false))
@@ -33,11 +32,13 @@ func _ready() -> void:
 	button.pivot_offset_ratio = Vector2(0.5, 0.5)
 
 func _on_button_pressed() -> void:
+	_select_pitch()
 	pressed_player.play()
 	reset_tween()
 	tween.tween_property(button, "scale", scale_amount, anim_duration).from(Vector2(0.8, 0.8))
 
 func _on_mouse_hovered(hovered: bool) -> void:
+	_select_pitch()
 	hover_player.play()
 	reset_tween()
 	tween.tween_property(button, "scale", 
@@ -46,3 +47,9 @@ func _on_mouse_hovered(hovered: bool) -> void:
 func reset_tween() -> void:
 	if tween: tween.kill()
 	tween = create_tween().set_ease(ease_type).set_trans(trans_type).set_parallel(true)
+
+func _select_pitch() -> void:
+	var hover_pitch = randf_range(0.4,0.55)
+	var pressed_pitch = randf_range(0.95,1.05)
+	hover_player.pitch_scale = hover_pitch
+	pressed_player.pitch_scale = pressed_pitch
