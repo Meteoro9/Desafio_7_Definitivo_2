@@ -9,7 +9,7 @@ func _ready() -> void:
 	#var entry = 
 	var stars_text : String = "★".repeat(stars) + "☆".repeat(5 - stars) 
 	
-	stars_label.text = stars_text + "\n" + tr("STARS-WIN: %d" % stars)
+	stars_label.text = stars_text + "\n" + tr("[wave]STARS-WIN: %d[/wave]" % stars)
 
 func on_retry_pressed():
 	LoadBar.fade_to_scene(LevelRegistry.configs[GameManager.current_level_index].level_path)

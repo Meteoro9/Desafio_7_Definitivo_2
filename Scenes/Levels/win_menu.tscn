@@ -187,7 +187,8 @@ offset_bottom = 224.0
 grow_horizontal = 2
 theme_override_fonts/normal_font = ExtResource("2_keumo")
 theme_override_font_sizes/normal_font_size = 24
-text = "aaaa"
+bbcode_enabled = true
+text = "[wave]aaaaaaaaaa[/wave]"
 horizontal_alignment = 1
 vertical_alignment = 1
 
