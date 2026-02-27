@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://lvk0ui6gexa5" path="res://Assets/Elements/Wood.png" id="2_ogt1t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_75auj"]
-size = Vector2(48, 32)
+size = Vector2(42, 32)
 
 [sub_resource type="Curve" id="Curve_dsshd"]
 _data = [Vector2(0.028248586, 0), 0.0, 0.0, 0, 0, Vector2(0.22598869, 0.6731518), 0.0, 0.0, 0, 0, Vector2(0.59322035, 0.26848257), 0.0, 0.0, 0, 0, Vector2(0.9830509, 0.688716), 0.0, 0.0, 0, 0]
@@ -100,7 +100,7 @@ tracks/3/keys = {
 
 [sub_resource type="Animation" id="Animation_ygv67"]
 resource_name = "fire"
-length = 2.0
+length = 2.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -108,7 +108,7 @@ tracks/0/path = NodePath("FireParticles:emitting")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.8666667, 1.1333333),
+"times": PackedFloat32Array(0, 0.6333333, 0.8666667),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [true, true, false]
@@ -120,7 +120,7 @@ tracks/1/path = NodePath("Sprite2D:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(-0.13333333, 1.6, 1.9666667),
+"times": PackedFloat32Array(-0.13333333, 2.0666666, 2.4),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Color(0.9838117, 0.9838117, 0.9838117, 1), Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
@@ -132,7 +132,7 @@ tracks/2/path = NodePath(".")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(1.7333333),
+"times": PackedFloat32Array(2.1333334),
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": [],
@@ -146,7 +146,7 @@ tracks/3/path = NodePath("CollisionBody/CollisionShape2D:shape")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 1.8, 1.9333333),
+"times": PackedFloat32Array(0, 1.8333334, 2.2666667),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [SubResource("RectangleShape2D_dsshd"), SubResource("RectangleShape2D_dsshd"), null]
@@ -229,7 +229,7 @@ wait_time = 2.0
 [node name="FireParticles" type="GPUParticles2D" parent="." unique_id=1143732081]
 scale = Vector2(18.260193, 17.920134)
 amount = 30
-lifetime = 4.0
+lifetime = 3.0
 process_material = SubResource("ParticleProcessMaterial_8h1ud")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=159882937]
