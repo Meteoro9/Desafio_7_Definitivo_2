@@ -7,9 +7,14 @@ var wood_fire_audio : AudioStream = load("res://Audio/SFX/Elements/Wood-Fire-SFX
 var audio_emmited : bool = false
 
 func _ready() -> void:
+	_configure_audio()
+
+func _configure_audio() -> void:
 	audio_player = AudioStreamPlayer2D.new()
 	add_child(audio_player)
 	audio_player.bus = "SFX"
+	var pitch = randf_range(0.8,1.2)
+	audio_player.pitch_scale = pitch
 	audio_player.stream = wood_fire_audio
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
