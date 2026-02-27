@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cnj0et6kmyb3r"]
 
 [ext_resource type="Script" uid="uid://t37fi2u1vxam" path="res://Scripts/Utils/win_menu.gd" id="1_30vpb"]
-[ext_resource type="FontFile" uid="uid://ckf8mo42wqebx" path="res://Assets/Fonts/ChelseaMarket-Regular.ttf" id="2_keumo"]
+[ext_resource type="FontFile" uid="uid://ctccrv58u3mka" path="res://Assets/Fonts/ChelseaMarket-Regular.ttf" id="2_keumo"]
 [ext_resource type="Script" uid="uid://dadsukldygahu" path="res://Scripts/Decoration & Visuals/button_effects_module.gd" id="2_ncqc4"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_keumo"]
@@ -153,17 +153,16 @@ libraries/ = SubResource("AnimationLibrary_rifxn")
 autoplay = &"visible_init"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=416799711]
-visible = false
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -137.25
+offset_top = 107.0
 offset_right = 137.25
-offset_bottom = 40.0
+offset_bottom = 224.0
 grow_horizontal = 2
 theme_override_fonts/normal_font = ExtResource("2_keumo")
 theme_override_font_sizes/normal_font_size = 24
-text = "STARS-WIN: ★★★★★"
 horizontal_alignment = 1
 vertical_alignment = 1
 

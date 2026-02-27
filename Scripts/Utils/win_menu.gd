@@ -2,11 +2,14 @@ extends CanvasLayer
 
 @onready var stars_label = $RichTextLabel
 # Implementar lógica de muestra de estrellas al ganar
-var stars : int = 0
+var stars : int
 
 func _ready() -> void:
-	#stars_label.text = 
-	pass
+	await get_tree().process_frame
+	#var entry = 
+	var stars_text : String = "★".repeat(stars) + "☆".repeat(5 - stars) 
+	
+	stars_label.text = stars_text + "\n" + tr("STARS-WIN: %d" % stars)
 
 func on_retry_pressed():
 	LoadBar.fade_to_scene(LevelRegistry.configs[GameManager.current_level_index].level_path)
