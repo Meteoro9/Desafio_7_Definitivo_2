@@ -3,8 +3,10 @@
 [ext_resource type="Script" uid="uid://t37fi2u1vxam" path="res://Scripts/Utils/win_menu.gd" id="1_30vpb"]
 [ext_resource type="FontFile" uid="uid://ctccrv58u3mka" path="res://Assets/Fonts/ChelseaMarket-Regular.ttf" id="2_keumo"]
 [ext_resource type="Script" uid="uid://dadsukldygahu" path="res://Scripts/Decoration & Visuals/button_effects_module.gd" id="2_ncqc4"]
-[ext_resource type="Texture2D" uid="uid://sqrtdwhygkml" path="res://Assets/Elements/Coin Collectable.png" id="3_w521n"]
 [ext_resource type="Script" uid="uid://1w16umy3lb4q" path="res://Assets/Fonts/title_text_effect.gd" id="4_7ksyu"]
+[ext_resource type="Texture2D" uid="uid://drvwfi1ipxjuf" path="res://Assets/Elements/Bronze-Coin.png" id="5_3aons"]
+[ext_resource type="Texture2D" uid="uid://cg4fbfyyqxipo" path="res://Assets/Elements/Silver-Coin.png" id="6_7i5s4"]
+[ext_resource type="Texture2D" uid="uid://b80v42qmu28m3" path="res://Assets/Elements/Gold-Coin.png" id="7_g06af"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_keumo"]
 bg_color = Color(0.288213, 0.586319, 0.246446, 1)
@@ -32,72 +34,6 @@ corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
 shadow_color = Color(0.346569, 0.346569, 0.346569, 0.831373)
 shadow_size = 5
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_fegd7"]
-atlas = ExtResource("3_w521n")
-region = Rect2(0, 320, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3aons"]
-atlas = ExtResource("3_w521n")
-region = Rect2(0, 256, 64, 64)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_7i5s4"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_fegd7")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_3aons")
-}],
-"loop": true,
-"name": &"default",
-"speed": 3.0
-}]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_g06af"]
-atlas = ExtResource("3_w521n")
-region = Rect2(0, 64, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_s3blx"]
-atlas = ExtResource("3_w521n")
-region = Rect2(0, 0, 64, 64)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_l4ljq"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_g06af")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_s3blx")
-}],
-"loop": true,
-"name": &"default",
-"speed": 3.0
-}]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jja3n"]
-atlas = ExtResource("3_w521n")
-region = Rect2(0, 192, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4b84l"]
-atlas = ExtResource("3_w521n")
-region = Rect2(0, 128, 64, 64)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_78irw"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_jja3n")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_4b84l")
-}],
-"loop": true,
-"name": &"default",
-"speed": 3.0
-}]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7ksyu"]
 bg_color = Color(0.28627452, 0.5882353, 0.24705882, 0.4745098)
@@ -181,18 +117,6 @@ tracks/3/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0)]
 }
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Coins Decorative:modulate")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
 
 [sub_resource type="Animation" id="Animation_c1hu8"]
 resource_name = "visible_init"
@@ -243,18 +167,6 @@ tracks/3/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.22745098), Color(1, 1, 1, 1)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Coins Decorative:modulate")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0, 0.33, 0.49, 1),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 0.5529412), Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_rifxn"]
@@ -326,30 +238,6 @@ text = "MENU"
 script = ExtResource("2_ncqc4")
 metadata/_custom_type_script = "uid://dadsukldygahu"
 
-[node name="Coins Decorative" type="Node2D" parent="." unique_id=223921205]
-modulate = Color(1, 1, 1, 0)
-
-[node name="Bronze" type="AnimatedSprite2D" parent="Coins Decorative" unique_id=166508159]
-position = Vector2(276.4, 283)
-scale = Vector2(0.7, 0.7)
-sprite_frames = SubResource("SpriteFrames_7i5s4")
-autoplay = "default"
-frame_progress = 0.45804074
-
-[node name="Silver" type="AnimatedSprite2D" parent="Coins Decorative" unique_id=961644702]
-position = Vector2(534.4, 283)
-scale = Vector2(0.7, 0.7)
-sprite_frames = SubResource("SpriteFrames_l4ljq")
-autoplay = "default"
-frame_progress = 0.52115417
-
-[node name="Gold" type="AnimatedSprite2D" parent="Coins Decorative" unique_id=782848994]
-position = Vector2(792.39996, 283)
-scale = Vector2(0.7, 0.7)
-sprite_frames = SubResource("SpriteFrames_78irw")
-autoplay = "default"
-frame_progress = 0.32138732
-
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=524699471]
 modulate = Color(1, 1, 1, 0)
 z_index = -1
@@ -357,9 +245,9 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -415.0
-offset_top = 113.0
+offset_top = 58.0
 offset_right = 415.0
-offset_bottom = 343.0
+offset_bottom = 322.0
 grow_horizontal = 2
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_7ksyu")
@@ -399,6 +287,7 @@ layout_mode = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer" unique_id=1291331374]
 layout_mode = 2
+size_flags_vertical = 3
 theme_override_constants/separation = 20
 alignment = 1
 
@@ -454,6 +343,11 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_fegd7")
 
+[node name="Bronze" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer2/PanelContainer" unique_id=788016068]
+layout_mode = 2
+texture = ExtResource("5_3aons")
+stretch_mode = 4
+
 [node name="BronzeCoinsLabel" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer2/PanelContainer" unique_id=1899822390]
 clip_contents = false
 custom_minimum_size = Vector2(150, 30)
@@ -464,7 +358,7 @@ theme_override_constants/shadow_outline_size = 3
 theme_override_fonts/normal_font = ExtResource("2_keumo")
 theme_override_font_sizes/bold_font_size = 40
 bbcode_enabled = true
-text = "[title-effect]     3/3 = ★"
+text = "[title-effect]3/3 = ★"
 fit_content = true
 scroll_active = false
 horizontal_alignment = 1
@@ -486,12 +380,17 @@ theme_override_constants/shadow_outline_size = 3
 theme_override_fonts/normal_font = ExtResource("2_keumo")
 theme_override_font_sizes/bold_font_size = 40
 bbcode_enabled = true
-text = "[title-effect]     3/3 = ★"
+text = "[title-effect]3/3 = ★"
 fit_content = true
 scroll_active = false
 horizontal_alignment = 1
 vertical_alignment = 1
 custom_effects = [SubResource("RichTextEffect_7ksyu")]
+
+[node name="Silver" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer2/PanelContainer2" unique_id=108711656]
+layout_mode = 2
+texture = ExtResource("6_7i5s4")
+stretch_mode = 4
 
 [node name="PanelContainer3" type="PanelContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1447712707]
 layout_mode = 2
@@ -508,12 +407,17 @@ theme_override_constants/shadow_outline_size = 3
 theme_override_fonts/normal_font = ExtResource("2_keumo")
 theme_override_font_sizes/bold_font_size = 40
 bbcode_enabled = true
-text = "[title-effect]     3/3 = ★"
+text = "[title-effect]3/3 = ★"
 fit_content = true
 scroll_active = false
 horizontal_alignment = 1
 vertical_alignment = 1
 custom_effects = [SubResource("RichTextEffect_7ksyu")]
+
+[node name="Gold" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer2/PanelContainer3" unique_id=599964313]
+layout_mode = 2
+texture = ExtResource("7_g06af")
+stretch_mode = 4
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1314943492]
 libraries/ = SubResource("AnimationLibrary_rifxn")
