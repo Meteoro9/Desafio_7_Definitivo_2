@@ -33,90 +33,6 @@ corner_radius_bottom_left = 16
 shadow_color = Color(0.346569, 0.346569, 0.346569, 0.831373)
 shadow_size = 5
 
-[sub_resource type="Animation" id="Animation_pbk73"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Button:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Button2:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("PanelContainer/MarginContainer/VBoxContainer/StarsLabel:modulate")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_c1hu8"]
-resource_name = "visible_init"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Button:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.333333, 1),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.619608), Color(1, 1, 1, 1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Button2:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.3333, 1),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.619608), Color(1, 1, 1, 1)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("PanelContainer/MarginContainer/VBoxContainer/StarsLabel:modulate")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.34, 1),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.61960787), Color(1, 1, 1, 1)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_rifxn"]
-_data = {
-&"RESET": SubResource("Animation_pbk73"),
-&"visible_init": SubResource("Animation_c1hu8")
-}
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_fegd7"]
 atlas = ExtResource("3_w521n")
 region = Rect2(0, 320, 64, 64)
@@ -184,7 +100,7 @@ animations = [{
 }]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7ksyu"]
-bg_color = Color(0.09803922, 0.6627451, 0.6862745, 0.3254902)
+bg_color = Color(0.28627452, 0.5882353, 0.24705882, 0.4745098)
 corner_radius_top_left = 30
 corner_radius_top_right = 10
 corner_radius_bottom_right = 30
@@ -195,7 +111,7 @@ script = ExtResource("4_7ksyu")
 metadata/_custom_type_script = "uid://1w16umy3lb4q"
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w521n"]
-bg_color = Color(0.09803922, 0.6627451, 0.6862745, 0.6039216)
+bg_color = Color(0.16078432, 0.34509805, 0.13725491, 0.6039216)
 corner_radius_top_left = 30
 corner_radius_top_right = 10
 corner_radius_bottom_right = 30
@@ -209,11 +125,143 @@ script = ExtResource("4_7ksyu")
 metadata/_custom_type_script = "uid://1w16umy3lb4q"
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fegd7"]
-bg_color = Color(0.09803922, 0.6627451, 0.6862745, 0.6039216)
+bg_color = Color(0.15922177, 0.3465236, 0.13698292, 0.6039216)
 corner_radius_top_left = 30
 corner_radius_top_right = 10
 corner_radius_bottom_right = 30
 corner_radius_bottom_left = 10
+
+[sub_resource type="Animation" id="Animation_pbk73"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Button:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Button2:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PanelContainer/MarginContainer/VBoxContainer/StarsLabel:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("PanelContainer:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Coins Decorative:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_c1hu8"]
+resource_name = "visible_init"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Button:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.333333, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.619608), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Button2:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3333, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.619608), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PanelContainer/MarginContainer/VBoxContainer/StarsLabel:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.34, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.61960787), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("PanelContainer:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.33, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.22745098), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Coins Decorative:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.33, 0.49, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 0.5529412), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rifxn"]
+_data = {
+&"RESET": SubResource("Animation_pbk73"),
+&"visible_init": SubResource("Animation_c1hu8")
+}
 
 [node name="WinMenu" type="CanvasLayer" unique_id=1123096377 node_paths=PackedStringArray("stars_label", "time1_label", "time2_label", "bronze_label", "silver_label", "gold_label")]
 script = ExtResource("1_30vpb")
@@ -278,40 +326,40 @@ text = "MENU"
 script = ExtResource("2_ncqc4")
 metadata/_custom_type_script = "uid://dadsukldygahu"
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1314943492]
-libraries/ = SubResource("AnimationLibrary_rifxn")
-autoplay = &"visible_init"
+[node name="Coins Decorative" type="Node2D" parent="." unique_id=223921205]
+modulate = Color(1, 1, 1, 0)
 
-[node name="Bronze" type="AnimatedSprite2D" parent="." unique_id=166508159]
-position = Vector2(382, 322)
+[node name="Bronze" type="AnimatedSprite2D" parent="Coins Decorative" unique_id=166508159]
+position = Vector2(276.4, 283)
 scale = Vector2(0.7, 0.7)
 sprite_frames = SubResource("SpriteFrames_7i5s4")
 autoplay = "default"
-frame_progress = 0.26439214
+frame_progress = 0.45804074
 
-[node name="Silver" type="AnimatedSprite2D" parent="." unique_id=961644702]
-position = Vector2(536.00006, 322)
+[node name="Silver" type="AnimatedSprite2D" parent="Coins Decorative" unique_id=961644702]
+position = Vector2(534.4, 283)
 scale = Vector2(0.7, 0.7)
 sprite_frames = SubResource("SpriteFrames_l4ljq")
 autoplay = "default"
-frame_progress = 0.32750577
+frame_progress = 0.52115417
 
-[node name="Gold" type="AnimatedSprite2D" parent="." unique_id=782848994]
-position = Vector2(691, 322)
+[node name="Gold" type="AnimatedSprite2D" parent="Coins Decorative" unique_id=782848994]
+position = Vector2(792.39996, 283)
 scale = Vector2(0.7, 0.7)
 sprite_frames = SubResource("SpriteFrames_78irw")
 autoplay = "default"
-frame_progress = 0.12773916
+frame_progress = 0.32138732
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=524699471]
+modulate = Color(1, 1, 1, 0)
 z_index = -1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -415.0
-offset_top = 152.0
+offset_top = 113.0
 offset_right = 415.0
-offset_bottom = 248.0
+offset_bottom = 343.0
 grow_horizontal = 2
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_7ksyu")
@@ -356,6 +404,7 @@ alignment = 1
 
 [node name="PanelContainer" type="PanelContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=2065177341]
 layout_mode = 2
+size_flags_horizontal = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_w521n")
 
 [node name="Time1Label" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer/PanelContainer" unique_id=2103502135]
@@ -376,6 +425,7 @@ custom_effects = [SubResource("RichTextEffect_7ksyu")]
 
 [node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1615623995]
 layout_mode = 2
+size_flags_horizontal = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_w521n")
 
 [node name="Time2Label" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer/PanelContainer2" unique_id=766259586]
@@ -401,6 +451,7 @@ alignment = 1
 
 [node name="PanelContainer" type="PanelContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1989121786]
 layout_mode = 2
+size_flags_horizontal = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_fegd7")
 
 [node name="BronzeCoinsLabel" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer2/PanelContainer" unique_id=1899822390]
@@ -422,6 +473,7 @@ custom_effects = [SubResource("RichTextEffect_7ksyu")]
 
 [node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=15736303]
 layout_mode = 2
+size_flags_horizontal = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_fegd7")
 
 [node name="SilverCoinsLabel" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer2/PanelContainer2" unique_id=699935006]
@@ -443,6 +495,7 @@ custom_effects = [SubResource("RichTextEffect_7ksyu")]
 
 [node name="PanelContainer3" type="PanelContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1447712707]
 layout_mode = 2
+size_flags_horizontal = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_fegd7")
 
 [node name="GoldCoinsLabel" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer2/PanelContainer3" unique_id=1317541296]
@@ -461,6 +514,10 @@ scroll_active = false
 horizontal_alignment = 1
 vertical_alignment = 1
 custom_effects = [SubResource("RichTextEffect_7ksyu")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1314943492]
+libraries/ = SubResource("AnimationLibrary_rifxn")
+autoplay = &"visible_init"
 
 [connection signal="pressed" from="Button" to="." method="on_retry_pressed"]
 [connection signal="pressed" from="Button2" to="." method="on_go_menu_pressed"]
