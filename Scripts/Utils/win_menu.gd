@@ -35,8 +35,8 @@ func evaluate_coins(coins_collected: int, coins_to_reach: int) -> String:
 	var evaluation : String = ""
 	var coins_reached : String = str(coins_collected) + "/" + str(coins_to_reach)
 	if coins_collected == coins_to_reach:
-		evaluation += title_effect_tag + coins_reached + " = ★" 
-	else: evaluation += red_tag + coins_reached + " = ☆"
+		evaluation += title_effect_tag + ": " + coins_reached + " = ★" 
+	else: evaluation += red_tag + "    : " + coins_reached + " = ☆"
 	return evaluation
 
 # Helper para mostrar evaluación de estrellas de tiempo

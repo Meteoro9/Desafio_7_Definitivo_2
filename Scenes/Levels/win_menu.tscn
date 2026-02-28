@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://t37fi2u1vxam" path="res://Scripts/Utils/win_menu.gd" id="1_30vpb"]
 [ext_resource type="FontFile" uid="uid://ctccrv58u3mka" path="res://Assets/Fonts/ChelseaMarket-Regular.ttf" id="2_keumo"]
 [ext_resource type="Script" uid="uid://dadsukldygahu" path="res://Scripts/Decoration & Visuals/button_effects_module.gd" id="2_ncqc4"]
+[ext_resource type="Texture2D" uid="uid://sqrtdwhygkml" path="res://Assets/Elements/Coin Collectable.png" id="3_w521n"]
 [ext_resource type="Script" uid="uid://1w16umy3lb4q" path="res://Assets/Fonts/title_text_effect.gd" id="4_7ksyu"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_keumo"]
@@ -116,6 +117,72 @@ _data = {
 &"visible_init": SubResource("Animation_c1hu8")
 }
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_fegd7"]
+atlas = ExtResource("3_w521n")
+region = Rect2(0, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3aons"]
+atlas = ExtResource("3_w521n")
+region = Rect2(0, 256, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7i5s4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fegd7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3aons")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g06af"]
+atlas = ExtResource("3_w521n")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s3blx"]
+atlas = ExtResource("3_w521n")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l4ljq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g06af")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s3blx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jja3n"]
+atlas = ExtResource("3_w521n")
+region = Rect2(0, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4b84l"]
+atlas = ExtResource("3_w521n")
+region = Rect2(0, 128, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_78irw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jja3n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4b84l")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7ksyu"]
 bg_color = Color(0.09803922, 0.6627451, 0.6862745, 0.3254902)
 corner_radius_top_left = 30
@@ -127,6 +194,13 @@ corner_radius_bottom_left = 10
 script = ExtResource("4_7ksyu")
 metadata/_custom_type_script = "uid://1w16umy3lb4q"
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w521n"]
+bg_color = Color(0.09803922, 0.6627451, 0.6862745, 0.6039216)
+corner_radius_top_left = 30
+corner_radius_top_right = 10
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 10
+
 [sub_resource type="Theme" id="Theme_7ksyu"]
 RichTextLabel/font_sizes/normal_font_size = 20
 
@@ -134,14 +208,21 @@ RichTextLabel/font_sizes/normal_font_size = 20
 script = ExtResource("4_7ksyu")
 metadata/_custom_type_script = "uid://1w16umy3lb4q"
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fegd7"]
+bg_color = Color(0.09803922, 0.6627451, 0.6862745, 0.6039216)
+corner_radius_top_left = 30
+corner_radius_top_right = 10
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 10
+
 [node name="WinMenu" type="CanvasLayer" unique_id=1123096377 node_paths=PackedStringArray("stars_label", "time1_label", "time2_label", "bronze_label", "silver_label", "gold_label")]
 script = ExtResource("1_30vpb")
 stars_label = NodePath("PanelContainer/MarginContainer/VBoxContainer/StarsLabel")
-time1_label = NodePath("PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Time1Label")
-time2_label = NodePath("PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Time2Label")
-bronze_label = NodePath("PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/BronzeCoinsLabel")
-silver_label = NodePath("PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/SilverCoinsLabel")
-gold_label = NodePath("PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/GoldCoinsLabel")
+time1_label = NodePath("PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/Time1Label")
+time2_label = NodePath("PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer/PanelContainer2/Time2Label")
+bronze_label = NodePath("PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer2/PanelContainer/BronzeCoinsLabel")
+silver_label = NodePath("PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer2/PanelContainer2/SilverCoinsLabel")
+gold_label = NodePath("PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer2/PanelContainer3/GoldCoinsLabel")
 
 [node name="Button" type="Button" parent="." unique_id=690714501]
 modulate = Color(1, 1, 1, 0)
@@ -201,6 +282,27 @@ metadata/_custom_type_script = "uid://dadsukldygahu"
 libraries/ = SubResource("AnimationLibrary_rifxn")
 autoplay = &"visible_init"
 
+[node name="Bronze" type="AnimatedSprite2D" parent="." unique_id=166508159]
+position = Vector2(382, 322)
+scale = Vector2(0.7, 0.7)
+sprite_frames = SubResource("SpriteFrames_7i5s4")
+autoplay = "default"
+frame_progress = 0.26439214
+
+[node name="Silver" type="AnimatedSprite2D" parent="." unique_id=961644702]
+position = Vector2(536.00006, 322)
+scale = Vector2(0.7, 0.7)
+sprite_frames = SubResource("SpriteFrames_l4ljq")
+autoplay = "default"
+frame_progress = 0.32750577
+
+[node name="Gold" type="AnimatedSprite2D" parent="." unique_id=782848994]
+position = Vector2(691, 322)
+scale = Vector2(0.7, 0.7)
+sprite_frames = SubResource("SpriteFrames_78irw")
+autoplay = "default"
+frame_progress = 0.12773916
+
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=524699471]
 z_index = -1
 anchors_preset = 5
@@ -244,13 +346,21 @@ theme_override_constants/margin_top = 50
 theme_override_constants/margin_right = 15
 theme_override_constants/margin_bottom = 30
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer" unique_id=1291331374]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer" unique_id=1960742698]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer" unique_id=1291331374]
 layout_mode = 2
 theme_override_constants/separation = 20
+alignment = 1
 
-[node name="Time1Label" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer" unique_id=2103502135]
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=2065177341]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_w521n")
+
+[node name="Time1Label" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer/PanelContainer" unique_id=2103502135]
 clip_contents = false
-custom_minimum_size = Vector2(150, 30)
+custom_minimum_size = Vector2(200, 30)
 layout_mode = 2
 size_flags_horizontal = 3
 theme = SubResource("Theme_7ksyu")
@@ -264,9 +374,13 @@ horizontal_alignment = 1
 vertical_alignment = 1
 custom_effects = [SubResource("RichTextEffect_7ksyu")]
 
-[node name="Time2Label" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer" unique_id=766259586]
+[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1615623995]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_w521n")
+
+[node name="Time2Label" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer/PanelContainer2" unique_id=766259586]
 clip_contents = false
-custom_minimum_size = Vector2(150, 30)
+custom_minimum_size = Vector2(200, 30)
 layout_mode = 2
 size_flags_horizontal = 3
 theme = SubResource("Theme_7ksyu")
@@ -281,7 +395,15 @@ horizontal_alignment = 1
 vertical_alignment = 1
 custom_effects = [SubResource("RichTextEffect_7ksyu")]
 
-[node name="BronzeCoinsLabel" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer" unique_id=1899822390]
+[node name="HBoxContainer2" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer" unique_id=1144974104]
+layout_mode = 2
+alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1989121786]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_fegd7")
+
+[node name="BronzeCoinsLabel" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer2/PanelContainer" unique_id=1899822390]
 clip_contents = false
 custom_minimum_size = Vector2(150, 30)
 layout_mode = 2
@@ -291,14 +413,18 @@ theme_override_constants/shadow_outline_size = 3
 theme_override_fonts/normal_font = ExtResource("2_keumo")
 theme_override_font_sizes/bold_font_size = 40
 bbcode_enabled = true
-text = "[title-effect]asdf"
+text = "[title-effect]     3/3 = ★"
 fit_content = true
 scroll_active = false
 horizontal_alignment = 1
 vertical_alignment = 1
 custom_effects = [SubResource("RichTextEffect_7ksyu")]
 
-[node name="SilverCoinsLabel" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer" unique_id=699935006]
+[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=15736303]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_fegd7")
+
+[node name="SilverCoinsLabel" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer2/PanelContainer2" unique_id=699935006]
 clip_contents = false
 custom_minimum_size = Vector2(150, 30)
 layout_mode = 2
@@ -308,14 +434,18 @@ theme_override_constants/shadow_outline_size = 3
 theme_override_fonts/normal_font = ExtResource("2_keumo")
 theme_override_font_sizes/bold_font_size = 40
 bbcode_enabled = true
-text = "[title-effect]asdf"
+text = "[title-effect]     3/3 = ★"
 fit_content = true
 scroll_active = false
 horizontal_alignment = 1
 vertical_alignment = 1
 custom_effects = [SubResource("RichTextEffect_7ksyu")]
 
-[node name="GoldCoinsLabel" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer" unique_id=1317541296]
+[node name="PanelContainer3" type="PanelContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1447712707]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_fegd7")
+
+[node name="GoldCoinsLabel" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer2/PanelContainer3" unique_id=1317541296]
 clip_contents = false
 custom_minimum_size = Vector2(150, 30)
 layout_mode = 2
@@ -325,7 +455,7 @@ theme_override_constants/shadow_outline_size = 3
 theme_override_fonts/normal_font = ExtResource("2_keumo")
 theme_override_font_sizes/bold_font_size = 40
 bbcode_enabled = true
-text = "[title-effect]asdf"
+text = "[title-effect]     3/3 = ★"
 fit_content = true
 scroll_active = false
 horizontal_alignment = 1
