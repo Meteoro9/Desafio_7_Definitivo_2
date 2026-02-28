@@ -50,7 +50,7 @@ func evaluate_time(time_to_evaluate: float, time_to_reach: float) -> String:
 	return evaluation
 
 func on_retry_pressed():
-	LoadBar.fade_to_scene(LevelRegistry.configs[GameManager.current_level_index].level_path)
+	LoadBar.fade_to_scene(LevelRegistry.configs[GameManager.current_level_index -1].level_path)
 	queue_free()
 
 func on_go_menu_pressed():

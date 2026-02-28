@@ -128,7 +128,7 @@ script = ExtResource("4_7ksyu")
 metadata/_custom_type_script = "uid://1w16umy3lb4q"
 
 [sub_resource type="Theme" id="Theme_7ksyu"]
-RichTextLabel/font_sizes/normal_font_size = 24
+RichTextLabel/font_sizes/normal_font_size = 20
 
 [sub_resource type="RichTextEffect" id="RichTextEffect_7ksyu"]
 script = ExtResource("4_7ksyu")
