@@ -11,7 +11,7 @@ var record : LevelRecord
 @export var silver_label : RichTextLabel
 @export var gold_label : RichTextLabel
 var title_effect_tag : String = "[title-effect]"
-var red_tag: String = "[color=red]"
+var loose_tags: String = "[color=black][wave]"
 
 func _ready() -> void:
 	await get_tree().process_frame
@@ -36,7 +36,7 @@ func evaluate_coins(coins_collected: int, coins_to_reach: int) -> String:
 	var coins_reached : String = str(coins_collected) + "/" + str(coins_to_reach)
 	if coins_collected == coins_to_reach:
 		evaluation += title_effect_tag + ": " + coins_reached + " = ★" 
-	else: evaluation += red_tag + ": " + coins_reached + " = ☆"
+	else: evaluation += loose_tags + ": " + coins_reached + " = ☆"
 	return evaluation
 
 # Helper para mostrar evaluación de estrellas de tiempo
@@ -46,7 +46,7 @@ func evaluate_time(time_to_evaluate: float, time_to_reach: float) -> String:
 	if time_to_evaluate <= time_to_reach:
 		evaluation += title_effect_tag + str(time_to_reach) + " > " + time + " = ★"
 	else: 
-		evaluation += red_tag + str(time_to_reach) + " < " + time + " = ☆"
+		evaluation += loose_tags + str(time_to_reach) + " < " + time + " = ☆"
 	return evaluation
 
 func on_retry_pressed():
