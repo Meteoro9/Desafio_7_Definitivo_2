@@ -34,6 +34,7 @@ func _on_body_entered(body: Node2D) -> void:
 			var new_record: LevelRecord = GameData.add_record(level_id, timer.current_time)
 			
 			var scene = win_scene.instantiate()
+			scene.record = new_record
 			scene.stars = new_record.stars if new_record else 0
 			get_tree().root.add_child(scene)
 			

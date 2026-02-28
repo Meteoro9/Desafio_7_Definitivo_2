@@ -1,10 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://b7j0bgreic0dy"]
+[gd_scene format=3 uid="uid://b7j0bgreic0dy"]
 
 [ext_resource type="Script" uid="uid://myajf8aimvsl" path="res://Scripts/Utils/timer_record.gd" id="1_sc1f6"]
 
-[node name="ShowTimer" type="CanvasLayer"]
+[node name="ShowTimer" type="CanvasLayer" unique_id=1010484455]
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=942270468]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
