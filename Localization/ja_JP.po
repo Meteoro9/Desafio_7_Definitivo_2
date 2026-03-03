@@ -42,11 +42,11 @@ msgstr "時間"
 
 #: Scenes/Levels/main_menu.tscn
 msgid ""
-"[pulse freq=.3 ease=2.0][wave][title-effect][i]Main-Title[/i][/title-effect][/wave]"
-"[/pulse]"
+"[pulse freq=.3 ease=2.0][wave][title-effect][i]Main-Title[/i][/title-effect]"
+"[/wave][/pulse]"
 msgstr ""
-"[pulse freq=.3 ease=2.0][wave][title-effect]信念を失うな！[/title-effect][/wave][/"
-"pulse]"
+"[pulse freq=.3 ease=2.0][wave][title-effect]信念を失うな！[/title-effect][/"
+"wave][/pulse]"
 
 #: Scenes/Levels/loose_menu.tscn Scenes/Levels/win_menu.tscn
 msgid "RETRY"
@@ -55,6 +55,18 @@ msgstr "リトライ"
 #: Scenes/Levels/loose_menu.tscn Scenes/Levels/win_menu.tscn
 msgid "MENU"
 msgstr "メニューに戻る"
+
+#: Scenes/Levels/win_menu.tscn
+msgid "REQUIREMENT: "
+msgstr "必要時間："
+
+#: Scenes/Levels/win_menu.tscn
+msgid "YOUR-TIME: "
+msgstr "あなたのタイム："
+
+#: Scenes/Levels/level_show_info.tscn
+msgid "NO-RECORDS"
+msgstr "（まだ記録がありません）"
 
 #: Scenes/Levels/level_show_info.tscn
 msgid "STARS"
@@ -69,8 +81,8 @@ msgid "MAIN-MENU"
 msgstr "戻る"
 
 #: Scenes/Levels/level_show_info.tscn
-msgid "NO-RECORDS"
-msgstr "（まだ記録がありません）"
+msgid "[color=red][wave]CANOT-PLAY-3-STARS-PREV-MIN"
+msgstr ""
 
 msgid "Don't Loose Your Faith"
 msgstr "信念を失うな"

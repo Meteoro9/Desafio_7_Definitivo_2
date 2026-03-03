@@ -56,6 +56,18 @@ msgstr "फिर से प्रयास करें"
 msgid "MENU"
 msgstr "मेनू पर जाएँ"
 
+#: Scenes/Levels/win_menu.tscn
+msgid "REQUIREMENT: "
+msgstr "आवश्यक समय: "
+
+#: Scenes/Levels/win_menu.tscn
+msgid "YOUR-TIME: "
+msgstr "आपका समय: "
+
+#: Scenes/Levels/level_show_info.tscn
+msgid "NO-RECORDS"
+msgstr "(अभी तक कोई समय दर्ज नहीं हुआ है)"
+
 #: Scenes/Levels/level_show_info.tscn
 msgid "STARS"
 msgstr "सितारे"
@@ -69,8 +81,8 @@ msgid "MAIN-MENU"
 msgstr "वापस"
 
 #: Scenes/Levels/level_show_info.tscn
-msgid "NO-RECORDS"
-msgstr "(अभी तक कोई समय दर्ज नहीं हुआ है)"
+msgid "[color=red][wave]CANOT-PLAY-3-STARS-PREV-MIN"
+msgstr ""
 
 msgid "Don't Loose Your Faith"
 msgstr "अपना विश्वास मत खोना"

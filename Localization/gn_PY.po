@@ -56,6 +56,18 @@ msgstr "Eha’ã jey"
 msgid "MENU"
 msgstr "Eho menú-pe"
 
+#: Scenes/Levels/win_menu.tscn
+msgid "REQUIREMENT: "
+msgstr "Aravo ojeikotevẽva: "
+
+#: Scenes/Levels/win_menu.tscn
+msgid "YOUR-TIME: "
+msgstr "Nde aravo: "
+
+#: Scenes/Levels/level_show_info.tscn
+msgid "NO-RECORDS"
+msgstr "(Ndaipóri gueteri aravo ojehai va’ekue)"
+
 #: Scenes/Levels/level_show_info.tscn
 msgid "STARS"
 msgstr "Mbyja kuéra"
@@ -69,8 +81,8 @@ msgid "MAIN-MENU"
 msgstr "Ejevy"
 
 #: Scenes/Levels/level_show_info.tscn
-msgid "NO-RECORDS"
-msgstr "(Ndaipóri gueteri aravo ojehai va’ekue)"
+msgid "[color=red][wave]CANOT-PLAY-3-STARS-PREV-MIN"
+msgstr ""
 
 msgid "Don't Loose Your Faith"
 msgstr "Ani rehejarei nde jerovia"

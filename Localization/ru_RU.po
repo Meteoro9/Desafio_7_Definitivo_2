@@ -42,11 +42,11 @@ msgstr "Время"
 
 #: Scenes/Levels/main_menu.tscn
 msgid ""
-"[pulse freq=.3 ease=2.0][wave][title-effect][i]Main-Title[/i][/title-effect][/wave]"
-"[/pulse]"
+"[pulse freq=.3 ease=2.0][wave][title-effect][i]Main-Title[/i][/title-effect]"
+"[/wave][/pulse]"
 msgstr ""
-"[pulse freq=.3 ease=2.0][wave][title-effect]Не теряй веру![/title-effect][/wave][/"
-"pulse]"
+"[pulse freq=.3 ease=2.0][wave][title-effect]Не теряй веру![/title-effect][/"
+"wave][/pulse]"
 
 #: Scenes/Levels/loose_menu.tscn Scenes/Levels/win_menu.tscn
 msgid "RETRY"
@@ -55,6 +55,18 @@ msgstr "Повторить"
 #: Scenes/Levels/loose_menu.tscn Scenes/Levels/win_menu.tscn
 msgid "MENU"
 msgstr "В меню"
+
+#: Scenes/Levels/win_menu.tscn
+msgid "REQUIREMENT: "
+msgstr "Требование: "
+
+#: Scenes/Levels/win_menu.tscn
+msgid "YOUR-TIME: "
+msgstr "Твоё время: "
+
+#: Scenes/Levels/level_show_info.tscn
+msgid "NO-RECORDS"
+msgstr "(Пока нет записанных результатов)"
 
 #: Scenes/Levels/level_show_info.tscn
 msgid "STARS"
@@ -69,8 +81,8 @@ msgid "MAIN-MENU"
 msgstr "Назад"
 
 #: Scenes/Levels/level_show_info.tscn
-msgid "NO-RECORDS"
-msgstr "(Пока нет записанных результатов)"
+msgid "[color=red][wave]CANOT-PLAY-3-STARS-PREV-MIN"
+msgstr ""
 
 msgid "Don't Loose Your Faith"
 msgstr "Не теряй веру"

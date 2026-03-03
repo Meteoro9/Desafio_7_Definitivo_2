@@ -581,7 +581,7 @@ offset_right = 361.0
 offset_bottom = 316.0
 theme_override_constants/line_spacing = 10
 theme_override_font_sizes/font_size = 20
-text = "añlsdfkjñalksjfd"
+text = "NO-RECORDS"
 vertical_alignment = 1
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1447986689]
@@ -663,25 +663,33 @@ text = "STARS"
 vertical_alignment = 1
 
 [node name="LabelTimesRecord" type="Label" parent="CanvasLayer/HBoxContainer/PanelContainer/MarginContainer/HBoxContainer/GridContainer" unique_id=2127548062]
+auto_translate_mode = 2
 layout_mode = 2
+tooltip_auto_translate_mode = 2
 theme_override_constants/line_spacing = 10
 theme_override_font_sizes/font_size = 20
 vertical_alignment = 1
 
 [node name="LabelDayRecord" type="Label" parent="CanvasLayer/HBoxContainer/PanelContainer/MarginContainer/HBoxContainer/GridContainer" unique_id=1039944936]
+auto_translate_mode = 2
 layout_mode = 2
+tooltip_auto_translate_mode = 2
 theme_override_constants/line_spacing = 10
 theme_override_font_sizes/font_size = 20
 vertical_alignment = 1
 
 [node name="LabelHourRecord" type="Label" parent="CanvasLayer/HBoxContainer/PanelContainer/MarginContainer/HBoxContainer/GridContainer" unique_id=934767222]
+auto_translate_mode = 2
 layout_mode = 2
+tooltip_auto_translate_mode = 2
 theme_override_constants/line_spacing = 10
 theme_override_font_sizes/font_size = 20
 vertical_alignment = 1
 
 [node name="LabelStarsRecord" type="Label" parent="CanvasLayer/HBoxContainer/PanelContainer/MarginContainer/HBoxContainer/GridContainer" unique_id=222950057]
+auto_translate_mode = 2
 layout_mode = 2
+tooltip_auto_translate_mode = 2
 theme_override_constants/line_spacing = 10
 theme_override_font_sizes/font_size = 20
 vertical_alignment = 1

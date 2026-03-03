@@ -42,11 +42,11 @@ msgstr "Hora"
 
 #: Scenes/Levels/main_menu.tscn
 msgid ""
-"[pulse freq=.3 ease=2.0][wave][title-effect][i]Main-Title[/i][/title-effect][/wave]"
-"[/pulse]"
+"[pulse freq=.3 ease=2.0][wave][title-effect][i]Main-Title[/i][/title-effect]"
+"[/wave][/pulse]"
 msgstr ""
-"[pulse freq=.3 ease=2.0][wave][title-effect]Não perca a fé![/title-effect][/wave][/"
-"pulse]"
+"[pulse freq=.3 ease=2.0][wave][title-effect]Não perca a fé![/title-effect][/"
+"wave][/pulse]"
 
 #: Scenes/Levels/loose_menu.tscn Scenes/Levels/win_menu.tscn
 msgid "RETRY"
@@ -55,6 +55,18 @@ msgstr "Tentar novamente"
 #: Scenes/Levels/loose_menu.tscn Scenes/Levels/win_menu.tscn
 msgid "MENU"
 msgstr "Ir para o menu"
+
+#: Scenes/Levels/win_menu.tscn
+msgid "REQUIREMENT: "
+msgstr "Requisito: "
+
+#: Scenes/Levels/win_menu.tscn
+msgid "YOUR-TIME: "
+msgstr "Seu tempo: "
+
+#: Scenes/Levels/level_show_info.tscn
+msgid "NO-RECORDS"
+msgstr "(Ainda não há tempos registrados)"
 
 #: Scenes/Levels/level_show_info.tscn
 msgid "STARS"
@@ -69,8 +81,8 @@ msgid "MAIN-MENU"
 msgstr "Voltar"
 
 #: Scenes/Levels/level_show_info.tscn
-msgid "NO-RECORDS"
-msgstr "(Ainda não há tempos registrados)"
+msgid "[color=red][wave]CANOT-PLAY-3-STARS-PREV-MIN"
+msgstr ""
 
 msgid "Don't Loose Your Faith"
 msgstr "Não perca a fé"

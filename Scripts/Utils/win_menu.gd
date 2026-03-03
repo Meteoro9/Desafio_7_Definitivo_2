@@ -1,6 +1,5 @@
 extends CanvasLayer
 
-
 # Implementar lógica de muestra de estrellas al ganar
 var stars : int
 var record : LevelRecord
@@ -35,18 +34,19 @@ func evaluate_coins(coins_collected: int, coins_to_reach: int) -> String:
 	var evaluation : String = ""
 	var coins_reached : String = str(coins_collected) + "/" + str(coins_to_reach)
 	if coins_collected == coins_to_reach:
-		evaluation += title_effect_tag + coins_reached + " = ★" 
-	else: evaluation += loose_tags + coins_reached + " = ☆"
+		evaluation += title_effect_tag + coins_reached + " ✔" 
+	else: evaluation += loose_tags + coins_reached + " ☐"
 	return evaluation
 
 # Helper para mostrar evaluación de estrellas de tiempo
 func evaluate_time(time_to_evaluate: float, time_to_reach: float) -> String:
 	var evaluation : String = ""
-	var time : String = "%.2f" % time_to_evaluate
+	var time_to_reach_text : String = tr("REQUIREMENT: ") + " %.2f \n"  % time_to_reach
+	var your_time_text : String = tr("YOUR-TIME: ") + "%.2f" % time_to_evaluate
 	if time_to_evaluate <= time_to_reach:
-		evaluation += title_effect_tag + str(time_to_reach) + " > " + time + " = ★"
+		evaluation += title_effect_tag + time_to_reach_text + your_time_text + " ✔"
 	else: 
-		evaluation += loose_tags + str(time_to_reach) + " < " + time + " = ☆"
+		evaluation += loose_tags + time_to_reach_text + your_time_text + " ☐"
 	return evaluation
 
 func on_retry_pressed():

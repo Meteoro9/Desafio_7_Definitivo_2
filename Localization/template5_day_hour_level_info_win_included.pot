@@ -52,6 +52,18 @@ msgstr ""
 msgid "MENU"
 msgstr ""
 
+#: Scenes/Levels/win_menu.tscn
+msgid "REQUIREMENT: "
+msgstr ""
+
+#: Scenes/Levels/win_menu.tscn
+msgid "YOUR-TIME: "
+msgstr ""
+
+#: Scenes/Levels/level_show_info.tscn
+msgid "NO-RECORDS"
+msgstr ""
+
 #: Scenes/Levels/level_show_info.tscn
 msgid "STARS"
 msgstr ""
@@ -65,14 +77,8 @@ msgid "MAIN-MENU"
 msgstr ""
 
 #: Scenes/Levels/level_show_info.tscn
-msgid "NO-RECORDS"
+msgid "[color=red][wave]CANOT-PLAY-3-STARS-PREV-MIN"
 msgstr ""
-
-#: Scenes/Levels/win_menu.tscn
-msgid "REQUIREMENT"
-
-#: Scenes/Levels/win_menu.tscn
-msgid "YOUR-TIME"
 
 msgid "Don't Loose Your Faith"
 msgstr ""
