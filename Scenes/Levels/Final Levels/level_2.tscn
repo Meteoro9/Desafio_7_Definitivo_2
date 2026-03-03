@@ -38,7 +38,6 @@ level_id = 2
 player = NodePath("../Candle-Player")
 
 [node name="Candle-Player" parent="." unique_id=31092358 instance=ExtResource("7_haist")]
-visible = false
 position = Vector2(16, -30)
 
 [node name="Coins" type="Node2D" parent="." unique_id=563501793]
