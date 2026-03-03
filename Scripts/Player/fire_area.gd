@@ -34,7 +34,7 @@ func kill():
 		is_alive = false
 		
 		fire_killed.emit()
-		
+		GameData.discard_pending_coins()
 		GlobalMusicManager.current_state = GlobalMusicManager.Scene_State.LOOSE
 		var scene = loose_menu.instantiate()
 		get_tree().root.add_child(scene)

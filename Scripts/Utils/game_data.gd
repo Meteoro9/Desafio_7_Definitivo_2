@@ -35,7 +35,7 @@ func add_record(level_id : int, new_time : float) -> LevelRecord:
 	
 	return new_record
 
-# Verificar si es necesario, me lo recomendó IA
+# Al morir, se resetea la lista
 func discard_pending_coins() -> void: _pending_coins.clear()
 
 func _clean_old_records(target_level_id : int):
