@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://qly26b58ghn5" path="res://Scenes/Levels/camera_follow.tscn" id="6_71c48"]
 [ext_resource type="PackedScene" uid="uid://cy3tu7f5wvque" path="res://Scenes/Elements/button.tscn" id="6_gjq2s"]
 [ext_resource type="PackedScene" uid="uid://dsnr7dq55rfyk" path="res://Scenes/Player/candle_player.tscn" id="7_3p58d"]
+[ext_resource type="PackedScene" uid="uid://bp34ml0vk47rg" path="res://Scenes/Elements/essential_wood_behaviour.tscn" id="9_71c48"]
 [ext_resource type="PackedScene" uid="uid://cri2ewgfn2l0q" path="res://Scenes/Enemies/water_drop_spawner.tscn" id="10_iq32m"]
 [ext_resource type="PackedScene" uid="uid://b3i70u2s72jdx" path="res://Scenes/Enemies/water_area.tscn" id="11_71c48"]
 
@@ -65,6 +66,10 @@ position = Vector2(-176, -208)
 
 [node name="Wood8" parent="Wood" unique_id=1860664191 instance=ExtResource("3_j53mp")]
 position = Vector2(48, -400)
+
+[node name="Essential Wood Behaviour" parent="Wood" unique_id=1007295182 node_paths=PackedStringArray("essential_wood_list", "player") instance=ExtResource("9_71c48")]
+essential_wood_list = [NodePath("../Wood8")]
+player = NodePath("../../Candle-Player")
 
 [node name="Wood9" parent="Wood" unique_id=1723481274 instance=ExtResource("3_j53mp")]
 position = Vector2(176, -368)

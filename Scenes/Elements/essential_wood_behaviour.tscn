@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bp34ml0vk47rg"]
+
+[ext_resource type="Script" uid="uid://dncwa1q2dvjyl" path="res://Scripts/Elements/essential_wood_behaviour.gd" id="1_moq8d"]
+[ext_resource type="FontFile" uid="uid://ctccrv58u3mka" path="res://Assets/Fonts/ChelseaMarket-Regular.ttf" id="2_0b6cq"]
+
+[node name="Essential Wood Behaviour" type="CanvasLayer" unique_id=1007295182]
+script = ExtResource("1_moq8d")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1715979952]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -309.5
+offset_top = 131.0
+offset_right = 309.5
+offset_bottom = 171.0
+grow_horizontal = 2
+theme_override_fonts/normal_font = ExtResource("2_0b6cq")
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "NO-WAY-TO-FINISH"
+horizontal_alignment = 1
+vertical_alignment = 1
