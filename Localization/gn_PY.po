@@ -81,8 +81,14 @@ msgid "MAIN-MENU"
 msgstr "Ejevy"
 
 #: Scenes/Levels/level_show_info.tscn
+msgid "CANNOT-PLAY"
+msgstr "Oñemboty"
+
+#: Scenes/Levels/level_show_info.tscn
 msgid "[color=red][wave]CANOT-PLAY-3-STARS-PREV-MIN"
 msgstr ""
+"[color=red][wave]Reñembosarái hag̃ua, tekotevẽ reguereko por lo menos 3 "
+"mbyja pe nivel ohasava’ekuépe."
 
 msgid "Don't Loose Your Faith"
 msgstr "Ani rehejarei nde jerovia"

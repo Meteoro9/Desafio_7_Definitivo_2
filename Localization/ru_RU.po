@@ -81,8 +81,14 @@ msgid "MAIN-MENU"
 msgstr "Назад"
 
 #: Scenes/Levels/level_show_info.tscn
+msgid "CANNOT-PLAY"
+msgstr "Заблокировано"
+
+#: Scenes/Levels/level_show_info.tscn
 msgid "[color=red][wave]CANOT-PLAY-3-STARS-PREV-MIN"
 msgstr ""
+"[color=red][wave]Чтобы играть, нужно получить минимум 3 звезды на "
+"предыдущем уровне."
 
 msgid "Don't Loose Your Faith"
 msgstr "Не теряй веру"

@@ -81,8 +81,14 @@ msgid "MAIN-MENU"
 msgstr "Voltar"
 
 #: Scenes/Levels/level_show_info.tscn
+msgid "CANNOT-PLAY"
+msgstr "Bloqueado"
+
+#: Scenes/Levels/level_show_info.tscn
 msgid "[color=red][wave]CANOT-PLAY-3-STARS-PREV-MIN"
 msgstr ""
+"[color=red][wave]Você precisa obter pelo menos 3 estrelas no nível anterior "
+"para jogar."
 
 msgid "Don't Loose Your Faith"
 msgstr "Não perca a fé"

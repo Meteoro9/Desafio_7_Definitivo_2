@@ -83,7 +83,6 @@ color_state = 1
 position = Vector2(-240, -880)
 
 [node name="Candle-Player" parent="." unique_id=31092358 instance=ExtResource("9_67byb")]
-visible = false
 position = Vector2(16, -30)
 
 [node name="Coins" type="Node2D" parent="." unique_id=1740900598]

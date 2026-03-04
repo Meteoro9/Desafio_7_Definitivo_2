@@ -757,15 +757,16 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -290.75
-offset_top = -129.0
-offset_right = 290.75
-offset_bottom = -89.0
+offset_left = -407.375
+offset_top = -114.0
+offset_right = 407.375
+offset_bottom = -74.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_fonts/normal_font = ExtResource("3_hwnxc")
 bbcode_enabled = true
 text = "[color=red][wave]CANOT-PLAY-3-STARS-PREV-MIN"
+scroll_active = false
 horizontal_alignment = 1
 vertical_alignment = 1
 
