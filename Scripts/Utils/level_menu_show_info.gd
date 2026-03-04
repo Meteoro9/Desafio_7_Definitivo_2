@@ -53,7 +53,7 @@ func show_info(summary: LevelSummaryMenu) -> void:
 	hour_record_label.text = hour_text
 	stars_record_label.text = stars_text
 	# Revisamos si el jugador puede jugar el nivel
-	#_update_play_availability(summary)
+	_update_play_availability(summary)
 	placing_no_records_label()
 
 
@@ -65,19 +65,22 @@ func _update_play_availability(summary: LevelSummaryMenu) -> void:
 	if requirement == null or not requirement.has_requirement:
 		play_button.disabled = false
 		play_button.text = tr("PLAY")
+		cant_play_label.visible = false
 		return
-	var prev_index : int = current_level_index -1
+	
 	var allowed : bool = false
 	
-	if prev_index >= 0 and prev_index < level_info_array_ordered.size():
-		var prev_summary: LevelSummaryMenu = level_info_array_ordered[prev_index]
-		allowed = requirement.can_play(prev_summary)
-	else: allowed = true # Si es el primer nivel, siempre se permite jugar
+	# Si el índice es mayor que el mínimo y tiene el mínimo de estrellas...
+	if current_level_index == 0:
+		allowed = true
+	else:
+		var prev_index : int = current_level_index -1
+		var max_stars : int = GameData.search_max_stars(prev_index)
+		allowed = max_stars >= requirement.min_stars_required
 	
-	
-	cant_play_label.visible = true
-	play_button.disabled = not allowed
-	play_button.text = tr("PLAY") if allowed else tr("[color=red][wave]CANNOT-PLAY")
+	cant_play_label.visible = not allowed
+	play_button.disabled = not allowed 
+	play_button.text = tr("PLAY") if allowed else tr("CANNOT-PLAY")
 #endregion
 
 #region Animations
@@ -117,12 +120,14 @@ func _on_button_next_pressed():
 		current_level_index += 1
 		show_info(level_info_array_ordered[current_level_index])
 		GameManager.current_showed_index = current_level_index
+		_update_play_availability(level_info_array_ordered[current_level_index])
 
 func _on_button_previous_pressed():
 	if not (current_level_index -1) < 0: # Este es debug
 		current_level_index -= 1
 		show_info(level_info_array_ordered[current_level_index])
 		GameManager.current_showed_index = current_level_index
+		_update_play_availability(level_info_array_ordered[current_level_index])
 
 func _on_button_play_pressed():
 	if not play_button.disabled: # Doble chequeo de seguridad

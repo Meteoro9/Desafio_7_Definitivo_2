@@ -7,7 +7,7 @@ enum LevelSelected { LEVEL_0, LEVEL_1, LEVEL_2, LEVEL_3, LEVEL_4, LEVEL_5,
 LEVEL_6, LEVEL_7, LEVEL_8 } 
 @export var level_id : LevelSelected = LevelSelected.LEVEL_1
 
-#@export var play_requirement: LevelPlayRequirement
+@export var play_requirement: LevelPlayRequirement
 
 # Info procesada para mostrar en pantalla
 var processed_records: Array[Dictionary] = []

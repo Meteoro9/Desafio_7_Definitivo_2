@@ -1,5 +1,4 @@
-extends Node
-class_name GamePersistentData
+extends Node # Acceso global GameData
 
 # Aquí podemos ir alterando el array para añadir capas como fecha del record, hora, etc
 var current_records : Array[LevelRecord] = []
@@ -34,6 +33,20 @@ func add_record(level_id : int, new_time : float) -> LevelRecord:
 	_save_to_disk()
 	
 	return new_record
+
+func search_max_stars(target_level_id: int) -> int:
+	var max_stars : int = 0
+	var current_level_records : Array[LevelRecord] = []
+	# Filtramos records
+	for rec in current_records:
+		if rec.level_id == target_level_id:
+			current_level_records.append(rec)
+	# Buscamos máximo de estrellas en lista filtrada
+	for rec in current_level_records:
+		if rec.stars > max_stars:
+			max_stars = rec.stars
+	
+	return max_stars
 
 # Al morir, se resetea la lista
 func discard_pending_coins() -> void: _pending_coins.clear()
