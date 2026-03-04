@@ -42,11 +42,11 @@ msgstr " "
 
 #: Scenes/Levels/main_menu.tscn
 msgid ""
-"[pulse freq=.3 ease=2.0][wave][title-effect][i]Main-Title[/i][/title-effect]"
-"[/wave][/pulse]"
+"[pulse freq=.3 ease=2.0][wave][title-effect][i]Main-Title[/i][/title-effect][/"
+"wave][/pulse]"
 msgstr ""
-"[pulse freq=.3 ease=2.0][wave][title-effect]Ani rehejarei nde jerovia![/"
-"title-effect][/wave][/pulse]"
+"[pulse freq=.3 ease=2.0][wave][title-effect]Ani rehejarei nde jerovia![/title-"
+"effect][/wave][/pulse]"
 
 #: Scenes/Levels/loose_menu.tscn Scenes/Levels/win_menu.tscn
 msgid "RETRY"
@@ -81,14 +81,17 @@ msgid "MAIN-MENU"
 msgstr "Ejevy"
 
 #: Scenes/Levels/level_show_info.tscn
-msgid "CANNOT-PLAY"
-msgstr "Oñemboty"
-
-#: Scenes/Levels/level_show_info.tscn
 msgid "[color=red][wave]CANOT-PLAY-3-STARS-PREV-MIN"
 msgstr ""
-"[color=red][wave]Reñembosarái hag̃ua, tekotevẽ reguereko por lo menos 3 "
-"mbyja pe nivel ohasava’ekuépe."
+"[color=red][wave]Reñembosarái hag̃ua, tekotevẽ reguereko por lo menos 3 mbyja "
+"pe nivel ohasava’ekuépe."
+
+#: Scenes/Elements/essential_wood_behaviour.tscn
+msgid "NO-WAY-TO-FINISH"
+msgstr "Ndaikatúi oñemohuʼã pe nivel."
 
 msgid "Don't Loose Your Faith"
 msgstr "Ani rehejarei nde jerovia"
+
+#~ msgid "CANNOT-PLAY"
+#~ msgstr "Oñemboty"

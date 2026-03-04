@@ -81,14 +81,17 @@ msgid "MAIN-MENU"
 msgstr "Retour"
 
 #: Scenes/Levels/level_show_info.tscn
-msgid "CANNOT-PLAY"
-msgstr "Verrouillé"
-
-#: Scenes/Levels/level_show_info.tscn
 msgid "[color=red][wave]CANOT-PLAY-3-STARS-PREV-MIN"
 msgstr ""
 "[color=red][wave]Vous devez obtenir au moins 3 étoiles au niveau précédent "
 "pour jouer."
 
+#: Scenes/Elements/essential_wood_behaviour.tscn
+msgid "NO-WAY-TO-FINISH"
+msgstr "Impossible de terminer le niveau."
+
 msgid "Don't Loose Your Faith"
 msgstr "Ne perds pas la foi "
+
+#~ msgid "CANNOT-PLAY"
+#~ msgstr "Verrouillé"

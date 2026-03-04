@@ -81,14 +81,17 @@ msgid "MAIN-MENU"
 msgstr "Return"
 
 #: Scenes/Levels/level_show_info.tscn
-msgid "CANNOT-PLAY"
-msgstr "Locked"
-
-#: Scenes/Levels/level_show_info.tscn
 msgid "[color=red][wave]CANOT-PLAY-3-STARS-PREV-MIN"
 msgstr ""
 "[color=red][wave]You must earn at least 3 stars in the previous level to "
 "play."
 
+#: Scenes/Elements/essential_wood_behaviour.tscn
+msgid "NO-WAY-TO-FINISH"
+msgstr "No way to finish the level."
+
 msgid "Don't Loose Your Faith"
 msgstr "Don't Loose Your Faith"
+
+#~ msgid "CANNOT-PLAY"
+#~ msgstr "Locked"

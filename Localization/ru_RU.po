@@ -81,14 +81,17 @@ msgid "MAIN-MENU"
 msgstr "Назад"
 
 #: Scenes/Levels/level_show_info.tscn
-msgid "CANNOT-PLAY"
-msgstr "Заблокировано"
-
-#: Scenes/Levels/level_show_info.tscn
 msgid "[color=red][wave]CANOT-PLAY-3-STARS-PREV-MIN"
 msgstr ""
-"[color=red][wave]Чтобы играть, нужно получить минимум 3 звезды на "
-"предыдущем уровне."
+"[color=red][wave]Чтобы играть, нужно получить минимум 3 звезды на предыдущем "
+"уровне."
+
+#: Scenes/Elements/essential_wood_behaviour.tscn
+msgid "NO-WAY-TO-FINISH"
+msgstr "Уровень невозможно завершить."
 
 msgid "Don't Loose Your Faith"
 msgstr "Не теряй веру"
+
+#~ msgid "CANNOT-PLAY"
+#~ msgstr "Заблокировано"

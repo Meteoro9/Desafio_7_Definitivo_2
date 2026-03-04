@@ -3,6 +3,7 @@
 # res://Scenes/Levels/loose_menu.tscn
 # res://Scenes/Levels/win_menu.tscn
 # res://Scenes/Levels/level_show_info.tscn
+# res://Scenes/Elements/essential_wood_behaviour.tscn
 #
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
@@ -77,11 +78,11 @@ msgid "MAIN-MENU"
 msgstr ""
 
 #: Scenes/Levels/level_show_info.tscn
-msgid "CANNOT-PLAY"
+msgid "[color=red][wave]CANOT-PLAY-3-STARS-PREV-MIN"
 msgstr ""
 
-#: Scenes/Levels/level_show_info.tscn
-msgid "[color=red][wave]CANOT-PLAY-3-STARS-PREV-MIN"
+#: Scenes/Elements/essential_wood_behaviour.tscn
+msgid "NO-WAY-TO-FINISH"
 msgstr ""
 
 msgid "Don't Loose Your Faith"

@@ -81,12 +81,15 @@ msgid "MAIN-MENU"
 msgstr "返回"
 
 #: Scenes/Levels/level_show_info.tscn
-msgid "CANNOT-PLAY"
-msgstr "已锁定"
-
-#: Scenes/Levels/level_show_info.tscn
 msgid "[color=red][wave]CANOT-PLAY-3-STARS-PREV-MIN"
 msgstr "[color=red][wave]必须在上一关获得至少3颗星才能游玩。"
 
+#: Scenes/Elements/essential_wood_behaviour.tscn
+msgid "NO-WAY-TO-FINISH"
+msgstr "无法完成本关。"
+
 msgid "Don't Loose Your Faith"
 msgstr "不要失去信念"
+
+#~ msgid "CANNOT-PLAY"
+#~ msgstr "已锁定"

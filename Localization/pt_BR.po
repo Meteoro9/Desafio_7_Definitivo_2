@@ -81,14 +81,17 @@ msgid "MAIN-MENU"
 msgstr "Voltar"
 
 #: Scenes/Levels/level_show_info.tscn
-msgid "CANNOT-PLAY"
-msgstr "Bloqueado"
-
-#: Scenes/Levels/level_show_info.tscn
 msgid "[color=red][wave]CANOT-PLAY-3-STARS-PREV-MIN"
 msgstr ""
 "[color=red][wave]Você precisa obter pelo menos 3 estrelas no nível anterior "
 "para jogar."
 
+#: Scenes/Elements/essential_wood_behaviour.tscn
+msgid "NO-WAY-TO-FINISH"
+msgstr "Não há como terminar o nível."
+
 msgid "Don't Loose Your Faith"
 msgstr "Não perca a fé"
+
+#~ msgid "CANNOT-PLAY"
+#~ msgstr "Bloqueado"
