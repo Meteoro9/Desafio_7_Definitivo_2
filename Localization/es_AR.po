@@ -85,12 +85,13 @@ msgid "[color=red][wave]CANOT-PLAY-3-STARS-PREV-MIN"
 msgstr ""
 "[color=red][wave]Debes obtener al menos 3 estrellas en el nivel anterior"
 
+#: Scenes/Levels/level_show_info.tscn
+msgid "CANOT-PLAY"
+msgstr "Bloqueado"
+
 #: Scenes/Elements/essential_wood_behaviour.tscn
 msgid "NO-WAY-TO-FINISH"
 msgstr "No hay forma de terminar el nivel."
 
 msgid "Don't Loose Your Faith"
 msgstr "No pierdas la fe"
-
-#~ msgid "CANNOT-PLAY"
-#~ msgstr "Bloqueado"

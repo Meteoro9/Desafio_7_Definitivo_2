@@ -84,12 +84,15 @@ msgstr "戻る"
 msgid "[color=red][wave]CANOT-PLAY-3-STARS-PREV-MIN"
 msgstr "[color=red][wave]前のレベルで★3以上を獲得しないとプレイできません。"
 
+#: Scenes/Levels/level_show_info.tscn
+#, fuzzy
+#| msgid "CANNOT-PLAY"
+msgid "CANOT-PLAY"
+msgstr "未解放"
+
 #: Scenes/Elements/essential_wood_behaviour.tscn
 msgid "NO-WAY-TO-FINISH"
 msgstr "このレベルはクリアできません。"
 
 msgid "Don't Loose Your Faith"
 msgstr "信念を失うな"
-
-#~ msgid "CANNOT-PLAY"
-#~ msgstr "未解放"

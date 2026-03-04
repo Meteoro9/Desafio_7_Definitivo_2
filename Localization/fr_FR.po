@@ -86,12 +86,15 @@ msgstr ""
 "[color=red][wave]Vous devez obtenir au moins 3 étoiles au niveau précédent "
 "pour jouer."
 
+#: Scenes/Levels/level_show_info.tscn
+#, fuzzy
+#| msgid "CANNOT-PLAY"
+msgid "CANOT-PLAY"
+msgstr "Verrouillé"
+
 #: Scenes/Elements/essential_wood_behaviour.tscn
 msgid "NO-WAY-TO-FINISH"
 msgstr "Impossible de terminer le niveau."
 
 msgid "Don't Loose Your Faith"
 msgstr "Ne perds pas la foi "
-
-#~ msgid "CANNOT-PLAY"
-#~ msgstr "Verrouillé"

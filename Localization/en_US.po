@@ -86,12 +86,15 @@ msgstr ""
 "[color=red][wave]You must earn at least 3 stars in the previous level to "
 "play."
 
+#: Scenes/Levels/level_show_info.tscn
+#, fuzzy
+#| msgid "CANNOT-PLAY"
+msgid "CANOT-PLAY"
+msgstr "Locked"
+
 #: Scenes/Elements/essential_wood_behaviour.tscn
 msgid "NO-WAY-TO-FINISH"
 msgstr "No way to finish the level."
 
 msgid "Don't Loose Your Faith"
 msgstr "Don't Loose Your Faith"
-
-#~ msgid "CANNOT-PLAY"
-#~ msgstr "Locked"

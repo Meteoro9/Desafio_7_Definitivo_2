@@ -81,6 +81,10 @@ msgstr ""
 msgid "[color=red][wave]CANOT-PLAY-3-STARS-PREV-MIN"
 msgstr ""
 
+#: Scenes/Levels/level_show_info.tscn
+msgid "CANOT-PLAY"
+msgstr ""
+
 #: Scenes/Elements/essential_wood_behaviour.tscn
 msgid "NO-WAY-TO-FINISH"
 msgstr ""

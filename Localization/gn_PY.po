@@ -86,12 +86,15 @@ msgstr ""
 "[color=red][wave]Reñembosarái hag̃ua, tekotevẽ reguereko por lo menos 3 mbyja "
 "pe nivel ohasava’ekuépe."
 
+#: Scenes/Levels/level_show_info.tscn
+#, fuzzy
+#| msgid "CANNOT-PLAY"
+msgid "CANOT-PLAY"
+msgstr "Oñemboty"
+
 #: Scenes/Elements/essential_wood_behaviour.tscn
 msgid "NO-WAY-TO-FINISH"
 msgstr "Ndaikatúi oñemohuʼã pe nivel."
 
 msgid "Don't Loose Your Faith"
 msgstr "Ani rehejarei nde jerovia"
-
-#~ msgid "CANNOT-PLAY"
-#~ msgstr "Oñemboty"

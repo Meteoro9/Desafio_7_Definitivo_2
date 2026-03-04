@@ -86,12 +86,15 @@ msgstr ""
 "[color=red][wave]Чтобы играть, нужно получить минимум 3 звезды на предыдущем "
 "уровне."
 
+#: Scenes/Levels/level_show_info.tscn
+#, fuzzy
+#| msgid "CANNOT-PLAY"
+msgid "CANOT-PLAY"
+msgstr "Заблокировано"
+
 #: Scenes/Elements/essential_wood_behaviour.tscn
 msgid "NO-WAY-TO-FINISH"
 msgstr "Уровень невозможно завершить."
 
 msgid "Don't Loose Your Faith"
 msgstr "Не теряй веру"
-
-#~ msgid "CANNOT-PLAY"
-#~ msgstr "Заблокировано"

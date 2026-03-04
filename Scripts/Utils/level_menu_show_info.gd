@@ -64,7 +64,7 @@ func _update_play_availability(summary: LevelSummaryMenu) -> void:
 	# Sin requisito se puede jugar
 	if requirement == null or not requirement.has_requirement:
 		play_button.disabled = false
-		play_button.text = tr("PLAY")
+		#play_button.text = tr(" PLAY ")
 		cant_play_label.visible = false
 		return
 	
@@ -81,7 +81,7 @@ func _update_play_availability(summary: LevelSummaryMenu) -> void:
 	
 	cant_play_label.visible = not allowed
 	play_button.disabled = not allowed 
-	play_button.text = tr("PLAY") if allowed else tr("CANNOT-PLAY")
+	#play_button.text = tr(" PLAY ") #if allowed else tr(" CANNOT-PLAY ") # No funciona
 #endregion
 
 #region Animations
