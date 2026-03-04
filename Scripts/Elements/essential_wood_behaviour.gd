@@ -19,5 +19,6 @@ func _count_essential_wood() -> int:
 
 func _process(_delta: float) -> void:
 	if _count_essential_wood() == 0 and not loosed:
+		loosed = true
 		$RichTextLabel.visible = true
 		fire.kill()
