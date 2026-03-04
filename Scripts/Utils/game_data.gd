@@ -45,7 +45,7 @@ func search_max_stars(target_level_id: int) -> int:
 	for rec in current_level_records:
 		if rec.stars > max_stars:
 			max_stars = rec.stars
-	
+	print(max_stars)
 	return max_stars
 
 # Al morir, se resetea la lista

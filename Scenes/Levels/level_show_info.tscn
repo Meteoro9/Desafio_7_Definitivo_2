@@ -769,13 +769,6 @@ text = "[color=red][wave]CANOT-PLAY-3-STARS-PREV-MIN"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Level-0-Info" parent="." unique_id=1909714594 node_paths=PackedStringArray("play_requirement") instance=ExtResource("4_oxtd6")]
-play_requirement = NodePath("LevelPlayRequirement")
-
-[node name="LevelPlayRequirement" type="Node" parent="Level-0-Info" unique_id=107667019]
-script = ExtResource("7_211a5")
-metadata/_custom_type_script = "uid://dyc7fljrdvedp"
-
 [node name="Level-1-Info" parent="." unique_id=527644416 node_paths=PackedStringArray("play_requirement") instance=ExtResource("4_oxtd6")]
 play_requirement = NodePath("LevelPlayRequirement")
 

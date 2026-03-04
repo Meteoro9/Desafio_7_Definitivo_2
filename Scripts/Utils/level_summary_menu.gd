@@ -2,10 +2,7 @@ extends Node
 class_name LevelSummaryMenu
 
 # Agregar acá los niveles para poder seleccionarlos.
-# Level_0 = Sample_Level, no mostrarlo en versión final
-enum LevelSelected { LEVEL_0, LEVEL_1, LEVEL_2, LEVEL_3, LEVEL_4, LEVEL_5,
-LEVEL_6, LEVEL_7, LEVEL_8 } 
-@export var level_id : LevelSelected = LevelSelected.LEVEL_1
+@export var level_id : int = 1
 
 @export var play_requirement: LevelPlayRequirement
 

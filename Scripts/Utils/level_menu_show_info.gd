@@ -1,6 +1,7 @@
 extends Control
 class_name LevelShowInfo
 
+#region Init
 @export var times_record_label : Label
 @export var day_record_label : Label
 @export var hour_record_label : Label
@@ -24,6 +25,7 @@ func _ready() -> void:
 	await animation.animation_finished
 	#await get_tree().create_timer(1.0).timeout
 	show_info(level_info_array_ordered[0])
+#endregion
 
 #region Update Info
 func show_info(summary: LevelSummaryMenu) -> void:
@@ -57,8 +59,6 @@ func show_info(summary: LevelSummaryMenu) -> void:
 	placing_no_records_label()
 
 
-
-# Método a revisar NO FUNCIONA
 func _update_play_availability(summary: LevelSummaryMenu) -> void:
 	var requirement : LevelPlayRequirement = summary.play_requirement
 	# Sin requisito se puede jugar
@@ -74,8 +74,9 @@ func _update_play_availability(summary: LevelSummaryMenu) -> void:
 	if current_level_index == 0:
 		allowed = true
 	else:
-		var prev_index : int = current_level_index -1
-		var max_stars : int = GameData.search_max_stars(prev_index)
+		var prev_summary : LevelSummaryMenu = level_info_array_ordered[current_level_index -1]
+		var prev_level_id : int = prev_summary.level_id
+		var max_stars : int = GameData.search_max_stars(prev_level_id)
 		allowed = max_stars >= requirement.min_stars_required
 	
 	cant_play_label.visible = not allowed
@@ -120,14 +121,12 @@ func _on_button_next_pressed():
 		current_level_index += 1
 		show_info(level_info_array_ordered[current_level_index])
 		GameManager.current_showed_index = current_level_index
-		_update_play_availability(level_info_array_ordered[current_level_index])
 
 func _on_button_previous_pressed():
 	if not (current_level_index -1) < 0: # Este es debug
 		current_level_index -= 1
 		show_info(level_info_array_ordered[current_level_index])
 		GameManager.current_showed_index = current_level_index
-		_update_play_availability(level_info_array_ordered[current_level_index])
 
 func _on_button_play_pressed():
 	if not play_button.disabled: # Doble chequeo de seguridad

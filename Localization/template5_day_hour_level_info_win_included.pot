@@ -77,6 +77,10 @@ msgid "MAIN-MENU"
 msgstr ""
 
 #: Scenes/Levels/level_show_info.tscn
+msgid "CANNOT-PLAY"
+msgstr ""
+
+#: Scenes/Levels/level_show_info.tscn
 msgid "[color=red][wave]CANOT-PLAY-3-STARS-PREV-MIN"
 msgstr ""
 
